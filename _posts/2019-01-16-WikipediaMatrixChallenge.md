@@ -85,7 +85,7 @@ It can help determining the weaknesses of some extractors. We can compare freque
 
 Note that an *exact* comparison between the two CSV files (one obtained with the HTML extractor, the other with the Wikitext extractor) may be unfair or too strict. In particular, the data sources differ a bit. For instance, if you look at the raw content of Wikitext, many cell values are ```{{{Yes}}}``` and not "Yes" as simply depicted in the HTML. 
 
-#### N-versions testing 
+#### N-variants testing 
 
 We can reuse similar treatments among competing extractors. We can also apply lightweight techniques like comparing the number of rows and columns per tables and URLs. Below is a comparison between the ten larger tables (with regards to the number of rows) as obtained by two solutions:
 
