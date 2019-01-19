@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The WikipediaMatrix Challenge 
-tags: software engineering, software testing, data 
+tags: [software engineering, software testing, data] 
 ---
 
 How to automatically extract tabular data out of Wikipedia pages? Tables are omnipresent in Wikipedia and incredibly useful for classifying and comparising many "things" (products, food, software, countries, etc.). Yet this huge source of information is hard to exploit by visualization, statistical, spreadsheet, or machine learning tools (think: Tableau, Excel, pandas, R, d3.js, etc.) — the basic reason is that tabular data are not represented in an exploitable tabular format (like the simple CSV format). 
