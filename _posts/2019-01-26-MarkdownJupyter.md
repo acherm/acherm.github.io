@@ -9,9 +9,11 @@ The basic idea is to use a special "Cell Type".
 An important feature I struggle to activate is the ability to call a (Python) variable inside Markdown. 
 
 Something like
-```
+--- python
 maxv = 1.2 # after a long computation in Python says
-```
+---
+
+
 then you want to write Markdown that refers to maxv (a Python variable)
 ```
 The maximum value found is {% raw %}{{maxv}}{% endraw %} and suggests that blabla
@@ -27,7 +29,13 @@ I succeed to activate it with:
 
 ```jupyter nbextension enable python-markdown/main```
 
-(the "main" is important and actually refers to main.js)
+(the "main" is important and actually refers to main.js, see below)
+
+```
+ls /Users/macher1/Library/Jupyter/nbextensions/python-markdown/
+main.css			python-markdown-post.png	python-markdown.png		readme.md		 untrusted.png
+main.js															 python-markdown-pre.png  python-markdown.yaml  trusted.png
+```
  
 
 
