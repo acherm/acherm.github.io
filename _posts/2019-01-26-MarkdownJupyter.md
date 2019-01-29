@@ -9,9 +9,9 @@ The basic idea is to use a special "Cell Type".
 An important feature I struggle to activate is the ability to call a (Python) variable inside Markdown. 
 
 Something like
---- python
+~~~ python
 maxv = 1.2 # after a long computation in Python says
----
+~~~
 
 
 then you want to write Markdown that refers to maxv (a Python variable)
