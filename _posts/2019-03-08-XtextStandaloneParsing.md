@@ -28,11 +28,11 @@ language = StandardLanguage {
 It injects for you the good dependencies and so you have an executable, standalone Java program. 
 
 Another solution is to use an helper function that loads the model out of a string content:
-[](https://gist.github.com/acherm/bf7896a81d8db2c3726e82e8d4d921ec)
+[see this gist](https://gist.github.com/acherm/bf7896a81d8db2c3726e82e8d4d921ec)
 
 The principle is to write the string into a temporary file and parses this file (URI) to obtain a model. 
 Then you can traverse your model and compile it. 
-I provide similar facilities as part of an MDE/DSL/SPL course at Universiyt of Rennes 1 [](https://github.com/acherm/teaching-MDE-IL1819/blob/master/VideoGenTransformer/src/VideoGenHelper.xtend)
+I provide similar facilities as part of an [MDE/DSL/SPL course at University of Rennes 1] (https://github.com/acherm/teaching-MDE-IL1819/blob/master/VideoGenTransformer/src/VideoGenHelper.xtend)
 
 I thank [Manuel Leduc](https://mleduc.xyz/) for his nice advices about DSL and Xtext.
 
