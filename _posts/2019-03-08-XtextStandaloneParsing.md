@@ -4,7 +4,7 @@ title: Standalone Solution for Loading Models with Xtext
 tags: [xtext, java, parsing, model] 
 ---
 
-Xtext is an open-source and popular framework for the development of domain-specific languages. 
+[Xtext](https://www.eclipse.org/Xtext/) is an open-source and popular framework for the development of domain-specific languages. 
 The contract is appealing: specify a grammar and you get for free (no effort) a parser (ANTLR), a metamodel, a comprehensive editor (working in Eclipse, or even in the Web), and lots of facilities for writing a compiler/an interpreter. 
 
 For instance, you can write a compiler (in Java or Xtend) that generates on-the-fly when a user edits her program (with the generated editor of course). Sometimes, there is the need to have a standalone solution because you want to develop outside Eclipse or simply because you want to integrate your compiler as part of a bigger thing (e.g., a Web application). 
