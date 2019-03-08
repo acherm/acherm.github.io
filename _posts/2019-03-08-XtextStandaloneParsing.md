@@ -9,7 +9,7 @@ The contract is appealing: specify a grammar and you get for free (no effort) a 
 
 For instance, you can write a compiler (in Java or Xtend) that generates on-the-fly when a user edits his or her programs (with the generated editor of course). Sometimes, there is the need to have a standalone solution because you want to develop outside Eclipse or simply because you want to integrate your compiler as part of a bigger thing (e.g., a Web application). 
 
-ParserHelper is nice for unit testing your compiler (see [tutorial](https://www.eclipse.org/Xtext/documentation/103_domainmodelnextsteps.html#tutorial-unit-tests)). 
+ParserHelper is nice for unit testing your compiler (see this [tutorial](https://www.eclipse.org/Xtext/documentation/103_domainmodelnextsteps.html#tutorial-unit-tests)). 
 However ParserHelper depends on @RunWith(XtextRunner). 
 So outside @Test methods, you cannot use it since dependency injection does not apply.
 
@@ -32,7 +32,7 @@ Another solution is to use an helper function that loads the model out of a stri
 
 The principle is to write the string into a temporary file and parses this file (URI) to obtain a model. 
 Then you can traverse your model and compile it. 
-I provide similar facilities as part of an [MDE/DSL/SPL course at University of Rennes 1] (https://github.com/acherm/teaching-MDE-IL1819/blob/master/VideoGenTransformer/src/VideoGenHelper.xtend)
+I provide similar facilities as part of an [MDE/DSL/SPL course at University of Rennes 1](https://github.com/acherm/teaching-MDE-IL1819/blob/master/VideoGenTransformer/src/VideoGenHelper.xtend)
 
 I thank [Manuel Leduc](https://mleduc.xyz/) for his nice advices about DSL and Xtext.
 
