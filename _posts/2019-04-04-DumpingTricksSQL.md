@@ -13,7 +13,7 @@ If you want specifically a trick with mysqldump, it's at the end of the post.
 # Chess games
 
 We performed large-scale analysis of chess games and gathered around 1 tera of chess engines' evaluations. If you're interested, [the article is available](https://hal.inria.fr/hal-01307091) while a snapshot of data is also available [here](http://chess.variability.io/). 
-The solution was quite brute force: buy a hard-disk with many teraoctets, dump the database into it, wait one week (true story). 
+The solution to backup was quite brute force: buy a hard-disk with many teraoctets, dump the database into it, wait one week (true story). 
 Fortunately the brute force copy was possible, that is, copying 1 tera was feasible. 
 
 A not-so-funny experience followed: you want to check that your dump is correct, isn't it? 
