@@ -6,11 +6,13 @@ tags: [data, backup, sql]
 
 We're sometimes bound to backup data for personal usage (e.g., photos) or in a professional context (e.g., in research). 
 Data can be very large (gigabytes or terabytes), and I have faced many experiences where (1) data are located in a remote machine (2) the copy is not straightforward. 
-I give three examples below, with some tricks.
+I give three examples below, with some tricks (or not). 
+If you want specifically a trick with mysqldump, it's at the end of the post. 
+
 
 # Chess games
 
-We performed large-scale analysis of chess games and gathered around 1 tera of chess engines' evaluations [see here:](https://hal.inria.fr/hal-01307091), a snapshot is available [here](http://chess.variability.io/). 
+We performed large-scale analysis of chess games and gathered around 1 tera of chess engines' evaluations. If you're interested, [the article is available](https://hal.inria.fr/hal-01307091) while a snapshot of data is also available [here](http://chess.variability.io/). 
 The solution was quite brute force: buy a hard-disk with many teraoctets, dump the database into it, wait one week (true story). 
 Fortunately the brute force copy was possible, that is, copying 1 tera was feasible. 
 
