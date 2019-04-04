@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Some tricks to backup large data (dump with SQL)
+title: Some tricks to backup large data (like dump with SQL)
 tags: [data, backup, sql] 
 ---
 
