@@ -40,7 +40,7 @@ Great keynote (without mentionning Daniel "replaces" at last minute Christian Ka
 I then enjoyed many presentations, either from industry papers, research track, or journal first track. I also attended some presentations of ECSA papers (ECSA was co-located with SPLC).
 I particularly appreciated the session with papers about:
  * "DNA as features: Organic software product lines" applications to variability in the synthetic biology domain (outside the pure software domain usually considered)
- * configuration of neural networks (machine learning is an important topic at SPLC with the keynote of Christian Kastner on performance prediction, our tutorial, or our paper ("Towards quality assurance of software product lines with adversarial configurations")[https://hal.inria.fr/hal-02287616] in the main research track)
+ * configuration of neural networks (machine learning is an important topic at SPLC with the keynote of Christian Kastner on performance prediction, our tutorial, or our paper ["Towards quality assurance of software product lines with adversarial configurations"](https://hal.inria.fr/hal-02287616) in the main research track)
  * advanced IDE for a family of languages (with the now famous tiramisu example!) 
 
 I had to leave earlier than expected but from what I have heard thursday and friday were also a very interesting day with regular papers, tool demonstrations, etc. What is sure is that SPLC was a success with a very nice organisation in Paris and nice interactions in the community or with ECSA crowd. Special thanks to Laurence Duchien, Tewfik Ziadi, Camille Salinesi, and Juliana Alves Pereira! 
