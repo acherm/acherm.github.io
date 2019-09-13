@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Tutorial, workshops, paper, and organization at SPLC 2019"
+date:   2019-09-08 011:54:29 +0200
+categories: dissemination 
+---
+
+[SPLC](https://splc2019.net/) is the major international venue on software product lines and variability. Most of today’s software is made variable to allow for more adaptability and economies of scale, while many development practices (DevOps, A/B testing, parameter tuning, continuous integration...) support this goal of engineering software *variants*. 
+Numerous systems and application domains have to deal with variants: automotive, mobile phones, Web apps, IoT systems, 3D printing, autonomous and deep learning systems, software-defined networks, security, generative art, games... to just give a few examples. The 23rd edition of SPLC has been nicely organized in Paris, and I want to write a small post to report on some interesting papers and topics. 
+
+This report is highly biased as I will mostly tell what I have done and heard there ;-) 
+I started SPLC 2019 with a tutorial about "Machine learning and configurable systems: A gentle introduction" with Hugo Martin, Juliana Alves Pereira, and Paul Temple. You can find the material online with [slides, data, exercices](https://github.com/VaryVary/ML-configurable-SPLCTutorial). The tutorial was well attended (around 20 people) and there were interesting interactions. The demonstration with VaryLaTeX toke more than expected since many questions arise (1 hour!). I thus have to shorten the review of existing works in the field, based on a systematic literature review. Hugo and Paul then manage the practical sessions with Jupyter notebooks and some technical explanations when needs be. The setup of tools was not as smooth as we expect: only a few participants can really play with our data and procedures (lesson learned: setting up tools is really important and should be ideally done prior to a tutorial). Anyway, I think the main messages were transmitted and we can certainly replay or extend the tutorial for another audience. 
+
+The afternoon, Rick Rabiser, Roberto Herrejon-Lopez and I had the please to lead a workshop about teaching and software product lines (SPLTea). Basically, how to disseminate the body of knowledge of variability to students? Variability can be seen as an advanced topic, but there is room to teach some concepts early in the computer science curriculum. And more generally, you can present different variability topics related to e.g., requirements, modeling, implementation, reverse engineering, testing. The goal of SPLTea was precisely to understand what topics and (core) concepts can be taught. 
+We start SPLTea with a very nice experience report by Jaime (basically 10 years of teaching software product lines in Columbia). 10 years is a lot and has lead to different evolutions: (1) the education system and organization: there are now many blended courses and students tend to consume different medias (e.g., videos); (2) the topics of interest have also changed (agile methodlogy or devops are now mainstream subjects). It has of course some impacts on the content of the course and on the way you transmit knowledge to students. 
+After this presentation, we form 2 groups both in charge of modeling what is common and variable in a software product line curriculum:
+ * the first group has to reverse engineer the variability (features) out of existing curiculums and evidence (papers, repository, etc.)
+ * the second group starts from scratch
+I was in the first group, and we have deciced to elaborate a comparison matrix (instead of directly a feature model). Each row of the matrix was a specific curiculum. 
+We then join the effort and discuss our two models. Interestingly, the two feature models were quite similar with regards to features (the structure differs though). The conclusion is that the teaching space is quite vaste, some core topics are present (modeling variability) while others can be tailored or removed depending on the audience.  
+
+
+The next day I co-organize [REVE](http://reveworkshop.github.io) and [MODEVAR](https://modevar.github.io/program/). 
+REVE was mainly a presentation of 5 papers about reverse engineering variabilty, with questions. 
+Roberto also advertised our upcoming book on re-engineering software systems into software product lines. 
+
+I spent most of the time in MODEVAR. The goal of this workshop was (and actually *is*) to "build up a simple variability modeling language that the community can agree on". There have been different attempts in the past to model configurations, features, decisions, variability, commonality, so the idea is that maybe we can find a common language that can ease interoperability between tools, research works (e.g., on automated reasoning), and... teaching (see previous workshop).
+I made a short presentation on the proposal of a technology for a feature modeling language. What technology to use? Lex/yacc? ANTLR? Xtext? Reuse of existing languages like Clafer or even OCL?
+With Andrzej Wasowski, we have considered an original path: the use of YAML together with JSON schema. 
+Andrezj made interesting [prototype](https://github.com/wasowski/fm-schema/) to demonstrate the feasibility. 
+Our point is that YAML is a very lightweight and very easy solution to integrate into any tooling (industrial or research) and ecosystems (e.g., Python, JavaScript).
+There were different presentations about different aspects of the language (expressiveness, analysability, scenarios, etc.). 
+In the afternoon, we brainstorm about different expressiveness levels we want to include in the language as well as a possible roadmap. The adventure will continue: stay tuned! 
+
+The third day of SPLC started with a keynote of Daniel Le Berre about "SAT oracles, for NP-Complete problems and beyond". Daniel made the choice to not talk about software architecture or software product line, despite his knowledge and experience with configurable systems (like the dependency system of Eclipse). It was a *great* decision and he directly attacked his core research subject: satisfiability (SAT) problems. 
+He made an insightful history of SAT and then detailed the crucial role of CNF encodings. 
+He toke the example of MaxSAT (aka MinUnsat) and dig into different problems and heuristics. Tools like [Limboole](http://fmv.jku.at/limboole/) and [PySAT](https://pysathq.github.io) are worth looking at. 
+Great keynote (without mentionning Daniel "replaces" at last minute Christian Kastner due to trains issues)!
+
+I then enjoyed many presentations, either from industry papers, research track, or journal first track. I also attended some presentations of ECSA papers (ECSA was co-located with SPLC).
+I particularly appreciated the session with papers about:
+ * "DNA as features: Organic software product lines" applications to variability in the synthetic biology domain (outside the pure software domain usually considered)
+ * configuration of neural networks (machine learning is an important topic at SPLC with the keynote of Christian Kastner on performance prediction, our tutorial, or our paper "Towards quality assurance of software product lines with adversarial configurations" in the main research track)
+ * advanced IDE for a family of languages (with the now famous tiramisu example!) 
+
+I had to leave earlier than expected but from what I have heard thursday and friday was also a very interesting day with regular papers, tool demonstrations, etc. What is sure is that SPLC was a success with a very nice organisation in Paris and nice interactions in the community or with ECSA crowd. Special thanks to Laurence Duchien, Tewfik Ziadi, Camille Salinesi, and Juliana Alves Pereira! 
