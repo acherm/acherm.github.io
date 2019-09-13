@@ -27,8 +27,8 @@ Roberto also advertised our upcoming book on re-engineering software systems int
 In fact, I spent most of the time in MODEVAR. The goal of this workshop was (and actually *is*) to "build up a simple variability modeling language that the community can agree on". There have been different attempts in the past to model configurations, features, decisions, variability, commonality, so the idea is that maybe we can find a common language that can ease interoperability between tools, research works (e.g., on automated reasoning), and... teaching (see previous workshop).
 I made a short presentation on the proposal of a technology for a feature modeling language. What technology to use? Lex/yacc? ANTLR? Xtext? Reuse of existing languages like Clafer or even OCL?
 With Andrzej Wasowski, we have considered an original path: the use of YAML together with JSON schema. 
-Andrezj made interesting [prototype](https://github.com/wasowski/fm-schema/) to demonstrate the feasibility. 
-Our point is that YAML is a very lightweight and very easy solution to integrate into any tooling (industrial or research) and ecosystems (e.g., Python, JavaScript).
+Andrezj made an interesting [prototype](https://github.com/wasowski/fm-schema/) to demonstrate the feasibility. 
+Our point is that YAML is a very lightweight and an easy solution to integrate into any tooling (industrial or research) and ecosystems (e.g., Python, JavaScript).
 There were different presentations about different aspects of the language (expressiveness, analysability, scenarios, etc.). 
 In the afternoon, we brainstorm about different expressiveness levels we want to include in the language as well as a possible roadmap. The adventure will continue: stay tuned! 
 
