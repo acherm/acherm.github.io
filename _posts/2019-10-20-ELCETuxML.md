@@ -2,7 +2,7 @@
 layout: post
 title:  "Talk at Embedded Linux Conference Europe 2019"
 date:   2019-10-30 011:54:29 +0200
-categories: dissemination 
+tags: [linux, open source, lyon, dissemination] 
 ---
 
 I gave a [talk](https://sched.co/TLKI) at [Embedded Linux Conference Europe 2019 (co-located with Open Source Summit 2019)](https://events.linuxfoundation.org/events/open-source-summit-europe-2019/) in Lyon about "Learning the Linux Kernel Configuration Space: Results and Challenges".
@@ -10,7 +10,7 @@ The conference was a blast, maybe one of the best conference I've attended: dive
 
 I usually attend academic conferences, and I must say OSS+ELC is different. 
 The number of attendees is incredible (around 2000), with many parallel tracks, demonstrations of vendors, keynotes. 
-Maybe [SIGCSE 2018](https://www.sigcse2018.sigcse.org/) I've attend in Baltimore was closed in terms of scale, otherwiste it's more around 300 people.  
+Maybe [SIGCSE 2018](https://www.sigcse2018.sigcse.org/) I've attended in Baltimore was closed in terms of scale, otherwiste it's more around 300 people.  
 
 I enjoyed many talks, just to name a few:
  * KernelCI: an effort to lead the (fragmented) testing effort of the kernel, now supported by the Linux foundation and companies like Google or Redhat
@@ -23,7 +23,7 @@ I enjoyed many talks, just to name a few:
  * a crystal clear tutorial of Linux permissions (hint: giving the root permission is not the only path)
  * a crazy talk about using Linux with Android 
  * very impressive showcases, for example, state-of-the-art computer vision systems running on very small devices. My prefered one is the [Tux over a chessboard and a laser](https://twitter.com/acherm/status/1189328054721695745)
- * (automated testing summit 2019)[https://elinux.org/Automated_Testing_Summit_2019] a full-day workshop about testing the Linux kernel (it was the main topic) and the ongoing effort to unify the forces (e.g., KernelCI). There are impressive tools/ideas developed by an industry-driven and passionate community.
+ * [automated testing summit 2019](https://elinux.org/Automated_Testing_Summit_2019) a full-day workshop about testing the Linux kernel (it was the main topic) and the ongoing effort to unify the forces (e.g., KernelCI). There are impressive tools/ideas developed by an industry-driven and passionate community.
 
 I mainly attended Linux-related talks and I've been lucky to meet many interesting people that really want to collaborate.
 OSS+ELC was definitely not like academic events: I am not saying it's "better", it's just different and complementary. But maybe there are lessons to learn here ;) 
@@ -35,5 +35,5 @@ By the way, the abstract of the talk can be found below:
 > In this talk, Mathieu Acher will introduce TuxML an OSS tool based on Docker/Python to massively gather data about thousands of kernel configurations. Mathieu will describe how 200K+ configurations have been automatically built and how machine learning can exploit this information to predict properties of unseen Linux configurations, with different use cases (identification of influential/buggy options, finding of small kernels, etc.)
 > The vision is that a continuous understanding of the configuration space is undoubtedly beneficial for the Linux community, yet several technical challenges remain in terms of infrastructure and automation.
 
-[Slides/papers can be found online](https://elinux.org/ELC_Europe_2019_Presentations). 
+[Slides/papers related to the talk can be found online](https://elinux.org/ELC_Europe_2019_Presentations). 
 Youtube video will follow soon!
