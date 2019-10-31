@@ -5,16 +5,16 @@ date:   2019-10-30 011:54:29 +0200
 categories: dissemination 
 ---
 
-I gave a 35' [talk](https://sched.co/TLKI) at [Embedded Linux Conference Europe 2019 (co-located with Open Source Summit 2019)](https://events.linuxfoundation.org/events/open-source-summit-europe-2019/) in Lyon about "Learning the Linux Kernel Configuration Space: Results and Challenges".
+I gave a [talk](https://sched.co/TLKI) at [Embedded Linux Conference Europe 2019 (co-located with Open Source Summit 2019)](https://events.linuxfoundation.org/events/open-source-summit-europe-2019/) in Lyon about "Learning the Linux Kernel Configuration Space: Results and Challenges".
 The conference was a blast, maybe one of the best conference I've attended: diversity of topics, quality of presenters, in-depth and technical content, and many^many exchanges with people that want to understand, share, and help. 
 
-I mostly attend academic conferences, and I must say OSS+ELC is different. 
+I usually attend academic conferences, and I must say OSS+ELC is different. 
 The number of attendees is incredible (around 2000), with many parallel tracks, demonstrations of vendors, keynotes. 
-Maybe [SIGCSE 2018 in Baltimore](https://www.sigcse2018.sigcse.org/) was closed in terms of scale, otherwiste it's mostly around 300 people.  
+Maybe [SIGCSE 2018](https://www.sigcse2018.sigcse.org/) I've attend in Baltimore was closed in terms of scale, otherwiste it's more around 300 people.  
 
-I enjoy many talks, just to name a few:
+I enjoyed many talks, just to name a few:
  * KernelCI: an effort to lead the (fragmented) testing effort of the kernel, now supported by the Linux foundation and companies like Google or Redhat
- * [Buildroot evolution](https://sched.co/TLMK), a very clear description of the build system
+ * [Buildroot evolution](https://sched.co/TLMK), a very clear description of the build system, new features and release/testing process
  * [Continuous documentation](https://sched.co/TLBL) that nicely discusses many aspects of documentation. I particularly appreciated the advices about writing styles. Stupid biases are unfortunately present in technical writing. Think about the use of "whitelist/blacklist", "master/slave" or "hey guys", how they translate to other languages, and how they can hurt people. The speaker suggests to make pull requests to correct open source projects: very good idea. Btw I think the correction can be partly automated: a bunch of queries over Github to identify bad smells in README.md (with [BigQuery](https://codelabs.developers.google.com/codelabs/bigquery-github/index.html?index=..%2F..index)), a bot to replace the text, send a PR with an educational message, and we are done!
  * keynote of Linus Torvalds with interesting discussions about the Linux project and its "random crazy user bugs", the importance of commits messages (more important than code!?), subsurface, and git (Linus wanted to prove to himself he was able to do more than one successful project)
  * insightful report about boot time reduction and actually Linux kernel size reduction at Bootlin. Configuration options all along as [nicely exposed by Michael Opdenacker](https://sched.co/TLN3)
@@ -23,9 +23,9 @@ I enjoy many talks, just to name a few:
  * a crystal clear tutorial of Linux permissions (hint: giving the root permission is not the only path)
  * a crazy talk about using Linux with Android 
  * very impressive showcases, for example, state-of-the-art computer vision systems running on very small devices. My prefered one is the [Tux over a chessboard and a laser](https://twitter.com/acherm/status/1189328054721695745)
- * [automated testing summit 2019](https://elinux.org/Automated_Testing_Summit_2019) a full-day workshop about testing the Linux kernel (it was the main topic) and the ongoing effort of KernelCI to unify the forces. 
+ * (automated testing summit 2019)[https://elinux.org/Automated_Testing_Summit_2019] a full-day workshop about testing the Linux kernel (it was the main topic) and the ongoing effort to unify the forces (e.g., KernelCI). There are impressive tools/ideas developed by an industry-driven and passionate community.
 
-I mainly attended Linux-related talks and I've been lucky to meet many interesting and people that really want to collaborate.
+I mainly attended Linux-related talks and I've been lucky to meet many interesting people that really want to collaborate.
 OSS+ELC was definitely not like academic events: I am not saying it's "better", it's just different and complementary. But maybe there are lessons to learn here ;) 
  
 By the way, the abstract of the talk can be found below:
