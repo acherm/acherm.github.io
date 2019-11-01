@@ -8,9 +8,9 @@ tags: [linux, open source, lyon, dissemination]
 I gave a [talk](https://sched.co/TLKI) at [Embedded Linux Conference Europe 2019 (co-located with Open Source Summit 2019)](https://events.linuxfoundation.org/events/open-source-summit-europe-2019/) in Lyon about "Learning the Linux Kernel Configuration Space: Results and Challenges".
 The conference was a blast, maybe one of the best conference I've attended: diversity of topics, quality of presenters, in-depth and technical content, and many^many exchanges with people that want to understand, share, and help. 
 
-I usually attend academic conferences, and I must say OSS+ELC is different. 
+I usually attend academic conferences, and I must say OSS+ELC is different in terms of scale. 
 The number of attendees is incredible (around 2000), with many parallel tracks, demonstrations of vendors, keynotes. 
-Maybe [SIGCSE 2018](https://www.sigcse2018.sigcse.org/) I've attended in Baltimore was closed in terms of scale, otherwiste it's more around 300 people.  
+Maybe [SIGCSE 2018](https://www.sigcse2018.sigcse.org/) I've attended in Baltimore was similar, otherwise it's more around 300 people (I never attended ICSE though).  
 
 I enjoyed many talks, just to name a few:
  * KernelCI: an effort to lead the (fragmented) testing effort of the kernel, now supported by the Linux foundation and companies like Google or Redhat
