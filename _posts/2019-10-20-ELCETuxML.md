@@ -5,7 +5,7 @@ date:   2019-10-30 011:54:29 +0200
 tags: [linux, open source, lyon, dissemination] 
 ---
 
-I gave a [talk](https://sched.co/TLKI) at [Embedded Linux Conference Europe 2019 (co-located with Open Source Summit 2019)](https://events.linuxfoundation.org/events/open-source-summit-europe-2019/) in Lyon about "Learning the Linux Kernel Configuration Space: Results and Challenges".
+I gave a [talk](https://sched.co/TLKI) (see [Youtube video](https://youtu.be/UBghs-cwQX4)) at [Embedded Linux Conference Europe 2019 (co-located with Open Source Summit 2019)](https://events.linuxfoundation.org/events/open-source-summit-europe-2019/) in Lyon about "Learning the Linux Kernel Configuration Space: Results and Challenges".
 The conference was a blast, maybe one of the best conference I've attended: diversity of topics, quality of presenters, in-depth and technical content, and many^many exchanges with people that want to understand, share, and help. 
 
 I usually attend academic conferences, and I must say OSS+ELC is different in terms of scale. 
