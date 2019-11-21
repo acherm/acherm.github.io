@@ -36,4 +36,4 @@ By the way, the abstract of the talk can be found below:
 > The vision is that a continuous understanding of the configuration space is undoubtedly beneficial for the Linux community, yet several technical challenges remain in terms of infrastructure and automation.
 
 [Slides/papers related to the talk can be found online](https://elinux.org/ELC_Europe_2019_Presentations). 
-Youtube video will follow soon!
+**[Youtube video of the talk is online](https://youtu.be/UBghs-cwQX4)** 
