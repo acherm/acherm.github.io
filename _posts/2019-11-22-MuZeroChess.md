@@ -27,9 +27,9 @@ On the other hand, MuZero offers interesting perspectives for chess:
 
 
 
-MuZero is yet another tour de force for DeepMind. No explicit rules and self-play with smart sampling: elegant, simple, and even freaking! The potential of MuZero is now more outside Chess, since the approach is much more general and flexible. It's hard to say, but MuZero's results have certainly reduced Chess to a "common" baseline. The good news is that MuZero will accelerate the maturation and understanding of learning-based chess engines. I have also sketched some challenges MuZero could tackle (e.g., exceptionnaly playing at any chess variant such as Chess960). 
+MuZero is yet another tour de force for DeepMind. No explicit rules and self-play with smart sampling: elegant, simple, and even freaking! The potential of MuZero is now more outside Chess, since the approach is much more general and flexible. It's hard to say, but MuZero's results have certainly reduced Chess to a "common" baseline. The good news is that MuZero will accelerate the maturation and understanding of learning-based chess engines. I have also sketched some challenges MuZero could tackle (e.g., exceptionnaly playing at any chess variant such as Chess960). It's a truly exciting time, kudos to DeepMind!  
 
-
+PS: I am not an expert in model-based reinforcement learning, I have given a candide opinion based on my knowledge and understanding of chess and computer science. Feel free to clarify and discuss! 
 
 
 
