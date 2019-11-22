@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MuZero: A new revolution of Chess?"
+title:  "MuZero: A new revolution for Chess?"
 date:   2019-11-22 011:54:29 +0200
 categories: artificial intelligence, chess, learning
 ---
