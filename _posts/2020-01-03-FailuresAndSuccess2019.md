@@ -11,7 +11,9 @@ tags: [scholar, publications, review]
 
 * reject of my ERC starting grant (called REVARY for Resurrecting Software Variability). Brain-consuming work that forces you to go beyond the usual territory... the cut was 29% (I was ranked between 30% and 40% grrr), but really worth doing. I have now an explicit and ambitious research plan for... 2020 at least ;)
 
-* reject of ICSE submission:  [preprint](https://hal.inria.fr/hal-02314830) is available and already working hard to address reviews. Very frustrating since we worked hard, including in the middle of summer time… and the subject is exciting/challenging (can we learn the enormous configuration space of the Linux kernel with 15,000+ options?) 
+* reject of an ICSE submission:  [preprint](https://hal.inria.fr/hal-02314830) is available and already working hard to address reviews. Very frustrating since we worked hard, including in the middle of summer time… and the subject is exciting/challenging (can we learn the enormous configuration space of the Linux kernel with 15,000+ options?) 
+
+* accept of an ICSE submission about model/code co-evolution: kudos to Djamel Khelladi who has lead end-to-end the success 
 
 * accept at Transactions on Software Engineering (TSE) journal for [Empirical Assessment of Multimorphic Testing](https://hal.inria.fr/hal-02177158) The idea of Multimorphic testing is to assess the effectiveness of a test suite for revealing performance variations of a system (something surprinsingly not so common in the scientific literature).
 
