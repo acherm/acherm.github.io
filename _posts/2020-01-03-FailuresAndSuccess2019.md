@@ -5,7 +5,7 @@ date:   2020-01-03 011:54:29 +0200
 tags: [scholar, publications, review]
 ---
 
-2019 is over and it's a good excuse to report on failures and successes (in no particular order):
+2019 is over (all the best!) and it's a good excuse to report on some of my failures and successes (from an MIP to football, in no particular order):
 
 * most influential paper (MIP) award together with Philippe Collet, Philippe Lahire, and Robert B. France, at [SLE 2019](http://www.sleconf.org/2019/) for our 2009 paper “Composing feature models”. [slides](https://fr.slideshare.net/PhilCollet/sle-2019-mip-award-sle-2009-composing-feature-models) and [press release (in french)](https://ins2i.cnrs.fr/fr/cnrsinfo/des-scientifiques-primes-pour-leurs-travaux-sur-les-feature-models)
 
@@ -25,7 +25,7 @@ tags: [scholar, publications, review]
 
 * many [interesting](https://hal.inria.fr/hal-02287616) works on [sampling](https://hal.inria.fr/hal-02356290) and [learning](https://hal.inria.fr/hal-02287459) configuration spaces (see also this [survey](https://hal.inria.fr/hal-02148791))
 
-* co-chairing of [VaMoS](https://vamos2020.dbse.iti.cs.ovgu.de/) (14th International Working Conference on Variability Modelling of Software-Intensive Systems) with Maxime Cordy: proud to help the variability community! 
+* co-chairing of [VaMoS](https://vamos2020.dbse.iti.cs.ovgu.de/) (14th International Working Conference on Variability Modelling of Software-Intensive Systems) with Maxime Cordy: proud to help the variability community! The conference will be in 2020, but the essential work was in 2019 (I guess!) 
 
 * only one flight (from France to Greece)
 
