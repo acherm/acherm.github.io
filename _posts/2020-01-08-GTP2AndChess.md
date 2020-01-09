@@ -22,7 +22,7 @@ Future work may include:
  * rigorous assessment of the ability of GPT-2 to play legal moves. I only played 6 games with 30 moves maximum, it's worth trying on much more games eg for ending positions with only a few pieces or around move 40.
  * what's the minimum number of moves needed to check mate GPT-2? 
 
-GPT-2 based chess engine a fun experiment that may serve to further question and understand the current limits of artificial intelligence. Yea, GPT-2 has not learned the complex meaning of chess, but it has learned something purely out of texts, which is somehow bluffing (closed to [ELIZA effect](https://en.m.wikipedia.org/wiki/ELIZA_effect)). 
+GPT-2 based chess engine is a fun experiment that may serve to further question and understand the current limits of artificial intelligence. Yea, GPT-2 has not learned the complex meaning of chess, but it has learned something purely out of texts, which is somehow bluffing (closed to [ELIZA effect](https://en.m.wikipedia.org/wiki/ELIZA_effect)). 
 
 
 
