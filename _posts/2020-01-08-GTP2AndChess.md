@@ -5,7 +5,7 @@ date:   2020-01-08 011:54:29 +0200
 tags: [artificial intelligence, chess, learning, natural language, gpt2]
 ---
 
-Shawn Presser has [released](https://twitter.com/theshawwn/status/1214013710173425665) an intringuing chess engine based on deep learning-based language model (GPT-2). The model was trained on the Kingbase dataset (3.5 million chess games in PGN notation) in 24 hours using 146 TPUs. The engine is purely based on *text* prediction with no concept of chess. Though GPT-2 has already delivered promising/bluffing results for text generation, one can be skeptical and wonder whether it does work for chess.
+Shawn Presser has [released](https://twitter.com/theshawwn/status/1214013710173425665) an intringuing chess engine based on deep learning-based language model (GPT-2). The model was trained on the Kingbase dataset (3.5 million chess games in PGN notation) in 24 hours using 146 TPUs (ouch!). The engine is purely based on *text* prediction with no concept of chess. Though GPT-2 has already delivered promising/bluffing results for text generation, one can be skeptical and wonder whether it does work for chess.
 
 I have quickly experimented thanks to a nice notebook where you can play chess against the GPT-2 engine.
 I've only played 6 games, but (surprinsingly) it's enough to draw some conclusions.
