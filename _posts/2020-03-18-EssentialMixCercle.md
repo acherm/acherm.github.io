@@ -20,7 +20,7 @@ This blog post is an excuse to share some good music and thoughts. Essential Mix
 I always had the impression DJs give their very best at EM for delivering an unique story and putting their stamp on the history of music. It's not just about concatenating (their famous) tracks: Essential Mix deserves much respect and sounds a key opportunity for these artists to share their overall vision of music.  
 EM was and is an opportunity to discover different music (from trance to progressive to deep house to whatever) and talents (or confirms exceptionnal artists!). 
 
-The way we listen to music has largely evolved during the last decade. It's more streaming services and Youtube than classical radio and mp3 found in Napster or torrents. Now there are tons of mixes/shows/mixtapes/emissions/... available. Cercle is one of them and broadcasts live electronic music concerts from unusual locations (you can find all shows on Youtube). 
+The way we listen to music has largely evolved during the last decade. It's more streaming services and Youtube than classical radio and mp3 found in Napster or torrents. Now there are tons of mixes/shows/mixtapes/emissions/... available. [Cercle](https://www.youtube.com/channel/UCPKT_csvP72boVX0XrMtagQ) is one of them and broadcasts live electronic music concerts from unusual locations (you can find all shows on Youtube). 
 By unusual, I mean: a headlight, a tour, a strange cup with no public, or a rooftop landing, moutains at 10000 feet, and a fortress with thousands people. 
 What's incredible with Cercle is the selection of artists together with the selection of locations. 
 Like EM, the diversity of shows is mind-blowing with international artists (some are well-known, but some are great surprises, at least to me), different kind of electronic music (from pure house to deep techno), in different places and atmosphere. 
@@ -39,8 +39,8 @@ Here is a list of my 10 best Cercle:
  * [Lee Burridge](https://youtu.be/h96MGcsi7GQ?t=4090) 
  * [Mathame](https://youtu.be/dQjkqyc5nlc?t=4632) 
 
-So is Cercle the new Essential Mix? 
-It's too early, but I found many similarities (quality and diversity-wise) and I see Cercle as a powerful evolution of EM. Both magnify artists and music. If Cercle wants to definitely win the game, I have a suggestion: invite Gabriel And Dresden as well as Hernan Cattanero in unusual locations of France ;)  
+So is [Cercle](https://www.youtube.com/channel/UCPKT_csvP72boVX0XrMtagQ) the new Essential Mix? 
+It's too early and fresh, but I found many similarities (quality and diversity-wise) and I see Cercle as a powerful evolution of EM. Both magnify artists and music. If Cercle wants to definitely win the game, I have a suggestion: invite Gabriel And Dresden as well as Hernan Cattanero in unusual locations of France ;)  
 
 
 
