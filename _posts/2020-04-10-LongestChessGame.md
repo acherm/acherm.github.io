@@ -5,15 +5,10 @@ date:   2020-04-10 011:54:29 +0200
 tags: [chess, programming, sigbok]
 ---
 
-Do you want to see a chess game with almost 18,000 half-moves? OK, here is a Youtube video of almost 5 hours: [https://www.youtube.com/watch?v=XhnxuWKYm-w](https://www.youtube.com/watch?v=XhnxuWKYm-w)
-But wait: How is it possible? What's the point?
-In practice, the longest games are up to 250 moves (move = 2 plies, 1 white, 1 black) and such games are really outliers (the mean is certainly less than 40 moves).
-Tom Murphy did it again with his [6th chess paper](http://tom7.org/chess/ in a row) at the very prestigious SIGBOVIK 2020 (have a look at other papers, it's both funny and brilliant).
-He generated a game of 17,697 plies (8849 moves), certainly the longest chess game ever.
-
-paper: [http://tom7.org/chess/longest.pdf](http://tom7.org/chess/longest.pdf)
-source code: [https://sourceforge.net/p/tom7misc/svn/HEAD/tree/trunk/chess/longest.cc#l1](https://sourceforge.net/p/tom7misc/svn/HEAD/tree/trunk/chess/longest.cc#l1)
-game (PGN format): [http://tom7.org/chess/longest.pgn](http://tom7.org/chess/longest.pgn)
+Do you want to see a chess game with almost 18,000 half-moves? OK, here is a [Youtube video of almost 5 hours](https://www.youtube.com/watch?v=XhnxuWKYm-w)
+But wait: How is it possible? What's the point? In practice, the longest games are up to 250 moves and such games are really outliers (the mean is certainly less than 40 moves).
+Tom Murphy did it again with his [6th chess paper](http://tom7.org/chess/ in a row) at the very prestigious [SIGBOVIK 2020](http://sigbovik.org/2020/) (have a look at other papers, it's both funny and brilliant).
+Tom generated a game of 17,697 plies (8849 moves), certainly the longest chess game ever.
 
 # Tricks
 
@@ -47,7 +42,7 @@ three repetitions) and a mandatory one in 9.6:
 Basically the game is so long because precisely Tom Murphy nicely exploits the 75-move rule and the 5-fold repetition.
 There are of course other subtilities and hacks, and I let you discover them ;) 
 
-# Viewing the game 
+## Viewing the game 
 
 My first reaction was to view/see the generated game.
 8K moves is quite unusual though. It might be for these reasons that the awesome @lichess service has a 300 moves limit https://reddit.com/r/chess/comments/dgkp8c/til_there_is_a_300move_limit_for_games_on_lichess/ when importing PGN game. I've heard Chessbase has the same limitations.
@@ -65,7 +60,7 @@ Now fixed (should be Rgg8 since file-based disambiguation takes precedence), tha
 
 Anyway, I've also succeeded to open the game with my chess player reader made on top of Jupyter notebook (see my blog post: http://blog.mathieuacher.com/JupyterChess/) and with python chess library.
 
-# Youtube and GIFs
+## Youtube and GIFs
 
 I've generated three videos of the chess game (all uploaded to Youtube):
  * https://www.youtube.com/watch?v=XhnxuWKYm-w almost 5 hours, 1 second per ply... you can incrase the speed through parameters (x2 max?)
@@ -80,7 +75,12 @@ Some attempts (I assume you have generated the 17K+ positions as PGN files named
  * you can also try a conversion of mp4 file to GIF with `ffmpeg`
  * in any case, I recommend the use of the awesome gifsicle to optimize the size of the file, with something like `gifsicle -i output.gif --resize 100x100 -O3 --colors 10 -o output-opt.gif`
 
-# Future and ideas
+## Going further
+
+Resources:
+ * paper: [http://tom7.org/chess/longest.pdf](http://tom7.org/chess/longest.pdf)
+ * source code: [https://sourceforge.net/p/tom7misc/svn/HEAD/tree/trunk/chess/longest.cc#l1](https://sourceforge.net/p/tom7misc/svn/HEAD/tree/trunk/chess/longest.cc#l1)
+ * game (PGN format): [http://tom7.org/chess/longest.pgn](http://tom7.org/chess/longest.pgn)
 
 Some ideas for future work:
  * obvious one: Can we generate a longer chess game? As stated in the paper, the generated game is clearly not unique... I think there is room to experiment further with the algorithm and the code. A formal proof that it is (if it is the case) the longest game would be great.
