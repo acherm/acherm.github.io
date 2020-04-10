@@ -22,7 +22,7 @@ The 50-move rule is well-known and states that a player can claim a draw if no c
 But "in 2014 FIDE amended the rules to eliminate the possibility that a game could continue without end. Rule 9.6b states that if 75 consecutive moves have been made without movement of any pawn or any capture, the game is drawn..." see https://en.wikipedia.org/wiki/Fifty-move_rule for more details.
 You can use and abuse of this trick to generate sequence of moves with no capture during 75 moves. Basically, nothing special happens, it's just ridiculous (?) movement to make 75 moves without captures and thus increment the length of the game. 
 
-Another trick is the ~~threefold fivefold repetition. Here I'm quoting the paper:
+Another trick is the ~~threefold~~ fivefold repetition. Here I'm quoting the paper:
 
 ```
 The 75-move rule is rarely applied in practice, but its counterpart, "threefold repetition" is often the cause of draws in chess.
