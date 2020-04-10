@@ -12,7 +12,7 @@ Tom generated a game of 17,697 plies (8849 moves), certainly the longest chess g
 
 <iframe width="420" height="315" src="http://www.youtube.com/embed/XhnxuWKYm-w" frameborder="0" allowfullscreen></iframe>
 
-# Tricks
+## Tricks
 
 8K moves is much, much more than 40. You can try to manually move some pieces on a chessboard and generate a long game, but I guess you won't try much ;)
 The idea is of course to simulate a very long game with a *program*.
