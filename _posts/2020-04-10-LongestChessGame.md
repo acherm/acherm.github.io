@@ -10,6 +10,8 @@ But wait: How is it possible? What's the point? In practice, the longest games a
 So Tom Murphy did it again with his [6th chess paper](http://tom7.org/chess/ in a row) at the very prestigious [SIGBOVIK 2020](http://sigbovik.org/2020/) (have a look at other papers, it's both funny and brilliant).
 Tom generated a game of 17,697 plies (8849 moves), certainly the longest chess game ever.
 
+<iframe width="420" height="315" src="http://www.youtube.com/embed/XhnxuWKYm-w" frameborder="0" allowfullscreen></iframe>
+
 # Tricks
 
 8K moves is much, much more than 40. You can try to manually move some pieces on a chessboard and generate a long game, but I guess you won't try much ;)
