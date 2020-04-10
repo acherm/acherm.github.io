@@ -61,7 +61,7 @@ but in fact he gave an interesting comment on [Twitter](https://twitter.com/tom7
 ![Extraction process](/assets/longest-jupyter.png)
 
 
-Anyway, I've also succeeded to open the game with my chess player reader made on top of Jupyter notebook (see my blog post: http://blog.mathieuacher.com/JupyterChess/) and with python chess library.
+Anyway, I've also succeeded to open the game with my chess player reader made on top of Jupyter notebook (see [my previous blog post](http://blog.mathieuacher.com/JupyterChess/)) and with python chess library.
 
 ## Youtube and GIFs
 
@@ -91,6 +91,8 @@ In any case, I recommend the use of the awesome gifsicle to optimize the size of
 ```
 gifsicle -i output.gif --resize 100x100 -O3 --colors 10 -o output-opt.gif
 ``` 
+I've succeeded to obtain a [GIF of less than 3Mb](https://github.com/acherm/chess-jupyter/blob/master/out1-opt.gif), with the full game at a decent speed, and visually OK (maybe too small though). You can see the [GIF on Github](https://github.com/acherm/chess-jupyter/blob/master/out1-opt.gif).
+
 
 ## Going further
 
