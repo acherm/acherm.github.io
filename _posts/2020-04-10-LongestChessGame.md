@@ -24,21 +24,19 @@ You can use and abuse of this trick to generate sequence of moves with no captur
 
 Another trick is the ~~threefold~~ fivefold repetition. Here I'm quoting the paper:
 
-```
-The 75-move rule is rarely applied in practice, but its counterpart, "threefold repetition" is often the cause of draws in chess.
-This rule states that if the same position appears three game ends prematurely in a draw because of the 75-move rule.
-times, the players can claim a draw:
-       9.2.2. Positions are considered the same if and only if the
-       same player has the move, pieces of the same kind
-       and colour occupy the same squares and the possi-
-       ble moves of all the pieces of both players are the
-       same. [...]
-Like the 75-move rule, this rule has an optional version (upon
-three repetitions) and a mandatory one in 9.6:
-      [The game is a draw if . . . ]
-      9.6.1. the same position has appeared, as in 9.2.2, at
-      least five times
-```
+> The 75-move rule is rarely applied in practice, but its counterpart, "threefold repetition" is often the cause of draws in chess.
+> This rule states that if the same position appears three game ends prematurely in a draw because of the 75-move rule.
+> times, the players can claim a draw:
+>       9.2.2. Positions are considered the same if and only if the
+>       same player has the move, pieces of the same kind
+>       and colour occupy the same squares and the possi-
+>       ble moves of all the pieces of both players are the
+>       same. [...]
+> Like the 75-move rule, this rule has an optional version (upon
+> three repetitions) and a mandatory one in 9.6:
+>      [The game is a draw if . . . ]
+>      9.6.1. the same position has appeared, as in 9.2.2, at
+>      least five times
 
 Basically the game is so long because precisely Tom Murphy nicely exploits the 75-move rule and the 5-fold repetition.
 There are of course other subtilities and hacks, and I let you discover them ;) 
