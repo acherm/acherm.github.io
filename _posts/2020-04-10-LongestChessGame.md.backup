@@ -39,12 +39,12 @@ Another trick is the ~~threefold~~ fivefold repetition. Here I'm quoting the pap
 >      least five times
 
 Basically the game is so long because precisely Tom Murphy nicely exploits the 75-move rule and the 5-fold repetition.
-There are of course other subtleties and hacks, and I let you discover them ;) 
+There are of course other subtilities and hacks, and I let you discover them ;) 
 
 ## Viewing the game 
 
 Before digging into the details, my first reaction was to view/see the generated game.
-8K moves is quite unusual though. It might be for these reasons that the awesome [lichess](https://lichess.org/) open-source service has a 300 moves limit (see [https://reddit.com/r/chess/comments/dgkp8c/til_there_is_a_300move_limit_for_games_on_lichess/](discussion)) when importing a game in PGN format. I've heard Chessbase has the same 300 limitations.
+8K moves is quite unusual though. It might be for these reasons that the awesome [lichess](https://lichess.org/) open-source service has a 300 moves limit (see https://reddit.com/r/chess/comments/dgkp8c/til_there_is_a_300move_limit_for_games_on_lichess/ for a discussion) when importing a game in PGN format. I've heard Chessbase has the same 300 limitations.
 I've tried many services until finding one that can truly open the PGN file (btw accessible here: http://tom7.org/chess/longest.pgn). 
 @chesscom_fr fails, chesspastebin stops after 4400 moves [https://chesspastebin.com/view/22411](https://chesspastebin.com/view/22411).
 I've succeeded with [https://ingram-braun.net/erga/online-pgn-viewer/](https://ingram-braun.net/erga/online-pgn-viewer/) after a subtle edit.
