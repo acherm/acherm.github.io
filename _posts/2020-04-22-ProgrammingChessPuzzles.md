@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Programming Chess Puzzles: Fun, Opportunistic Reuse, and Minification"
+title:  "Programming (Chess) Puzzles with a Tweet"
 date:   2020-04-22 011:54:29 +0200
 tags: [programming, puzzles, chess, minification, recreative, python]
 ---
@@ -9,7 +9,7 @@ A friend posed the following puzzle/problem on social media: *"Given a 8x8 chess
 
 ## The chess puzzle 
 
-An animation is worth than thousands of words for explaining the problem/puzzle. The animation below almost shows a solution. 4 queens and 1 bishop are placed into a regular chess board. Circles in red represent squares that are not controlled (and yet to be controlled). The number at the top left indicates the number of squares not controlled (the goal is to reach 0). At the end of the animation, there is still missing one square ;) 
+An animation is worth than thousands of words for explaining the problem/puzzle[^1]. The animation below almost shows a solution. 4 queens and 1 bishop are placed into a regular chess board. Circles in red represent squares that are not controlled (and yet to be controlled). The number at the top left indicates the number of squares not controlled (the goal is to reach 0). At the end of the animation, there is still missing one square ;) 
 
 
 
@@ -112,7 +112,9 @@ Again with opportunistic reuse and in a way the program fits in a tweet ;)
 
 There are so many ideas to explore: the use of constraint programming, genetic algorithms, etc. If you're interested, you can [explore online the notebook and programs](https://github.com/acherm/progpuzzles/blob/master/minimality.ipynb). I highly recommend [the notebook of Luc Lesoil](https://github.com/acherm/progpuzzles/blob/master/Chess%20-%204%20queens%201%20bishop.ipynb) who nicely resolves the first chess puzzle in a different and elegant way (eg with numpy and matplotlib to visualize the solution). Maybe the easiest is to watch my talk [Towards programming puzzle spaces available on Youtube](https://youtu.be/oHEJJv7vUDw), given at the famous [DiverSE coffees](http://www.diverse-team.fr). In addition to what I've written in this blog post, I'm also developing and discussing the idea of *generating* interesting and enough hard puzzles (not necessary chess ones, see [examples](https://github.com/acherm/progpuzzles/blob/master/puzzlecoco.ipynb)). I'm basically arguing that whenever you see a puzzle, launch your notebook, resolve, tweetify, generalize, generate, and move to another puzzle space! 
 
-
+```
+[^1] A chess puzzle is sometimes used to refer to a real-world chess position in which you have to find the good series of moves (e.g., checkmate in 3). It's good for training your chess skills. Here "puzzle" refers to the general term that challenges the person's ingenuity and ability to solve some problems. 
+```
 
  
 
