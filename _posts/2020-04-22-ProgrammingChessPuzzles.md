@@ -5,7 +5,7 @@ date:   2020-04-22 011:54:29 +0200
 tags: [programming, puzzles, chess, minification, recreative, python]
 ---
 
-A friend posed the following puzzle/problem on social media: *"Given a 8x8 chessboard, your goal is to place 4 queens  and 1 bishop so that all squares of the board are controlled (through diagonales/lines; a piece controls the square where it is located)."* My usual reaction is to either promptly ignore this kind of fake problem or to try the resolution for real (on a concrete chessboard or mentally, [sans voir](https://en.wikipedia.org/wiki/Blindfold_chess)). But in this >quarantine period, I wanted to find a solution with a program (in next blog posts, I may explain how this attitude becomes a pattern beyond chess puzzles). Here is a short story about the process that lead to a Python solution in less than 280 characters that fits in a Tweet.
+A friend posed the following puzzle/problem on social media: *"Given a 8x8 chessboard, your goal is to place 4 queens  and 1 bishop so that all squares of the board are controlled (through diagonales/lines; a piece controls the square where it is located)."* My usual reaction is to either promptly ignore this kind of fake problem or to try the resolution for real on a concrete chessboard or mentally, [sans voir](https://en.wikipedia.org/wiki/Blindfold_chess). But in this >quarantine period, I wanted to find a solution with a *program* (in next blog posts, I may explain how this attitude becomes a pattern beyond chess puzzles). Here is a short story about the process that lead to a Python solution in less than 280 characters that fits in a Tweet.
 
 ## The chess puzzle 
 
@@ -28,11 +28,11 @@ The second task is to program a procedure that assesses whether a placement cont
 So I got some solutions (btw you can find more [statistics about all solutions of the puzzle](https://github.com/acherm/progpuzzles/blob/master/ChessPuzzle.ipynb)): 
 
 ```python
-    for cmb in gen_combinations():
-        n = nbcases_covered(cmb)
-        if (n > 63): # the solution(s)
-            print(cmb, "=>", n, ntries)
-            break
+for cmb in gen_combinations():
+    n = nbcases_covered(cmb)
+    if (n > 63): # the solution(s)
+        print(cmb, "=>", n, ntries)
+        break
 ```
 
 Looking back at my experience, I was a bit... puzzled ;) I was thinking it should have taken a few minutes but I was wrong, more something like 4 hours. I under-estimated the time of some tasks:
@@ -110,7 +110,9 @@ I have generalized my solution to resolve other (who says *any*?) chess puzzles:
 
 Again with opportunistic reuse and in a way the program fits in a tweet ;) 
 
-There are so many ideas to explore: the use of constraint programming, genetic algorithms, etc. If you're interested, you can [explore online the notebook and programs](https://github.com/acherm/progpuzzles/blob/master/minimality.ipynb). I highly recommend [the notebook of Luc Lesoil](https://github.com/acherm/progpuzzles/blob/master/Chess%20-%204%20queens%201%20bishop.ipynb) who nicely resolves the first chess puzzle in a different and elegant way (eg with numpy and matplotlib to visualize the solution). Maybe the easiest is to watch my talk [Towards programming puzzle spaces available on Youtube](https://youtu.be/oHEJJv7vUDw), given at the famous [DiverSE coffees](http://www.diverse-team.fr). In addition to what I've written in this blog post, I'm also developing and discussing the idea of *generating* interesting and enough hard puzzles (not necessary chess ones, see [examples](https://github.com/acherm/progpuzzles/blob/master/puzzlecoco.ipynb)). I'm basically arguing that whenever you see a puzzle, launch your notebook, resolve, tweetify, generalize, generate, and move to another puzzle space! 
+There are so many ideas to explore: the use of constraint programming, genetic algorithms, etc. If you're interested, you can [explore online the notebook and programs](https://github.com/acherm/progpuzzles/blob/master/minimality.ipynb). I highly recommend [the notebook of Luc Lesoil](https://github.com/acherm/progpuzzles/blob/master/Chess%20-%204%20queens%201%20bishop.ipynb) who nicely resolves the first chess puzzle in a different and elegant way (eg with numpy and matplotlib to visualize the solution). 
+
+Maybe the easiest is to watch my talk [Towards programming puzzle spaces available on Youtube](https://youtu.be/oHEJJv7vUDw), given at the famous [DiverSE coffees](http://www.diverse-team.fr). In addition to what I've written in this blog post, I'm also developing and discussing the idea of *generating* interesting and enough hard puzzles (not necessary chess ones, see [examples](https://github.com/acherm/progpuzzles/blob/master/puzzlecoco.ipynb)). I'm basically arguing that whenever you see a puzzle, launch your notebook, resolve, tweetify, generalize, generate, and move to another puzzle space! 
 
 ```
 [^1] A chess puzzle is sometimes used to refer to a real-world chess position in which you have to find the good series of moves (e.g., checkmate in 3). It's good for training your chess skills. Here "puzzle" refers to the general term that challenges the person's ingenuity and ability to solve some problems. 
