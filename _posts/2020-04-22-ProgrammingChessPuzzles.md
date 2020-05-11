@@ -114,9 +114,7 @@ There are so many ideas to explore: the use of constraint programming, genetic a
 
 Maybe the easiest is to watch my talk [Towards programming puzzle spaces available on Youtube](https://youtu.be/oHEJJv7vUDw), given at the famous [DiverSE coffees](http://www.diverse-team.fr). In addition to what I've written in this blog post, I'm also developing and discussing the idea of *generating* interesting and enough hard puzzles (not necessary chess ones, see [examples](https://github.com/acherm/progpuzzles/blob/master/puzzlecoco.ipynb)). I'm basically arguing that whenever you see a puzzle, launch your notebook, resolve, tweetify, generalize, generate, and move to another puzzle space! 
 
-```
-[^1] A chess puzzle is sometimes used to refer to a real-world chess position in which you have to find the good series of moves (e.g., checkmate in 3). It's good for training your chess skills. Here "puzzle" refers to the general term that challenges the person's ingenuity and ability to solve some problems. 
-```
+[^1]: A chess puzzle is sometimes used to refer to a real-world chess position in which you have to find the good series of moves (e.g., checkmate in 3). It's good for training your chess skills. Here "puzzle" refers to the general term that challenges the person's ingenuity and ability to solve some problems.  
 
  
 
