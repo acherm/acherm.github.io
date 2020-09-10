@@ -14,7 +14,7 @@ Some details below about I setup everything to achieve this on Linux with [OBS](
 
 Olivier Barais, a colleague of mine, shared this idea of "fake camera" a few months ago.
 He mentionned this nice article [https://blog.jbrains.ca/permalink/using-obs-studio-as-a-virtual-cam-on-linux]("Broadcast from OBS Studio To Everything In Linux"), but I didn't get much attention at that time.
-But recently, I have some variants-troubles with Teams: basically the screensharing was very limited or simply not supported (aka crash).
+But recently, I had some variants-troubles with Teams: basically the screensharing was very limited or simply not supported (aka crash).
 So I started to follow some tutorials.
 
 ### v4l2loopback
@@ -24,7 +24,8 @@ There are at least two subtilities:
  * `sudo modprobe v4l2loopback card_label="Virtual Cam"` might not be sufficient. The camera will be created but not recognized by third party applications like OBS or Web browsers. I suggest to use this line: `sudo modprobe v4l2loopback devices=1 video_nr=10 card_label="OBS Cam" exclusive_caps=1`
 
 For checking: `v4l2-ctl --all` and `v4l2-ctl -d /dev/video10 --list-formats-ext` as well as `ls -al /dev | grep video` (don't forget to install `sudo dnf install v4l-utils`). 
-At this step, some (hopefully all) applications might recognize your virtual camera. But there is nothing to broadcast.
+At this step, some (hopefully all) applications might recognize your virtual camera. A useful link is https://webrtc.github.io/samples/src/content/devices/input-output/ to test whether your camera is recognized. 
+But there is nothing to broadcast.
 
 ### vl42sink
 
@@ -56,7 +57,8 @@ Some strange things may happen with the "format", but it's OK
 I still have some issues for sharing the content of *some* applications that are not listed within OBS (eg I can't share the terminal content).
 But it's basically the same limitations with other systems. 
 It's due to issues with Wayland/X11. An OBS workaround is `obs-xdg-portal`, this issue was quite useful https://gitlab.gnome.org/feaneron/obs-xdg-portal/-/issues/4
-note: you can also experiment with `ffmpeg` and redirect the streaming of OBS. 
+note: you can also experiment with `ffmpeg` and redirect the streaming of OBS.
+
 
 A bit chaotic, but well it's also a good opportunity to learn many things about video, build, Linux, etc. 
 Now you can compose scenes in OBS, and broadcast through the virtual cam in Jitsi, Zoom, Teams, etc.
