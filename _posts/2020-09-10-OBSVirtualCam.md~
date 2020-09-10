@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "OBS and Virtual Cam (Linux)"
+date:   2020-09-10 011:54:29 +0200
+tags: [teaching, dissemination, OBS, video recording, camera, linux]
+---
+
+As part of now remote conferences or courses, you may need to show many things: not only your slides, but also your terminal, your browser, or you!
+There are many (proprietary) systems out there for sharing your screen live: BigBlueButton, Jitsi, Google meet, Zoom, Skype, Teams, etc.
+My recent experience is that it does not work so well. Hence an idea is to create a **virtual camera** and project what you want through it.
+That is, you create this fake camera and then broadcast to any conferencing system (you "just" have to select the virtual cam).
+Some details below about I setup everything to achieve this.
+
+The starting point was this nice blog post [https://blog.jbrains.ca/permalink/using-obs-studio-as-a-virtual-cam-on-linux]("Broadcast from OBS Studio To Everything In Linux").
+Olivier Barais, a colleague of mine, shared this idea and article a few months ago, but I didn't get much attention at that time. 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
