@@ -9,7 +9,7 @@ In COVID era, football matches have been played in empty stadiums. One hypothesi
 
 ## Data 
 
-I use the data coming from [understat](https://understat.com/). A unique feature of understat is that [**expected goals (xG)**](https://www.google.com/search?q=expected+goal+philosophy) are available as well as related metrics *expected goals against* (xGA) and *expected points* (xPoints). The site reports such metrics for all football matches played since 2014 and in major European leagues, namely Ligue 1 (aka french championship), la Liga, Calcio (Serie A), Bundesliga, EPL (aka Premier League), RFPL (aka russian championship). xG is a statistical measure of the quality of chances created and conceded. Intuitively, you have higher chance to score when you shot from 6 meters, in the axis than when you shot from 35 meters and you're off-center. Prediction algorithms have been applied over thousands of shots and over different parameters to compute xG. Of course, it's a metric and there is Messi: it's far from being perfect, but it is a good approximation of the quality of a team. Some people argue, and I am part of it, that xG usually gives a better indicator of the performance of a team than the raw, absolute final result. We all know football matches where a team won despite 1 chance created and 10 chances conceded. xG is particularly interesting when numerous matches are analyzed -- the miracles do not persist much on the long run. For sure, we can debate about xG for hours or days (it does not say everything about the match, the metric itself is sensitive to the quality of annotations, etc.). But let's consider in this post that xG is an interesting indicator as is final result. 
+I use the data coming from [understat](https://understat.com/). A unique feature of understat is that [**expected goals (xG)**](https://www.google.com/search?q=expected+goal+philosophy) are available as well as related metrics *expected goals against* (xGA) and *expected points* (xPoints). The site reports such metrics for all football matches played since 2014 and in major European leagues, namely Ligue 1 (aka french championship), la Liga, Calcio (Serie A), Bundesliga, EPL (aka Premier League), RFPL (aka russian championship). xG is a statistical measure of the quality of chances created. Intuitively, you have higher chance to score when you shot from 6 meters, in the axis than when you shot from 35 meters and you're off-center. Prediction algorithms have been applied over thousands of shots and over different parameters to compute xG. Of course, it's a metric and there is Messi: it's far from being perfect, but it is a good approximation of the quality of a team. Some people argue, and I am part of it, that xG usually gives a better indicator of the performance of a team than the raw, absolute final result. We all know football matches where a team won despite 1 chance created and 10 chances conceded. xG is particularly interesting when numerous matches are analyzed -- the miracles do not persist much on the long run. For sure, we can debate about xG for hours or days (it does not say everything about the match, the metric itself is sensitive to the quality of annotations, etc.). But let's consider in this post that xG is an interesting indicator as is final result. 
 
 xGA is the counterpart of xG: It is a statistical measure of the quality of chances conceded. xPoints are an estimate of how many points a team can get given its xG and xGA (recall: 3 points for a win, 1 point for a draw). 
 
@@ -17,15 +17,13 @@ xGA is the counterpart of xG: It is a statistical measure of the quality of chan
 
 A long-standing hypothesis in football is that playing at home gives you an advantage. It's certainly true (we will verify it soon, see below) and there are several conceivable reasons why. It's out of the scope of this post, but here are possible explanations:
 
-* (athletic reason) the presence of the fans pushes the home players to excel from a physical and determination point of view
-* (tactical reason) the presence of fans forces home players to adopt an offensive, active, riskier football while away players are more likely to undergo the game
-* (referee reason) the presence of fans impacts referee decisions
-* (spatial reason) players are familiar with the stadium, pitch, and there is no need to travel
+* (athletic reason) the presence of the fans pushes the home players to excel from a physical and determination point of view;
+* (tactical reason) the presence of fans forces home players to adopt an offensive, active, riskier football while away players are more likely to undergo the game;
+* (referee reason) the presence of fans impacts referee decisions;
+* (spatial reason) players are familiar with the stadium, pitch, and there is no need to travel.
 
 Are all these reasons pure bullshit and armchair philosophy? Certainly, and the list is incomplete ;) 
-
-In this post, we are interested in determining whether home advantage is a thing. In case it is you have reasons to have endless debate about why. In case not, you can also have endless debate. 
-
+In this post, we are interested in determining whether home advantage is a thing. In case it is you have reasons to have endless debate about why. In case not, you can also have endless debates. 
 Specifically, football matches have been played in empty stadiums in COVID era. It's an unique opportunity to investigate whether the COVID has had an effect on home advantage; and to *compare* this COVID situation to traditional seasons.   
 
 ## Home advantage? 
@@ -42,7 +40,7 @@ What is worth noticing is this sudden drop in 2020 or in 2019 for some leagues (
 
 Looking at actual points, in Russia championship and in 2019, there was also this effect. Bundesliga in 2019 suggested a trend, but on fewer games. In general, 2019 is hard to analyze since it's a mix of COVID and non COVID period. Serie A and Liga were apparently less impacted. 
 
-Now looking at expected points, the reversal for Ligue 1 and Premier League is less strong (61 xPoints for Ligue 1, 48 xPoints for Premier League). However there is a comparative decrease. 
+Now looking at expected points, the reversal for Ligue 1 and Premier League is less strong (61 xPoints for Ligue 1, 48 xPoints for Premier League). However there is a comparable decrease. 
 
 
 
@@ -50,9 +48,9 @@ Now looking at expected points, the reversal for Ligue 1 and Premier League is l
 
 
 
-The table with bar charts was here to visualize and investigate a possible effect of COVID on home advantage. Another perspective is given in the plots below. For each league, I plot the evolution of mean gained points (per match) for all seasons from 2014 to 2020. For non-COVID period, there was a difference between result and result_away (actual gained points). There was also a difference between xPoints and xPoints away. However, we can see that in Ligue 1 and Premier League (EPL) points won at home *matched* the points won away for season 2020-2021. It is a surprising evolution! 
+The table with bar charts was here to visualize and investigate a possible effect of COVID on home advantage. Another perspective is given in the plots below. For each league, I plot the evolution of mean gained points (per match) for all seasons from 2014 to 2020. For non-COVID period, there was a difference between result and result_away (actual gained points at home and away). There was also a difference between xPoints and xPoints away. However, we can see that in Ligue 1 and Premier League (EPL) points won at home *matched* the points won away for season 2020-2021. It is a surprising evolution! 
 
-**The expected points won at home vs away temper a bit the situation for Ligue 1 and EPL, but still show a decrease of home advantage. In fact, even La Liga, Bundesliga, and Serie A have been impacted when looking at xPoints vs xPoints away. **  
+**The expected points won at home vs away temper a bit the situation for Ligue 1 and EPL, but still show a decrease of home advantage. In fact, even La Liga, Bundesliga, and Serie A have been impacted when looking at xPoints vs xPoints away.**  
 
 ![Ligue_1_evolution_points](../assets/Ligue_1result-xPoints-result_away-xPointsAway-evolution.png)  
 
@@ -72,7 +70,7 @@ The table with bar charts was here to visualize and investigate a possible effec
 
 Differences in table and plots are good to give intuition, but let's do some statistical tests. Intuitively, the observations for COVID-like seasons might be due to "luck" and randomness (eg there were more victories away but it's due to coincidence or low number of matches). I used the non-parametrical Wilcoxon Signed-Rank test to assess differences between home and away matches, considering either actual result, xPoints, or xG. 
 
-Table below reports results for each season and each league. In detail, "wilco-result-pvalues" is the p-value of  Wilcoxon Signed-Rank over actual results at home and actual results away. "wilco-xPoints-pvalues"  is the p-value of  Wilcoxon Signed-Rank over xPoints at home and xPoints away. In general, p-values < 0.05 is considered to reject the null hypothesis (eg in our case that actual results at home come from the same distributions as actual results away). I highlight such values in red. In concrete terms, red values mean we can hardly distinguish home results from away results: the advantage of playing home is not!  
+Table below reports results for each season and each league. In detail, "wilco-result-pvalues" is the p-value of Wilcoxon Signed-Rank over actual results at home and actual results away. "wilco-xPoints-pvalues"  is the p-value of  Wilcoxon Signed-Rank over xPoints at home and xPoints away. In general, p-values < 0.05 is considered to reject the null hypothesis (eg in our case that actual results at home come from the same distributions as actual results away). I highlight such values in red. In concrete terms, red values mean we can hardly distinguish home results from away results: the advantage of playing home is not!  
 
 For effect size, I also report Cohen's d (difference between two means divided by a standard deviation) for both actual points, xPoints, and xG. The reading grid is as follows: small < 0.20 (highlighted in yellow), 0.20 <= medium < 0.50, 0.5 <= large < 0.8. 
 
