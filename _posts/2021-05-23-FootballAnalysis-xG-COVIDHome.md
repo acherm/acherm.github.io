@@ -39,7 +39,7 @@ Though there are some fluctuations across seasons for actual points (eg Ligue 1 
 
 What is worth noticing is this sudden drop in 2020 or in 2019 for some leagues (Bundesliga, Russia). It corresponds to the COVID period where stadiums were empty. In detail, french league simply stopped the 2019-2020 season mid-march 2020 whereas Bundesliga played again around mi-May 2020 in order to finish 2019-2020 season. 
 
-**In 2020, a surprising reversal occurred in Ligue 1 and Premier League: more points were scored away than at home! ** 
+**In 2020, a surprising reversal occurred in Ligue 1 and Premier League: more points were scored away than at home!** 
 
 Looking at actual points, in Russia championship and in 2019, there was also this effect. Bundesliga in 2019 suggested a trend, but on fewer games. In general, 2019 is hard to analyze since it's a mix of COVID and non COVID period. Serie A and Liga were apparently less impacted. 
 
@@ -47,7 +47,7 @@ Now looking at expected points, the reversal for Ligue 1 and Premier League is l
 
 
 
-   ![evolution_points](../assets/diffpoints-table.png) 
+![evolution_points](../assets/diffpoints-table.png) 
 
 
 
@@ -59,19 +59,11 @@ The table with bar charts was here to visualize and investigate a possible effec
 
 ![Bundesliga_evolution_points](../assets/La_ligaresult-xPoints-result_away-xPointsAway-evolution.png)  
 
-
-
 ![EPL_evolution_points](../assets/EPLresult-xPoints-result_away-xPointsAway-evolution.png) 
-
-
 
 ![Bundesliga_evolution_points](../assets/Bundesligaresult-xPoints-result_away-xPointsAway-evolution.png)  
 
-
-
 ![Bundesliga_evolution_points](../assets/Serie_Aresult-xPoints-result_away-xPointsAway-evolution.png)  
-
-
 
 ![Russia_evolution_points](../assets/RFPLresult-xPoints-result_away-xPointsAway-evolution.png)  
 
@@ -92,7 +84,6 @@ Statistical results show that the COVID period had variable effect:
 * Serie A has been impacted as well if we consider actual results, but looking at xPoints the COVID has little effect. By the way, the 2017 season (non COVID period) is different, but mostly due to the gap between xPoints and actual results.  
 * **La Liga seems not impacted at all (home advantage is still a thing)**
 * Russia has been impacted in 2019 (but not looking at xPoints), but 2020 leads to a quite normal situation
-
   
 
 ![Wilco_xpoints](../assets/result-sTest-Wilco.png)  
@@ -108,16 +99,9 @@ I used the non-parametrical Mann–Whitney U test to assess differences between 
 **Statistical results over xPoints show that the COVID has impacted the usual and relative home advantage within all leagues (except Russia)** . For Ligue 1 and EPL, it's more a confirmation of previous results (but under a different perspective): playing home is less an advantage per se, but it also questions the trend of previous seasons. *Liga is this time time impacted:* 2020 has comparatively to other seasons decreased the advantage of playing home. Hence, playing home remains the advantage, but this advantaged is partly mitigated. Russia is not impacted (it's in line with previous results on xPoints). Bundesliga had a rather strange 2015 season, but the COVID period (2019 and 2020) is a thing. Finally, Calcio is little impacted. 
 
 ![Wilco_xpoints](../assets/xPoints-EvoSeasons1.png)  
-
-
-
 ![Wilco_xpoints](../assets/xPoints-EvoSeasons2.png)  
 
-
-
 As a side note, I found the comparison across seasons to be more delicate and subject to caution. First, the set of teams varies across seasons. Second, the teams themselves change with different players and clubs.   
-
-
 
 ## Future work
 
@@ -127,7 +111,8 @@ There are many threats to my analysis and it should really be read as an exercis
 
 * statistical tests: I've used non-parametric tests owing to the sample size and distribution, but other tests may reveal other insights or results. Some indicators like Cohen's d should be interpreted with caution; 
 * the metrics I've chosen (xG, xGA, xPoints, and actual results) have limitations but are available for 6 leagues and since 2014. Other indicators can be used, but might not available for all leagues and seasons; 
-* randomness: statistical tests are here to mitigate randomness in the repetition of matches (says), but randomness is also present in the pitch, in the referee decisions, or even in how data about xG has been annotated.   
+* randomness: statistical tests are here to mitigate randomness in the repetition of matches (says), but randomness is also present in the pitch, in the referee decisions, or even in how data about xG has been annotated;
+* I can certainly do a better job when distinguishing COVID and non-COVID periods... for instance, Bundesliga and Calcio continued the 2019-2020 season in empty stadiums. Instead, I've considered the whole 2019-2020 season as a COVID season: it's obviously a threat!    
 
 This exercise left me thinking about other questions that remain unanswered and that would deserve a future treatment:
 
