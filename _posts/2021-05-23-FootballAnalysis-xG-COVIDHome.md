@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Impacts of Empty Football Stadiums: An Analysis of Results and xG Data in European Leagues"
+title:  "COVID and Home Advantage in Football: An Analysis of Results and xG Data in European Leagues"
 date:   2021-05-23 011:54:29 +0200
 tags: [football, expected goals, xG, data analysis]
 ---
 
-In COVID era, football matches have been played in empty stadiums. One hypothesis is that the absence of fans may call into question the way the game is played and especially the advantage of playing at home. In this post, I analyze matches' results and expected goals (xG)-like data of European leagues (Ligue 1, la Liga, Calcio, Bundesliga, Premier League, Russian championship) since 2014. Results show something happened, especially in Premier League and Ligue 1. I argue there is thus a unique opportunity to qualitatively analyze the COVID period (potentially with data obtained from computer analysis) in order to understand the new tactical or management approaches implemented. Perhaps COVID will lead to a (r)evolution of modern football?  
+In COVID era, football matches have been played in empty stadiums and unusual conditions. One hypothesis is that COVID may have questioned the way the game is played and especially the advantage of playing at home (e.g., due to the absence of fans). 
+In this post, I analyze matches' results and expected goals (xG)-like data of European leagues (Ligue 1, la Liga, Calcio, Bundesliga, Premier League, Russian championship) since 2014. Results show something happened, especially in Premier League and Ligue 1 for season 2020-2021. 
+I argue there is thus a unique opportunity to qualitatively analyze the COVID period (potentially with data obtained from computer analysis) in order to understand the new tactical or management approaches implemented. Perhaps COVID will lead to a (r)evolution of modern football?  
 
 ## Data 
 
@@ -23,8 +25,9 @@ A long-standing hypothesis in football is that playing at home gives you an adva
 * (spatial reason) players are familiar with the stadium, pitch, and there is no need to travel.
 
 Are all these reasons pure bullshit and armchair philosophy? Certainly, and the list is incomplete ;) 
-In this post, we are interested in determining whether home advantage is a thing. In case it is you have reasons to have endless debate about why. In case not, you can also have endless debates. 
-Specifically, football matches have been played in empty stadiums in COVID era. It's an unique opportunity to investigate whether the COVID has had an effect on home advantage; and to *compare* this COVID situation to traditional seasons.   
+In this post, we are interested in determining whether home advantage is (still) a thing. In case it is you have reasons to have endless debate about why. In case not, you can also have endless debates. 
+Specifically, football matches have been played in empty stadiums in COVID era; generally speaking, conditions have changed (training conditions, mental health, etc.) 
+It's an unique opportunity to investigate whether the COVID has had an effect on home advantage; and to *compare* this COVID situation to traditional seasons.   
 
 ## Home advantage? 
 
@@ -116,6 +119,7 @@ This exercise left me thinking about other questions that remain unanswered and 
 
 * What are the results for other leagues? For instance, in South America (says Brazil and Argentina): is it the same trend? In amateur football, is home an advantage as in professional football? Here we do not have data about COVID (competitions simply stop) but I'm now wondering what is the result even in non-COVID situations. Women's football is also an interesting case, in COVID and non-COVID situations. 
 * How to explain the drop of home advantage in COVID era for Ligue 1 and Premier League (mainly)? It's a key question raised by the quantitative analysis I made. In fact, it's also interesting to look at other championships: why La Liga has succeeded to keep home advantage, despite empty stadiums? 
+Beyond empty stadiums and absence of fans, it is also worth mentioning that COVID has created an unusual and novel situation: COVID cases for some clubs/players, training conditions, mental health, etc. Finding explanations is definitely a challenge!
 
 In fact, my original motivation was to verify that COVID has had an effect. It was both my intuition and my hope ;) Because now we know something happened, there is a unique opportunity to understand *why* and *what* fundamentally changes in the way football is played. In particular, a qualitative analysis of the COVID period is more than welcome. For instance, do tactical approaches have changed? It is very challenging to answer this question since it might require to accurately review thousands of matches or to synthesize fine-grained data about matchs. However, the rise of data and artificial intelligence can help to understand them at scale. From this perspective, the [ongoing effort of Deep Mind with Liverpool is worth looking at](https://arxiv.org/abs/2011.09192). For example, the idea of using computer visions to synthesize data out of COVID matches (potentially much more insightful than xG) can show some new patterns, new strategies or management approaches. Perhaps, incidentally, COVID will lead to a (r)evolution of modern football. 
 
