@@ -125,7 +125,7 @@ Beyond empty stadiums and absence of fans, it is also worth mentioning that COVI
 
 In fact, my original motivation was to verify that COVID has had an effect. It was both my intuition and my hope ;) Because now we know something happened, there is a unique opportunity to understand *why* and *what* fundamentally changes in the way football is played. In particular, a qualitative analysis of the COVID period is more than welcome. For instance, do tactical approaches have changed? It is very challenging to answer this question since it might require to accurately review thousands of matches or to synthesize fine-grained data about matchs. However, the rise of data and artificial intelligence can help to understand them at scale. From this perspective, the [ongoing effort of Deep Mind with Liverpool is worth looking at](https://arxiv.org/abs/2011.09192). For example, the idea of using computer visions to synthesize data out of COVID matches (potentially much more insightful than xG) can show some new patterns, new strategies or management approaches. Perhaps, incidentally, COVID will lead to a (r)evolution of modern football. 
 
-Acknowledgements: I'd like to thank Luc Lesoil for feedbacks about early drafts of this post. And, again: this post has not been peer-reviewed, it's a side project. 
+Acknowledgements: I'd like to thank Luc Lesoil and Thomas Gonort for feedbacks about early drafts of this post. And, again: this post has not been peer-reviewed, it's a side project. 
 Don't hesitate to correct me or suggest improvements!
 
 
