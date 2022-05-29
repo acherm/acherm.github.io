@@ -40,7 +40,7 @@ Here is a list of my 10 best Cercle:
  * [Mathame](https://youtu.be/dQjkqyc5nlc?t=4632) 
 
 So is [Cercle](https://www.youtube.com/channel/UCPKT_csvP72boVX0XrMtagQ) the new Essential Mix? 
-It's too early and fresh, but I found many similarities (quality and diversity-wise) and I see Cercle as a powerful evolution of EM. Both magnify artists and music. If Cercle wants to definitely win the game, I have a suggestion: invite Gabriel And Dresden as well as Hernan Cattanero in unusual locations of France ;)  
+It's too early and fresh, but I found many similarities (quality and diversity-wise) and I see Cercle as a powerful evolution of EM. Both magnify artists and music. If Cercle wants to definitely win the game, I have a suggestion: invite Gabriel And Dresden as well as Hernan Cattaneo in unusual locations of France ;)  
 
 
 
