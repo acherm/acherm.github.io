@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Chess piece values (in Stockfish)"
+title:  "Chess Piece Values (in Stockfish)"
 date:   2023-02-16 011:54:29 +0200
 tags: [chess, stockfish, alphazero]
 ---
