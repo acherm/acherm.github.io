@@ -17,11 +17,11 @@ A short investigation shows that `src/types.h` is a promising entry point.
 More specifically, the following [lines of code](https://github.com/official-stockfish/Stockfish/blob/master/src/types.h#L192-L196):
 ```
 PawnValueMg   = 126,   PawnValueEg   = 208,
-  KnightValueMg = 781,   KnightValueEg = 854,
-  BishopValueMg = 825,   BishopValueEg = 915,
-  RookValueMg   = 1276,  RookValueEg   = 1380,
-  QueenValueMg  = 2538,  QueenValueEg  = 2682,
- ```
+KnightValueMg = 781,   KnightValueEg = 854,
+BishopValueMg = 825,   BishopValueEg = 915,
+RookValueMg   = 1276,  RookValueEg   = 1380,
+QueenValueMg  = 2538,  QueenValueEg  = 2682,
+```
 
 `Md` means middle game and `Eg` means end-game. When a middle game starts and stops is another story, but it makes sense to distinguish both phases. 
 In fact some proposals listed in the Wikipedia article also make this distinction. 
@@ -39,9 +39,12 @@ Note: The values in the Value column have been rounded to 2 digits.
 The usual piece values are pawn=1, knight=3, bishop=3, rook=5, queen=10 (see [a list of piece values' proposal](https://en.wikipedia.org/wiki/Chess_piece_relative_value) or the [AlphaZero article](https://arxiv.org/abs/2009.04374)). 
 Hence, I may have missed something, but the relative values are a bit different w.r.t pawns. Otherwise, it's in line with what have been proposed. 
 Another (important) note: *how* these relative values are leveraged as part of the search/eval functions should be taken into account. 
-I can imagine, for instance, some heuristics to augment or downgrade relative values depending on some positions or other variables/parameters' values (e.g., thresholds).  
+I can imagine, for instance, some heuristics to augment or downgrade relative values depending on some positions or other variables/parameters' values (e.g., thresholds). 
+Stated differently, pieces' values are tuned to work along other factors in Stockfish's algorithm (there are many other factors!)... 
+And not necessarily to reflect on the way human chess players internalize the actual values of pieces. 
+There is an interesting [reddit discussion](https://www.reddit.com/r/chess/comments/e57lqz/stockfish_doesnt_use_the_traditional_piece_values/).
 
-For end-games, the relative trend is similar:
+For end-games, the *relative* trend is similar:
 
 | Piece | Value |
 | ----- | ----- |
@@ -53,8 +56,8 @@ For end-games, the relative trend is similar:
 
 Note: The values in the Value column have been rounded to 2 digits.
 
-In end-games, all kinds of pieces, but pawns are less powerful (intuition: a pawn can be promoted to a pawn). 
-Numbers concur with the answer in stackexchange: https://chess.stackexchange.com/a/27391 
+Yet, all kinds of pieces, but pawns are less powerful (intuition: a pawn is more likely to be promoted to a pawn in end-game). 
+Numbers concur with the [answer in stackexchange](https://chess.stackexchange.com/a/27391).
 
 
 ## Evolution of pieces' values
@@ -135,6 +138,8 @@ Right now there are many open questions:
  * In the [article about AlphaZero](https://arxiv.org/abs/2009.04374), the method to compute chess pieces' values is described in Section 3.8. The general principle is to compute a linear
 model that predicts the game outcome based on the difference in numbers of each piece. As acknowledged, it is an approximation (and has the merit of being quite general to other chess variants). We can certainly apply/adapt similar methods for Stockfish (using games eg of Stockfish against itself).  
 
+Overall, I am not sure static chess pieces' values, as encoded in Stockfish, can be transferred to human chess players' mental model. 
+The encoding serves a specific purpose and pieces' values interact with a lot of other factors as part of Stokfish algorithm. 
 This short blog post is actually the starting point of a (hopefully longer) series, where I will try to report on my understanding of the Stockfish source code. 
 My writing is most probably inaccurate and incomplete (e.g., I have written 3 hypotheses that need more research). 
 But it's good to me to keep traces of my current knowledge. And secretly I hope to have feedbacks ;)
