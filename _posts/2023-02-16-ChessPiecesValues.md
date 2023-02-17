@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Chess Piece Values (in Stockfish)"
+title:  "Stockfish(1): Chess Piece Values"
 date:   2023-02-16 011:54:29 +0200
 tags: [chess, stockfish, alphazero]
 ---
 
 What is the value of a queen, a bishop, or a knight in chess? 
-There have been several attempts in the past, mainly in books to help assessing positions and taking a decision (eg when exchanging pieces). We'll all agree that you should not give your queen for a pawn in general, but chess is full of subtlety and beauty! A [Twitter thread](https://twitter.com/martinmbauer/status/1624329951200649217) nicely summarizes the different attempts. This [nice Wikipedia article](https://en.wikipedia.org/wiki/Chess_piece_relative_value) lists different proposals, including the article "Assessing Game Balance with [AlphaZero: Exploring Alternative Rule Sets in Chess" from Deepmind](https://arxiv.org/abs/2009.04374) and Vladimir Kramnik as co-author (funny affiliation: "World Chess Champion
+There have been several attempts in the past, mainly in books to help assessing positions and taking a decision (e.g., when exchanging pieces). We'll all agree that you should not give your queen for a pawn in general, but chess is full of subtlety and beauty! A [Twitter thread](https://twitter.com/martinmbauer/status/1624329951200649217) nicely summarizes the different attempts. This [nice Wikipedia article](https://en.wikipedia.org/wiki/Chess_piece_relative_value) lists different proposals, including the article "Assessing Game Balance with [AlphaZero: Exploring Alternative Rule Sets in Chess" from Deepmind](https://arxiv.org/abs/2009.04374) and Vladimir Kramnik as co-author (funny affiliation: "World Chess Champion
 2000–2007"). I have been intrigued to know how [Stockfish](https://stockfishchess.org/) (the strongest, open source chess engine) encodes and deals with chess piece values. 
 So here we go, let's dig into the source code and [git repository](https://github.com/official-stockfish/Stockfish)! 
 
@@ -31,11 +31,12 @@ Overall, we obtain the following relative values in middle game, assuming a pawn
 | ----- | ----- |
 | Pawn  | 1.00 |
 | Knight | 6.20 |
-| Bishop | 6.55 |
+| Bishop |  6.55 |
 | Rook |  10.13 |
 | Queen | 20.14 | 
 
-Note: The values in the Value column have been rounded to 2 digits.
+(Note: The values in the Value column have been rounded to 2 digits.)
+
 The usual piece values are pawn=1, knight=3, bishop=3, rook=5, queen=10 (see [a list of piece values' proposal](https://en.wikipedia.org/wiki/Chess_piece_relative_value) or the [AlphaZero article](https://arxiv.org/abs/2009.04374)). 
 Hence, I may have missed something, but the relative values are a bit different w.r.t pawns. Otherwise, it's in line with what have been proposed. 
 Another (important) note: *how* these relative values are leveraged as part of the search/eval functions should be taken into account. 
@@ -50,11 +51,11 @@ For end-games, the *relative* trend is similar:
 | ----- | ----- |
 | Pawn | 1.00 |
 | Knight | 4.90 |
-| Bishop | 5.21 |
+| Bishop |  5.21 |
 | Rook | 7.95 |
 | Queen | 15.63 | 
 
-Note: The values in the Value column have been rounded to 2 digits.
+(Note: The values in the Value column have been rounded to 2 digits.)
 
 Yet, all kinds of pieces, but pawns are less powerful (intuition: a pawn is more likely to be promoted to a pawn in end-game). 
 Numbers concur with the [answer in stackexchange](https://chess.stackexchange.com/a/27391).
@@ -111,7 +112,7 @@ cat diffs.txt | grep -e "+  PawnValueMg"
 +  PawnValueMg   = 198,   PawnValueEg   = 258,
 ```
 
-Quite stable, though pawns' values have evolved more than other pieces. And clearly an effort of the contributors/devs of Stockfish to carefully and empirically tune these values. 
+It is quite stable, though pawns' values have evolved more than other pieces. And clearly there is an effort of the contributors/devs of Stockfish to carefully and empirically tune these values. 
 
 ## Where are static values used? 
 
@@ -139,7 +140,7 @@ Right now there are many open questions:
 model that predicts the game outcome based on the difference in numbers of each piece. As acknowledged, it is an approximation (and has the merit of being quite general to other chess variants). We can certainly apply/adapt similar methods for Stockfish (using games eg of Stockfish against itself).  
 
 Overall, I am not sure static chess pieces' values, as encoded in Stockfish, can be transferred to human chess players' mental model. 
-The encoding serves a specific purpose and pieces' values interact with a lot of other factors as part of Stockfish algorithm. 
+The encoding serves a specific computational purpose and pieces' values interact with a lot of other factors as part of Stockfish algorithm. 
 This short blog post is actually the starting point of a (hopefully longer) series, where I will try to report on my understanding of the Stockfish source code. 
 My writing is most probably inaccurate and incomplete (e.g., I have written 3 hypotheses that need more research). 
 But it's good to me to keep traces of my current knowledge. And secretly I hope to have feedbacks ;)
