@@ -6,7 +6,7 @@ tags: [chess, stockfish, alphazero]
 ---
 
 What is the value of a queen, a bishop, or a knight in chess? 
-There have been several attempts in the past, mainly in books to help assessing positions and taking a decision (eg when exchanging pieces). We'll all agree that you should not give your queen for a pawn in general, but chess is full of subtlety and beauty! A [Twitter thread](https://twitter.com/martinmbauer/status/1624329951200649217) nicely summarizes the different attempts. This [nice Wikipedia article](https://en.wikipedia.org/wiki/Chess_piece_relative_value ) lists different proposals, including the article "Assessing Game Balance with [AlphaZero: Exploring Alternative Rule Sets in Chess" from Deepmind](https://arxiv.org/abs/2009.04374) and Vladimir Kramnik as co-author (funny affiliation: "World Chess Champion
+There have been several attempts in the past, mainly in books to help assessing positions and taking a decision (eg when exchanging pieces). We'll all agree that you should not give your queen for a pawn in general, but chess is full of subtlety and beauty! A [Twitter thread](https://twitter.com/martinmbauer/status/1624329951200649217) nicely summarizes the different attempts. This [nice Wikipedia article](https://en.wikipedia.org/wiki/Chess_piece_relative_value) lists different proposals, including the article "Assessing Game Balance with [AlphaZero: Exploring Alternative Rule Sets in Chess" from Deepmind](https://arxiv.org/abs/2009.04374) and Vladimir Kramnik as co-author (funny affiliation: "World Chess Champion
 2000–2007"). I have been intrigued to know how [Stockfish](https://stockfishchess.org/) (the strongest, open source chess engine) encodes and deals with chess piece values. 
 So here we go, let's dig into the source code and [git repository](https://github.com/official-stockfish/Stockfish)! 
 
@@ -36,6 +36,10 @@ Overall, we obtain the following relative values in middle game, assuming a pawn
 | Queen | 20.14 | 
 
 Note: The values in the Value column have been rounded to 2 digits.
+The usual piece values are pawn=1, knight=3, bishop=3, rook=5, queen=10 (see [a list of piece values' proposal](https://en.wikipedia.org/wiki/Chess_piece_relative_value) or the [AlphaZero article](https://arxiv.org/abs/2009.04374)). 
+Hence, I may have missed something, but the relative values are a bit different w.r.t pawns. Otherwise, it's in line with what have been proposed. 
+Another (important) note: *how* these relative values are leveraged as part of the search/eval functions should be taken into account. 
+I can imagine, for instance, some heuristics to augment or downgrade relative values depending on some positions or other variables/parameters' values (e.g., thresholds).  
 
 For end-games, the relative trend is similar:
 
@@ -59,7 +63,7 @@ For tracking `src/types.h` over different commits, I've written a Bash script (w
 
  
 {% highlight bash %}
- #!/bin/bash
+#!/bin/bash
 
 FILE=$1
 
@@ -124,16 +128,16 @@ else
 
 ## What's next? 
 
-This short blog post is actually the starting point of a (hopefully longer) series, where I will try to report on my understanding of the Stockfish source code. 
-My writing is most probably inaccurate and incomplete. But it's good to me to keep traces of my knowledge. And secretly I hope to have feedbacks ;) 
-
 Right now there are many open questions:
- * How are (*static*) chess piece values leveraged? I've only scratched the surface. Frankly speaking, I was surprised to see relative values somehow hardcoded in the code base. Neural networks (with [NNUE](https://www.chessprogramming.org/NNUE)) have I think a stronger role/potential in assessing chess positions, and the values are typically learned, not even explicitly (a surrogate is certainly needed to actually compute these values out of this blackbox, see next point). How these static values participate in the search/evaluation function and combine with the NN is a question for which I don't have answer. I have a hypothesis: (H1) there is "classical" evaluation and a NNUE evaluation, the two are simply mutually exclusive and there is no usage of static values bu NNUE
- * How are these values updated as part of Stockfish evolution? I'm suspecting some empirical tuning, but how it's made is unclear right now. Looking at the source code of Stockfish I'm always amazed and intrigued by the apparently ad-hoc values that are present here and there. Don't get me wrong, these values come from some human chess knowledge and/or empirical tuning, and thus not from nowhere. But we are far from the over-simplified explanations that a chess engine is "just" a black-box that have learned a magical function evaluation. There are lots of engineering and community effort, especially for a hybrid chess engine like Stockfish. I have a hypothesis: (H2) the tuning of Stockfish occurs in many other places and for other "variables" than static relative values that are not that often modified. 
+ * How are (*static*) chess piece values leveraged? I've only scratched the surface. Frankly speaking, I was surprised to see relative values somehow hardcoded in the code base. Neural networks (with [NNUE](https://www.chessprogramming.org/NNUE)) have I think a stronger role/potential in assessing chess positions, and the values are typically learned, not even explicitly (a surrogate is certainly needed to actually compute these values out of this blackbox, see next point). How these static values participate in the search/evaluation function and combine with the NN is a question for which I don't have answer. I have a hypothesis: *(H1) there is "classical" evaluation and a NNUE evaluation, the two are simply mutually exclusive and there is no usage of static values by NNUE.* 
+ Another hypothesis is that *(H2) these relative piece values cannot be interpreted "as such" (as absolute values) and without understanding their exact exploitation as part of Stockfish*
+ * How are these values updated as part of Stockfish evolution? I'm suspecting some empirical tuning, but how it's made is unclear right now. Looking at the source code of Stockfish I'm always amazed and intrigued by the apparently ad-hoc values that are present here and there. Don't get me wrong, these values come from some human chess knowledge and/or empirical tuning, and thus not from nowhere. But we are far from the over-simplified explanations that a chess engine is "just" a black-box that have learned a magical function evaluation. There are lots of engineering and community effort, especially for a hybrid chess engine like Stockfish. I have a hypothesis: *(H3) the tuning of Stockfish occurs in many other places and for other "variables" than static relative piece values that are not that often modified.* 
  * In the [article about AlphaZero](https://arxiv.org/abs/2009.04374), the method to compute chess pieces' values is described in Section 3.8. The general principle is to compute a linear
 model that predicts the game outcome based on the difference in numbers of each piece. As acknowledged, it is an approximation (and has the merit of being quite general to other chess variants). We can certainly apply/adapt similar methods for Stockfish (using games eg of Stockfish against itself).  
 
-  
+This short blog post is actually the starting point of a (hopefully longer) series, where I will try to report on my understanding of the Stockfish source code. 
+My writing is most probably inaccurate and incomplete (e.g., I have written 3 hypotheses that need more research). 
+But it's good to me to keep traces of my current knowledge. And secretly I hope to have feedbacks ;)
 
   
 
