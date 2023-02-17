@@ -32,7 +32,7 @@ Overall, we obtain the following relative values in middle game, assuming a pawn
 | Pawn  | 1.00 |
 | Knight | 6.20 |
 | Bishop | 6.55 |
-| Rook | 10.13 |
+| Rook |  10.13 |
 | Queen | 20.14 | 
 
 Note: The values in the Value column have been rounded to 2 digits.
@@ -115,7 +115,7 @@ Quite stable, though pawns' values have evolved more than other pieces. And clea
 
 ## Where are static values used? 
 
-The different values above in `src/types.h` are used in the code base of Stockfish, in `material.cpp`, `search.cpp` and `evaluate.cpp` mainly through `non_pawn_material` or `nonPawnMaterial`   
+The different values above in `src/types.h` are used in the code base of Stockfish, in `material.cpp`, `search.cpp` and `evaluate.cpp` mainly through `non_pawn_material` or `nonPawnMaterial` 
 For example: https://github.com/official-stockfish/Stockfish/blob/master/src/evaluate.cpp#L916-L934 
 {% highlight C %}
 // For pure opposite colored bishops endgames use scale factor
@@ -139,7 +139,7 @@ Right now there are many open questions:
 model that predicts the game outcome based on the difference in numbers of each piece. As acknowledged, it is an approximation (and has the merit of being quite general to other chess variants). We can certainly apply/adapt similar methods for Stockfish (using games eg of Stockfish against itself).  
 
 Overall, I am not sure static chess pieces' values, as encoded in Stockfish, can be transferred to human chess players' mental model. 
-The encoding serves a specific purpose and pieces' values interact with a lot of other factors as part of Stokfish algorithm. 
+The encoding serves a specific purpose and pieces' values interact with a lot of other factors as part of Stockfish algorithm. 
 This short blog post is actually the starting point of a (hopefully longer) series, where I will try to report on my understanding of the Stockfish source code. 
 My writing is most probably inaccurate and incomplete (e.g., I have written 3 hypotheses that need more research). 
 But it's good to me to keep traces of my current knowledge. And secretly I hope to have feedbacks ;)
