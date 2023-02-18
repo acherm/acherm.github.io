@@ -1,10 +1,11 @@
+
 ---
 layout: page
 title: About
 permalink: /about/
 ---
 
-I'm Associate Professor and Researcher in Computer Science (University of Rennes 1 / IRISA / Inria, France). 
+I'm Professor and Researcher in Computer Science (University of Rennes / IRISA / Inria, France). 
 With this blog, I want to share some thoughts, ideas, and experiments related to (list is complete): 
  * software
  * data
@@ -13,8 +14,10 @@ With this blog, I want to share some thoughts, ideas, and experiments related to
  * chess
  * research/science
  * education
+ * football/soccer/sports
+ * music
 
-I won't necessarily talk about my core research, so it can be seen as a complement to [http://www.mathieuacher.com/](http://www.mathieuacher.com/). 
+I won't necessarily talk about my core research, so it can be seen as a complement to [https://www.mathieuacher.com/](http://www.mathieuacher.com/). 
 
 ### Contact me
 
