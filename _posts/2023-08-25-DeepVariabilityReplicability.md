@@ -5,8 +5,7 @@ date:   2023-08-25 011:54:29 +0200
 tags: [reproducibility, replicability, variability, programming]
 ---
 
-I talked about deep software variability and reproducibility/replicability in computational science at SES 2023, IPSJ/SIGSE Software Engineering Symposium in Tokyo, Japan
-https://ses.sigse.jp/2023/
+I talked about deep software variability and reproducibility/replicability in computational science at [SES 2023, IPSJ/SIGSE Software Engineering Symposium in Tokyo, Japan](https://ses.sigse.jp/2023/). Thanks to Paolo Arcaini and Fuyuki Ishikawa for the invitation! 
 Slides are here: https://docs.google.com/presentation/d/1S2YDDMHw9FJ-ogpiGvUvmeHkYhFOQo4Xbccmjg4FL_Q/edit?usp=drivesdk
 A few photos: https://twitter.com/acherm/status/1695305466455236925
 
