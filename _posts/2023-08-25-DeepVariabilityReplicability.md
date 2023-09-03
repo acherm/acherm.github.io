@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "ChatGPT for Programming Variability and Variants"
+title:  "Deep Software Variability for Replicability in Computational Science (talk in Japan)"
 date:   2023-08-30 011:54:29 +0200
-tags: [ChatGPT, LLM, generative AI, variability, programming]
+tags: [reproducibility, variability, programming]
 ---
 
 I talked about deep software variability and reproducibility/replicability in computational science at SES 2023, IPSJ/SIGSE Software Engineering Symposium in #Tokyo #Japan
@@ -18,4 +18,4 @@ Abstract:
 > While deep software variability often poses challenges to achieving reproducible results, we propose embracing this variability as a pathway to replicate existing studies with more extensive and systematic exploration of hypotheses, methodologies, and analyses. 
 > By harnessing deep variability, we can generate more robust, generalizable scientific findings, presenting a fresh perspective for computational science's future.
 
-It was great to meet the Japanese software engineering community. 
+It was great to meet the Japanese software engineering community!
