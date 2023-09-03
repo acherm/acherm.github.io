@@ -14,5 +14,4 @@ I have been involved in several scientific activities:
  * chairing of the session about feature model evolution and analysis
  * steering committee of SPLC
  * many, many discussions
-
- Japan was truly amazing, I highly recommend, and we researchers are lucky to visit incredible locations and meet diverse people!
+Japan was truly amazing, I highly recommend, and we researchers are lucky to visit incredible locations and meet diverse people!
