@@ -34,12 +34,13 @@ This paper differs from the other I presented about reengineering variants: here
 I am very excited by this research direction, i.e, how **ChatGPT and LLM-based assistant can help exploring variants' space with software!**  
 
 Abstract: 
+> Programming variability is central to the design and implementation of software systems that can adapt to a variety of contexts and requirements, providing increased flexibility 
+> and customization. Managing the complexity that arises from having multiple features, variations, and possible configurations is known to be highly challenging for software 
+> developers. In this paper, we explore how large language model (LLM)-based assistants can support the programming of variability. We report on new approaches made possible with
+> LLM-based assistants, like: features and variations can be implemented as prompts; augmentation of variability out of LLM-based domain knowledge; seamless implementation of
+> variability in different kinds of artefacts, programming languages, and frameworks, at different binding times (compile-time or run-time). 
+> We are sharing our data (prompts, sessions, generated code, etc.) to support the assessment of the effectiveness and robustness of LLMs for variability-related tasks.
 
-```
-
-Programming variability is central to the design and implementation of software systems that can adapt to a variety of contexts and requirements, providing increased flexibility and customization. Managing the complexity that arises from having multiple features, variations, and possible configurations is known to be highly challenging for software developers. In this paper, we explore how large language model (LLM)-based assistants can support the programming of variability. We report on new approaches made possible with LLM-based assistants, like: features and variations can be implemented as prompts; augmentation of variability out of LLM-based domain knowledge; seamless implementation of variability in different kinds of artefacts, programming languages, and frameworks, at different binding times (compile-time or run-time). We are sharing our data (prompts, sessions, generated code, etc.) to support the assessment of the effectiveness and robustness of LLMs for variability-related tasks.
-
-```
 
   
 
