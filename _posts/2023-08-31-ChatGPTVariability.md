@@ -18,7 +18,7 @@ A fun session with a fixed cat written in TikZ that is gradually made configurab
 
 
 Sadly, I haven't the time to present how to program variability in the context of reproducibility and floating-points. 
-With a few prompts, you can vary types of a variable, make vary flags of a compiler (eg gcc or clang), and synthesize a generator that compiles and executes all variants, while storing all results in a CSV.  
+With a few prompts, you can vary types of a variable, make vary flags of a compiler (eg gcc or clang), and synthesize a generator that compiles and executes all variants, while storing all results in a CSV.  /VariantsAndLLM/
 
 ![](/assets/floatingPointVariation.png)
 
@@ -30,7 +30,7 @@ More details in the paper or in the appendix of slides or in the Github:
 
 These are early results, and there are many open challenges and questions. 
 I got great feedbacks and suggestions in the reviews or at the conference. 
-This paper differs from the other I presented about reengineering variants: here we didn't start with variants in the first place, we aim to program and create them! 
+This paper differs from the [other I presented about reengineering variants](/VariantsAndLLM/): here we didn't start with variants in the first place, we aim to program and create them! 
 I am very excited by this research direction, i.e, how **ChatGPT and LLM-based assistant can help exploring variants' space with software!**  
 
 Abstract: 
