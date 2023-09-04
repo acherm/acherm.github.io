@@ -2,7 +2,7 @@
 layout: post
 title:  "ChatGPT for Reengineering Variants"
 date:   2023-08-28 011:54:29 +0200
-tags: [LLM, generative AI, variability, reengineering]
+tags: [ChatGPT, LLM, generative AI, variability, reengineering]
 ---
 
 I just presented at [27th ACM International Systems and Software Product Line Conference](https://2023.splc.net/) (SPLC 2023, [VariVolution workshop](https://sites.google.com/view/varivolution-2023/home)) the paper ["Generative AI for Reengineering Variants into Software Product Lines: An Experience Report"](https://inria.hal.science/hal-04160693/) joint work with Jabier Martinez. 
