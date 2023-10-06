@@ -5,12 +5,12 @@ date:   2023-09-30 011:54:29 +0200
 tags: [ChatGPT, LLM, generative AI, variability, programming]
 ---
 
-Can GPTs like ChatGPT-4 play legal moves and finish chess games? What is the actual Elo rating of GPTs? There have been some hypes, subjective assessment, and buzz lately from "GPT is capable of beating 99% of players?" to "GPT plays lots of illegal moves" to "here is a magic prompt with Magnus Carlsen in the headers". There are more or less solid anecdotes here and there, with counter-examples showing impressive failures or magnified stories on how GPTs can play chess well. I've resisted for a long time, but I've decided to do it seriously! I have synthesized hundreds of games with different variants of GPT, different prompt strategies, against different chess engines (with various skills). This post is here to document the variability space of experiments I have explored so far... and the underlying insights and results. The tldr; is that `gpt-3.5-turbo-instruct` operates around 1750 Elo and is capable of playing end-to-end legal moves, even when the game starts with strange openings. ChatGPT-3.5-turbo and ChatGPT-4, however, are much more brittle.  
+Can GPTs like ChatGPT-4 play legal moves and finish chess games? What is the actual Elo rating of GPTs? There have been some hypes, (subjective) assessment, and buzz lately from "GPT is capable of beating 99% of players?" to "GPT plays lots of illegal moves" to "here is a magic prompt with Magnus Carlsen in the headers". There are more or less solid anecdotes here and there, with counter-examples showing impressive failures or magnified stories on how GPTs can play chess well. I've resisted for a long time, but I've decided to do it seriously! I have synthesized hundreds of games with different variants of GPT, different prompt strategies, against different chess engines (with various skills). This post is here to document the variability space of experiments I have explored so far... and the underlying insights and results. The tldr; is that `gpt-3.5-turbo-instruct` operates around 1750 Elo and, though there are avoidable errors, is often capable of playing end-to-end legal moves, even with black pieces or when the game starts with strange openings. ChatGPT-3.5-turbo and more surprisingly ChatGPT-4, however, are much more brittle. Please do not stop to the tldr; and read the entire blog posts: there are subtilities and findings worth discussing! 
 
 
 ## GPTs and Chess since the 2020 prehistoric days 
 
-If you read this blog or follow me on Twitter, you know I have been interested for a while about generative AI technologies and chess. For instance,  I have reported on [GPT-2](http://blog.mathieuacher.com/GTP2AndChess/), one of the first promising version of GPT and trained on 3.5 million chess games with 146 TPUs (ouch!). This specialized version of GPT-2 played well during standard openings due to its training data but quickly blunders thereafter. While it consistently makes legal moves without understanding chess (even 30 moves into a game!), its performance was easily outclassed by traditional chess engines and human players --  [see some games in the blog post](http://blog.mathieuacher.com/GTP2AndChess/). At that time, it was impressive to see that transformers and a text completion engine can partially learn chess rules from pure text. 
+If you read this blog or follow me on Twitter, you know I have been interested for a while about generative AI technologies and chess. For instance,  I have reported on [GPT-2](https://blog.mathieuacher.com/GTP2AndChess/), one of the first promising version of GPT and trained on 3.5 million chess games with 146 TPUs (ouch!). This specialized version of GPT-2 played well during standard openings due to its training data but quickly blunders thereafter. While it consistently makes legal moves without understanding chess (even 30 moves into a game!), its performance was easily outclassed by traditional chess engines and human players --  [see some games in the blog post](https://blog.mathieuacher.com/GTP2AndChess/). At that time, it was impressive to see that transformers and a text completion engine can partially learn chess rules from pure text. 
 
 Since then, I have publicly shared and discussed some experiments like a prototype to play chess games with GPT-3 https://twitter.com/acherm/status/1616477887607242752 including some analysis that basically shows that GPT-3 proposes lots of illegal moves. I have also shown some failures of ChatGPT-4 https://twitter.com/acherm/status/1636441376375095306 Even this summer ChatGPT-4 has been defeated by Chessman Elite (beginner level, instantaneous answer, coming from the 90s): https://twitter.com/acherm/status/1691123390298443780 
 
@@ -145,9 +145,10 @@ There are lots of parameters of SF that can be controlled, both having an effect
 
 I have played a bit with `depth`, `Elo rating` , and `Skill level` . The conclusion is that it's easy to perform mistakes (e.g., setting Elo rating, keeping the depth to 15, and letting only 1 second to play), since it's highly sensitive to your hardware and workload. Hence, a better strategy is to use `Skill level` and rely on Elo estimates here: https://github.com/official-stockfish/Stockfish/issues/3635#issuecomment-1159552166
 
-I have tried different values of Skill level, from estimates of 1300 Elo to 
+By the way, super interesting discussion in this issue! What I've learned is that the estimates have to be taken with caution, since the numbers have been calibrated for a specific version of SF. I have also used `depth=20` (instead of 15).  (By the way, an immediate threat to my experiments is the SF version: I've exclusively used ` ./stockfish/stockfish/stockfish-ubuntu-x86-64-avx2
+Stockfish 16`. In general, there are other factors that can influence the result: hardware, SF settings such as Hash, Threads, etc.). Yet, it is the best method so far I know of. 
 
-By the way, super interesting discussion in this issue! What I've learned is that the estimates have to be taken with caution, since the numbers have been calibrated for a specific version of SF. Yet, it is the best method so far I know of. 
+I have tried different values of Skill level, from estimates of 1300 Elo to 2000 Elo, to make vary the strength of opponents. 
 
 #### Diversity of openings: uncontrolled, predetermined 
 
@@ -189,13 +190,13 @@ If we consider all possible "values" of:
 * engines with skill levels
 * random first moves or not 
 
-and combine all possible values, the number of experiments is huge. Let say: 4 possible values for GPT-model, 5 values for temperature, 3 values for max_token (I'm oversimplifying!), 2 values for prompt, 2 values for white/black pieces, 4 values for engines, and 3 values for random first moves or not... It's already *2880 experiments*  and only one game per experiment! 
+and combine all possible values, the number of experiments is huge. Let say: 4 possible values for GPT-model, 5 values for temperature, 3 values for max_token (I'm oversimplifying!), 2 values for prompt, 2 values for white/black pieces, 4 values for engines, and 3 values for random first moves or not... **It's already *2880 experiments*  and only one game per experiment!**
 
 Unfortunately, playing only one game per experiment would be a huge threat for measuring ability to play legal moves or for assessing Elo rating. Both GPTs and SFs have randomness and are stochastic, while considering a limited variability of chess game (only 1 among billions^billions possible) would not be representative at all. The point is we also need also to repeat experiments and play several games to draw solid conclusions. 10 games, 2880 experiments and settings: 28800 games. Why not. And not sure 10 is good enough. 
 
 If it was a just a question of computing cost, perhaps it's affordable -- one can envision to parallelize the experiments. However, there is another detail: $$$$$$$. You have to subscribe and pay when using the OpenAI API, typically a relatively small amount of dollars per request and tokens. However, thousands of games quickly cost a lot. In particular, `gpt-4` (chat mode) costs a lot since the price per token is higher comparatively and also the fact of concatenating moves, in long games, makes a "chat" session not cheap at all. 
 
-Hence, there is no escape: I can hardly, as an individual, run all possible experiments and cover the whole variability space. A *sample* of the experiments is rather needed. 
+Hence, there is no escape: I can hardly, as an individual, run all possible experiments and cover the whole variability space. A **sample** of the experiments is rather needed. 
 
 I used various strategies to reduce the variability dimensions:
 
@@ -207,9 +208,160 @@ I limited the budget to 100$.
 
 ### Dataset 
 
-I've compiled 765 games using a combination of GPT models, configurations of chess engines and other variation points below. 
+I've compiled 858 games using a combination of GPT models, configurations of chess engines and other variation points previously described:
+
+ * gpt-3.5-turbo-instruct : 573 games, among 401 with white piece and 172 with black pieces
+
+ * gpt-4 : 179 games, among 116 with white piece and 63 with black pieces
+
+ * gpt-3.5-turbo : 53 games, among 53 with white piece and 0 with black pieces
+
+ * text-davinci-003 : 73 games, among 43 with white piece and 30 with black pieces
+
+   
 
 ## Analysis and insights 
+
+
+
+### text-davinci-003
+
+Let's start with text-davinci-003, a relatively old model that serves for text completion. 
+
+Out of 73 games with davinci (with white pieces: 43, with black pieces: 30), 72 games contain illegal moves. There are 21 games against random chess engine among the 72 and so they also contains illegal moves. The only game with no illegal move is a defeat against Stockfish (Skill level 3) in 16 moves. 
+
+Games were short. The longest game was only 20 moves. The shortest game was 5 moves. The average and median game length was 12 moves. (Terminology note: move is one ply white piece and one ply black piece). In general, actual chess games are more around 40 moves on average. 
+
+A qualitative analysis of illegal moves shows that the moves are syntactically correct, but simply impossible on the chessboard (typically, some pieces cannot move to the indicated square).
+
+I did not insist much with `text-davinci-003`. Altered prompt had no specific effect and the overall conclusion is that **text-davinci-003 is unable to play an entire game because of illegal moves quickly generated, against basic SF engine or random chess engine**  It is not a big surprise and seems on par with what has been reported: a weak baseline, certainly closed to the specialized [GPT-2](https://blog.mathieuacher.com/GTP2AndChess/) 
+
+
+
+### gpt-3.5-turbo-instruct 
+
+With the model `gpt-3.5-turbo-instruct` (recall: text completion) I compiled 573 games, among 401 with white pieces and 172 with black pieces. 
+
+It's the model that caught attention lately. 
+
+Let's first focus on games played against SF at various skills. 
+
+#### Move ability against SF
+
+Out of 512 games against SF, 440 were legal games and 72 were illegal games, hence 14% of illegal games. 
+
+|          | illegal_move |
+| :------- | -----------: |
+| 1-0      |           49 |
+| 1-       |            4 |
+| Rxh5     |            1 |
+| {The     |            1 |
+| gxh8=    |            1 |
+| {[%clk   |            1 |
+| bxc8=    |            1 |
+| Nxa3     |            1 |
+| axb8=    |            1 |
+| bxc3     |            1 |
+| Qa7      |            1 |
+| dxe8=    |            1 |
+| {(Leko-G |            1 |
+| Qxc6+    |            1 |
+| Kb3      |            1 |
+| {M.      |            1 |
+| cxb8=    |            1 |
+| Bc5      |            1 |
+| f7       |            1 |
+| exf8=    |            1 |
+| {This    |            1 |
+
+We can categorize the illegal moves as follows.
+
+By far the most frequent pattern is "1-0" or "1-": it's clearly not a legal move, it means white pieces have won! How to interpret this? A first interpretation is simply the inability of `gpt-3.5-turbo-instruct` to play a legal move in a middle of a game. As a text, statistical-based completion engine, it's not that surprising after all to complete the game as such. A second interpretation is that `gpt-3.5-turbo-instruct` resigns on purpose. It's totally possible in chess to stop the game (and resign) since you consider that you're losing and have no chance to save the game. Interestingly, all games but one are with black pieces, going into the direction of this hypothesis. Furthermore, most of the games are either forced check mates or clear superior position. In detail, I've used SF to analyze the 48 games with 1-0: 19 games lead to forced mates, 25 games with centipawns greater than 5 (significant advantage!), and only 4 games that are unclear. Stated differently, the judgment of `gpt-3.5-turbo-instruct` is quite accurate, except in 4 games that should be continued. There is also a third case: 1-0 but with white piece. Like: hey, I'm winning, I dare to give the next moves, so 1-0, no discussion. 
+
+You can interpret as you want, the interpretations make sense, and are more or less supportive of `gpt-3.5-turbo-instruct`. My interpretation is in-between: it's an accidental error due to the very nature of the statistical-based completion, but the assessment of the position looks very accurate... Basically `gpt-3.5-turbo-instruct` finds that the best completion is to consider it as winning. A possible workaround is to ask `gpt-3.5-turbo-instruct` another completion (and move) when encountering 1-0. I didn't implement this workaround, since it's a grey zone: Are we here to assess GPT or to assess a corrected GPT? Is it fair to allow GPT to propose another move, when the move is illegal in the first place?
+
+
+
+A second pattern is the incorrect promotion. Instead of eg `gxh8=` the correct move is most likely `gxh8=Q` for promoting a queen (can well be a rook, a bishop, or knight...), but as `Q` is not specified, it's an illegal move. There are two possible fixes. First is related to max_tokens: experiments with this model and GPT-4, see hereafter, show that increasing max_tokens was not that helpful. A second approach is to help the GPT model and automatically modify the promotion as a queen, thus rewriting and fixing the syntactical move. It's again a grey zone: Are we assessing GPTs? Or can we take the liberty to fix outcomes of GPT? 
+
+A third pattern is related to a kind of unfinished comment: `{` is the starting of a PGN comment. Yea, it's really a text completion! 
+
+A fourth pattern concerns incorrect moves (no 1-0, no 1-, no incorrect promotion, or starting comment). I've manually analyzed the 8 mistakes:
+
+* 3 cases where a piece is "pinned", that is, a piece cannot be moved, since otherwise the king is checked (eg Nxa3 is not possible here: https://lichess.org/foSmbmil#28 or another example here: https://lichess.org/iuVNGc8W#94)
+* 3 cases where a piece is jumping another (ie there is an intermediate piece before the targeted square) eg https://lichess.org/0GAW3gLY#28 and Qxc6 is not possible
+* 1 case where a pawn takes another pawn of the same side (bxc3 is not possible here https://lichess.org/ILffB9ri#26)
+* 1 case where the square is not reachable (f7 is not possible: https://lichess.org/O5FD3mc2#348 after 174 games)
+
+The mistakes are illegal moves. I don't necessarily want to rank illegal moves, but I found the three with pinned pieces a bit tricky. Anyway, rules are rules. 
+
+A conclusion is that: 
+
+* `gpt-3.5-turbo-instruct` is not 100% robust and can generate illegal moves in numerous situations. 
+* though some "easy" fixes/workarounds are possible (by rewriting the generated text or "fairly" re-asking an actual move), there are some invalid moves that remain. If we consider "1-0", "comments", and "unspecified promotions" as fixable, then 1.5% of games still contain illegal moves. A possible general strategy is to ask GPT several ordered answers/completions, and choose the next move if the first try is illegal. In any case, some effort is needed to fix GPT and there is no guarantee it will be 100% accurate. 
+* `gpt-3.5-turbo-instruct` is capable of playing very long games (up to 174 moves!) with an average game length of 50 moves (median is 44 moves). It's remarkable! 
+
+![](/assets/gpt35_instruct_len_games_nmoves.png) 
+
+
+
+
+
+
+
+#### Elo rating against SF 
+
+#### Robustness and Elo rating vs random engine
+
+A set of experiments is related to games against a random chess engine that picks randomly a valid move across possible legal moves. The objective was first to assess ability of `gpt-3.5-turbo-instruct` to play legal moves, even with a strange opponent. 
+
+Out of 61 total games, there were 45 legal games and 16 illegal games. (An illegal game is a game that contains an illegal move due to GPT). 
+
+A manual analysis shows that illegal moves enter in the "accidental" category:
+
+```
+hxg8=      4
+gxh8=      3
+{[%clk     2
+dxc8=      1
+gxf8=      1
+exf8=      1
+cxd8=      1
+{The       1
+gxh1=      1
+bxc1=      1
+```
+
+
+
+A first and main pattern is the incorrect promotion (as previously against SF). A second pattern of illegal moves is a kind of comment or strange textual "artefacts". 
+
+Remarkably, the model won 98.89 % of *legal games* (44 games). 
+The only not won game is a draw: https://lichess.org/bE99x52y is due to repetition. 
+
+The legal games were short, mainly due to the poor level of a random chess engine: longest game was 33 moves, the shortest game was 2 moves (fun: `1. g4 e5 2. f4 Qh4# 0-1`), the average game length was 14.4 moves, the median game length was 14 moves.
+
+The overall conclusion is that random chess engines are not disturbing much `gpt-3.5-turbo-instruct` and causing specific difficulty. The illegal moves can somehow been fixed (with a standard, non-AI rewriting procedure) and were already present against SF. **If we ignore accidental errors, `gpt-3.5-turbo-instruct` quickly destroys a random chess engine.**  
+
+
+
+
+
+Score 100.0 % for games with only legal moves
+6 legal games and 17 illegal games (out of 23 total games)
+Illegal moves are           6
+Bxd6      1
+fxg7      1
+exf6      1
+Nf7+      1
+Qxf8#     1
+fxg8=Q    1
+Qd5       1
+...
+cxd6      1
+gxh8=Q    1
+Name: illegal_move, dtype: int64
+Quite severe example: https://lichess.org/FMoHsC7m with Bxd6
 
 
 
@@ -229,7 +381,7 @@ I've compiled 765 games using a combination of GPT models, configurations of che
 
 
 
-![](/assets/...png)
+
 
  
 
