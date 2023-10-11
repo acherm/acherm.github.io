@@ -48,9 +48,7 @@ The layout was not as I wanted.
 
 So, I asked the right question to ChatGPT, with a perfect English: 
 
-```
-How to change the layout and have a horizontal?
-```
+`How to change the layout and have a horizontal?`
 
 ChatGPT recommended to use `left to right direction`. 
 Indeed, it's something I've used in the past and actually written in the documentation. 
@@ -59,20 +57,15 @@ Indeed, it's something I've used in the past and actually written in the documen
 
 Unfortunately, the cardinality and roles' names are not really readable. The association should be longer and well, we need more space. 
 
-```
-How to enlarge space from left to right?
-```
+`How to enlarge space from left to right?`
 
 The recommendation about `packagePadding` parameter was not helpful. 
 
 ## Creativity and tricks: a signal
 
-```
-It has no visible effect.. any other idea?
-```
+`It has no visible effect.. any other idea?` 
 
 And here it's beginning to be interested.
-
 
 ```
 @startuml
