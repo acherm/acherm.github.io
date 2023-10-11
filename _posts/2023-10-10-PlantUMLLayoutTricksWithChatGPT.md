@@ -48,7 +48,7 @@ The layout was not as I wanted.
 
 So, I asked the right question to ChatGPT, with a perfect English: 
 
-<blockquote style='display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;'>How to change the layout and have a horizontal?</blockquote>.
+<blockquote style='display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;'>How to change the layout and have a horizontal?</blockquote>
 
 ChatGPT recommended to use `left to right direction`. 
 Indeed, it's something I've used in the past and actually written in the documentation. 
@@ -57,7 +57,7 @@ Indeed, it's something I've used in the past and actually written in the documen
 
 Unfortunately, the cardinality and roles' names are not really readable. The association should be longer and well, we need more space. 
 
-`How to enlarge space from left to right?`
+<blockquote style='display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;'>How to enlarge space from left to right?<blockquote>
 
 The recommendation about `packagePadding` parameter was not helpful. 
 
@@ -123,9 +123,7 @@ and then hiding these elements!
 
 A magical recipe in prompt engineering is of course to complain
 
-```
-not working
-```
+<blockquote style='display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;'>not working</blockquote>
 
 and here is the new proposition with "notes" to fake modeling elements. 
 
@@ -175,9 +173,7 @@ And from what I have learned in prior interactions (see above) it's certainly po
 
 ## ChatGPT + Human to hack 
 
-```
-can't you use skinParams now to make notes invisible?
-```
+<blockquote style='display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;'>can't you use skinParams now to make notes invisible?</blockquote>
 
 and here is the final result
 
