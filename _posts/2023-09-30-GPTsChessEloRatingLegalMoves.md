@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Debunking the Chessboard: Confronting GPTs Against Chess Engines to Estimate Elo Ratings and Assess Legal Move Abilities"
+title:  "(Unfinished Draft) Debunking the Chessboard: Confronting GPTs Against Chess Engines to Estimate Elo Ratings and Assess Legal Move Abilities"
 date:   2023-09-30 011:54:29 +0200
 tags: [ChatGPT, LLM, generative AI, variability, programming]
 draft: true

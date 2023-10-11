@@ -44,7 +44,7 @@ Question --> "1..* options" Option
 
 The layout was not as I wanted.
 
-![first layout](./assets/plantUMLFirstLayout.png)
+![first layout](/assets/plantUMLFirstLayout.png)
 
 So, I asked the right question to ChatGPT, with a perfect English: 
 
@@ -55,7 +55,7 @@ How to change the layout and have a horizontal?
 ChatGPT recommended to use `left to right direction`. 
 Indeed, it's something I've used in the past and actually written in the documentation. 
 
-![second layout](./assets/plantSecondLayout.png)
+![second layout](/assets/plantSecondLayout.png)
 
 Unfortunately, the cardinality and roles' names are not really readable. The association should be longer and well, we need more space. 
 
@@ -121,7 +121,7 @@ Question --> "1..* options" Option
 @enduml
 ```
 
-![third layout](assets/plantSecondLayout.png)
+![third layout](/assets/plantSecondLayout.png)
 
 It's not working, but the idea is brilliant: faking elements to enlarge spaces and forcing the layout to move the cardinalities/roles' names...
 and then hiding these elements! 
@@ -235,7 +235,7 @@ Question --> "1..* options" Option
 
 Absolutely perfect! 
 
-![final layout](./assets/plantfinalLayout.png)
+![final layout](/assets/plantfinalLayout.png)
 
 ## Conclusion 
 
