@@ -48,7 +48,7 @@ The layout was not as I wanted.
 
 So, I asked the right question to ChatGPT, with a perfect English: 
 
-<blockquote style="display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;>How to change the layout and have a horizontal?</blockquote>.
+<span style="display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;>How to change the layout and have a horizontal?</span>.
 
 ChatGPT recommended to use `left to right direction`. 
 Indeed, it's something I've used in the past and actually written in the documentation. 
