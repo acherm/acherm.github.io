@@ -297,19 +297,31 @@ The mistakes are illegal moves. I don't necessarily want to rank illegal moves, 
 
 A conclusion is that: 
 
-* `gpt-3.5-turbo-instruct` is not 100% robust and can generate illegal moves in numerous situations. 
-* though some "easy" fixes/workarounds are possible (by rewriting the generated text or "fairly" re-asking an actual move), there are some invalid moves that remain. If we consider "1-0", "comments", and "unspecified promotions" as fixable, then 1.5% of games still contain illegal moves. A possible general strategy is to ask GPT several ordered answers/completions, and choose the next move if the first try is illegal. In any case, some effort is needed to fix GPT and there is no guarantee it will be 100% accurate. 
-* `gpt-3.5-turbo-instruct` is capable of playing very long games (up to 174 moves!) with an average game length of 50 moves (median is 44 moves). It's remarkable! 
+* On the one hand, `gpt-3.5-turbo-instruct` is not 100% robust and can generate illegal moves in numerous situations. Though some "easy" fixes/workarounds are possible (by rewriting the generated text or "fairly" re-asking an actual move), there are some invalid moves that remain. If we consider "1-0", "comments", and "unspecified promotions" as fixable, then 1.5% of games still contain illegal moves. A possible general strategy is to ask GPT several ordered answers/completions, and choose the next move if the first try is illegal. In any case, some effort is needed to fix GPT and there is no guarantee it will be 100% accurate. 
 
-![](/assets/gpt35_instruct_len_games_nmoves.png) 
+* On the other hand, `gpt-3.5-turbo-instruct` is capable of playing very long games (up to 174 moves!) with an average game length of 50 moves (median is 44 moves). It's remarkable since an hypothesis is that GPT has more and more difficulties once a game progress, having more chances to encounter rare positions that are not in the training set.  Another remarkable perspective is to have a look at the frequency of legal moves: "only" 0.28% of moves are illegal (out of 25781 moves played against SF), and "only" 0.089% if we do not consider moves "1-0".  
 
+  ![](/assets/gpt35_instruct_len_games_nmoves.png) 
 
+* Obviously, all these numbers should be put in perspective. In a more critical domain, such errors can be  dramatic and considered as unacceptable. 
 
 
 
 
 
 #### Elo rating against SF 
+
+What is the rating of `gpt-3.5-turbo-instruct`? 
+
+A basic estimate is to have a look at the scores against SF. For instance, `gpt-3.5-turbo-instruct` scores 148.5 for games with only legal moves out of 440 games (one win is 1, one draw is 0.5). A score of 33.75%: `score = (total_wins + (total_draws * 0.5)) / (total_wins + total_losses + total_draws)` 
+
+In addition to the raw score, we have to take the estimated ratings of opponents (SF) into account. In detail, here is the distribution of games against different SF at different skills, together with Elo estimates (see previous explanations).
+
+![](/assets/stockfish_elo_distribution.png) 
+
+
+
+
 
 #### Robustness and Elo rating vs random engine
 
