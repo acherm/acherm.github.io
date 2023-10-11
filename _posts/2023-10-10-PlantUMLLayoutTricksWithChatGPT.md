@@ -48,7 +48,7 @@ The layout was not as I wanted.
 
 So, I asked the right question to ChatGPT, with a perfect English: 
 
-`How to change the layout and have a horizontal?`
+<span style="color:blue">How to change the layout and have a horizontal?</span>.
 
 ChatGPT recommended to use `left to right direction`. 
 Indeed, it's something I've used in the past and actually written in the documentation. 
