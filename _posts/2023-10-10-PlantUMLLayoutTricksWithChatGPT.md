@@ -114,7 +114,7 @@ Question --> "1..* options" Option
 @enduml
 ```
 
-![third layout](/assets/plantSecondLayout.png)
+![third layout](/assets/plantThirdLayout.png)
 
 It's not working, but the idea is brilliant: faking elements to enlarge spaces and forcing the layout to move the cardinalities/roles' names...
 and then hiding these elements! 
