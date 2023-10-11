@@ -9,8 +9,8 @@ Customizing the layout (or look and feel) of PlantUML diagrams is tricky.
 There is a dense and comprehensive [documentation](https://plantuml.com/class-diagram), but there is still a gap between what we want and what we get. 
 There are tricks and hacks to overcome default behavior or missing features of PlantUML. 
 Here I am sharing a fun session with ChatGPT that have successfully assisted me in a quite creative way! 
-The solution seems not in the documentation, and the "hack" can certainly be systematically applied. 
-Or did I miss something with PlantUML
+The solution seems not to be in the documentation, and the "hack" can certainly be systematically applied. 
+Or did I miss something with PlantUML?
 
 ## Session and first tries
 
