@@ -57,15 +57,15 @@ Indeed, it's something I've used in the past and actually written in the documen
 
 Unfortunately, the cardinality and roles' names are not really readable. The association should be longer and well, we need more space. 
 
-<blockquote style='display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;'>How to enlarge space from left to right?<blockquote>
+<blockquote style='display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;'>How to enlarge space from left to right?</blockquote>
 
 The recommendation about `packagePadding` parameter was not helpful. 
 
 ## Creativity and tricks: a signal
 
-`It has no visible effect.. any other idea?` 
+<blockquote style='display: inline; quotes: "\201C""\201D""\2018""\2019"; border-left: 10px solid #ccc;'>It has no visible effect.. any other idea?</blockquote> 
 
-And here it's beginning to be interested.
+And here it's beginning to be interested:
 
 ```
 @startuml
