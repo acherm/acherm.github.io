@@ -523,7 +523,7 @@ Details below:
 #### Robustness and Elo rating of `gpt-4` vs random engine
 
 Owing to the different uncertainties regarding Stockfish engines actual Elo rating, the method to compute Elo, the number and diversity of games, and the fact that GPTs generate sometimes illegal moves, it is hard to give a precise and final number. Even providing confidence intervals is not that easy in this context! 
-Overall, a reasonable estimate is that the Elo **rating of `gpt-3.5-turbo-instruct` is 1700 Elo (+/- 50 Elo)**. 
+Overall, a reasonable estimate is that the Elo **rating of `gpt-4` is 1700 Elo (+/- 50 Elo)**. 
 It is quite consistent with what have been reported in the informal X/Twitter space: 1700 Elo for Joel Eriksson, 1800 Elo for Grant Slatton and Boris Power. 
 
 
@@ -533,6 +533,7 @@ The objective was to assess ability of `gpt-4` to play legal moves, even with a 
 
 Out of 85 games against SF, 59 were legal games and 26 were illegal games, hence *31% of illegal games*.
 Illegal moves:
+
 |       |   illegal_move |
 |:------|---------------:|
 | 12... |              2 |
@@ -579,7 +580,7 @@ Furthermore, **`gpt-4` is not able to play at the level of `gpt-3.5-turbo-instru
 
 It is somehow surprising since `gpt-4` is a more recent model, with more parameters (?) or at least with innovations that are supposed to give better results than older models.
 There could be several explanations:
- * `gpt-4` has been fine-tuned for chat, not for text completion, and it can have an impact on the ability to play legal moves. A countermeasure would be to find the "right" prompt, but it's not that easy. It was already an engineering effort to make `gpt-4` play chess games. For instance, I implemented a post-process mechanism that automatically converts promotion (contrary to what I have done with `gpt-3.5-turbo-instruct`), since otherwiste the illegal move/game rate would be much higher. There was also more effort to parse the outcome of `gpt-4` that tends to not only propose its own move but a series of moves. I also had to play with max_token. Overall, it's not clear on how to improve the situation at the prompt engineering level: changing system role could be a solution to explore. Another hypothesis is that the fine-tuning has fundamentally changed the model and degrading its ability to play chess -- the only solution would be to re-train the model, or undo what has been done (is it then `gpt-3.5-turbo-instruct`?).  
+ * `gpt-4` has been fine-tuned for chat, not for text completion, and it can have an impact on the ability to play legal moves. A countermeasure would be to find the "right" prompt, but it's not that easy. It was already an engineering effort to make `gpt-4` play chess games. For instance, I implemented a post-process mechanism that automatically converts promotion (contrary to what I have done with `gpt-3.5-turbo-instruct`), since otherwise the illegal move/game rate would be much higher. There was also more effort to parse the outcome of `gpt-4` that tends to not only propose its own move but a series of moves. I also had to play with max_token. Overall, it's not clear on how to improve the situation at the prompt engineering level: changing system role could be a solution to explore. Another hypothesis is that the fine-tuning has fundamentally changed the model and degrading its ability to play chess -- the only solution would be to re-train the model, or undo what has been done (is it then `gpt-3.5-turbo-instruct`?).  
  * `gpt-4` has been trained on a different chess-related dataset. We completely ignore what training set has been used for either `gpt-4` or `gpt-3.5-turbo-instruct` and what is the relationship between the two
  * setting a better temperature could enhance the results... the few experiments I've done with temperature=0.8 were not conclusive. But I admit I didn't insist much. Intuitively, I am not seeing a reason why temperature would help here: more creativity when you're unable to play legal moves? I don't think so, but I can be wrong. 
 
