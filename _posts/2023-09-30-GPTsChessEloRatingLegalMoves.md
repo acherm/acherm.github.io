@@ -22,11 +22,11 @@ Overall, I have compiled a long list of chess+GPT things to explore and, well, I
 
 ## Signals and related work in the X/Twitter space  
 
-The basic reason is that Grant Slatton reported, on a quite viral tweet https://twitter.com/GrantSlatton/status/1703913578036904431, that "the new GPT model, gpt-3.5-turbo-instruct, can play chess around 1800 Elo." Interestingly, Grant had previously reported that ChatGPT-4 https://twitter.com/GrantSlatton/status/1699441158450270472 cannot play chess, on par with my past observations and informal experiments. Following Grant's tweet, Joel Eriksson also suggested that "GPT-3.5 playing chess against Stockfish set to 1700 ELO." https://twitter.com/OwariDa/status/1704170914659582281 and shared some code. Though I completely disagree with "Ping @ylecun, @GaryMarcus & others who claim LLMs are incapable of reasoning, and don't create world models", I toke it as a reproducibility challenge ;-) 
+The basic reason is that Grant Slatton reported, on a quite viral tweet https://twitter.com/GrantSlatton/status/1703913578036904431, that "the new GPT model, gpt-3.5-turbo-instruct, can play chess around 1800 Elo." Interestingly, Grant had previously reported that ChatGPT-4 https://twitter.com/GrantSlatton/status/1699441158450270472 cannot really play chess, on par with my past observations and informal experiments. Following Grant's tweet, Joel Eriksson also suggested that "GPT-3.5 playing chess against Stockfish set to 1700 ELO." https://twitter.com/OwariDa/status/1704170914659582281 and shared some code. Though I completely disagree with "Ping @ylecun, @GaryMarcus & others who claim LLMs are incapable of reasoning, and don't create world models", I toke it as a **reproducibility** challenge ;-) 
 
 Another signal that caught my attention was an experiment suggesting that if you throw the first random moves, GPTs fall apart: https://twitter.com/GaryMarcus/status/1706672864970363106. (Remarkably, the tweet has been deleted since then, with nice clarifications: https://twitter.com/paul_cal/status/1707303586932072862)
 
-An issue of all these signals in the X/Twitter space is that people very quickly jump to strong conclusions or interpretation or excuses. There are also interesting hypothesis like "it appears this was just the RLHF'd chat models. The pure completion model succeeds." to explain the sudden improvement https://twitter.com/GrantSlatton/status/1703913578036904431. Overall, all of this calls to investigate seriously some interesting questions, in short to reproduce and replicate experiments! 
+An issue of all these signals in the X/Twitter space is that people very quickly jump to strong conclusions or interpretation or excuses. There are also interesting hypotheses like "it appears this was just the RLHF'd chat models. The pure completion model succeeds." to explain the sudden improvement https://twitter.com/GrantSlatton/status/1703913578036904431. Overall, all of these calls to investigate seriously some interesting questions, in short to *reproduce and replicate experiments*! 
 
 
 
@@ -34,7 +34,7 @@ An issue of all these signals in the X/Twitter space is that people very quickly
 
 A first natural question is to assess the Elo rating of GPTs. Beforehand and hence a pre-requisite question is to assess the ability of GPTs to play legal moves. After all, playing illegal moves in practical chess settings has the consequence of losing games and decreasing your Elo rating! 
 
-A general issue with all these experiments I've read on X/Twitter, including mine, is that we're not sure about the generalization of results. Most of experiments have been done on specific GPTs, with specific prompts, against specific engines, with only a few games. For instance, "Reports of illegal moves are pretty common so I find this hard to swallow, Wondering about your methods and sample size." https://twitter.com/GaryMarcus/status/1704112674932502767 
+A general issue with all these experiments I've read on X/Twitter, including mine, is that we're not sure about the generalization of results. Most of the experiments have been done on specific GPTs, with specific prompts, against specific engines, with only a few games. For instance, "Reports of illegal moves are pretty common so I find this hard to swallow, Wondering about your methods and sample size." https://twitter.com/GaryMarcus/status/1704112674932502767 
 
 Hence, there is an opportunity to automate the experiments (e.g., for synthesizing games of GPTs) and then expand the set of experiments. 
 
@@ -154,7 +154,7 @@ I have tried different values of Skill level, from estimates of 1300 Elo to 2000
 
 A threat I was anticipating is the lack of diversity for the first moves (eg always the same opening and series of moves), either due to SF or GPTs. Hence I have started programming ways to diversity with known, predetermined openings, eg: 
 
-```
+```python
 ###### case known first moves (to diversify a bit the openings)
 def diversify_with_knownopenings():
     nmove = 2
@@ -222,7 +222,7 @@ I've compiled 858 games using a combination of GPT models, configurations of che
 
 ## Analysis and insights 
 
-
+Enough experimental settings and discussions, we want results! 
 
 ### text-davinci-003
 
@@ -241,14 +241,16 @@ I did not insist much with `text-davinci-003`. Altered prompt had no specific ef
 ### gpt-3.5-turbo-instruct 
 
 With the model `gpt-3.5-turbo-instruct` (recall: text completion) I compiled 573 games, among 401 with white pieces and 172 with black pieces. 
-
-It's the model that caught attention lately. 
+It's the model that caught attention lately, and it deserves to gather more games and experiments.
 
 Let's first focus on games played against SF at various skills. 
 
 #### Move ability against SF
 
-Out of 512 games against SF, 440 were legal games and 72 were illegal games, hence 14% of illegal games. 
+Out of 512 games against SF, 440 were legal games and 72 were illegal games, hence *14% of illegal games*. 
+It seems huge at first glance. 
+
+We can categorize the illegal moves as follows:
 
 |          | illegal_move |
 | :------- | -----------: |
@@ -274,12 +276,10 @@ Out of 512 games against SF, 440 were legal games and 72 were illegal games, hen
 | exf8=    |            1 |
 | {This    |            1 |
 
-We can categorize the illegal moves as follows.
 
 By far the most frequent pattern is "1-0" or "1-": it's clearly not a legal move, it means white pieces have won! How to interpret this? A first interpretation is simply the inability of `gpt-3.5-turbo-instruct` to play a legal move in a middle of a game. As a text, statistical-based completion engine, it's not that surprising after all to complete the game as such. A second interpretation is that `gpt-3.5-turbo-instruct` resigns on purpose. It's totally possible in chess to stop the game (and resign) since you consider that you're losing and have no chance to save the game. Interestingly, all games but one are with black pieces, going into the direction of this hypothesis. Furthermore, most of the games are either forced check mates or clear superior position. In detail, I've used SF to analyze the 48 games with 1-0: 19 games lead to forced mates, 25 games with centipawns greater than 5 (significant advantage!), and only 4 games that are unclear. Stated differently, the judgment of `gpt-3.5-turbo-instruct` is quite accurate, except in 4 games that should be continued. There is also a third case: 1-0 but with white piece. Like: hey, I'm winning, I dare to give the next moves, so 1-0, no discussion. 
 
 You can interpret as you want, the interpretations make sense, and are more or less supportive of `gpt-3.5-turbo-instruct`. My interpretation is in-between: it's an accidental error due to the very nature of the statistical-based completion, but the assessment of the position looks very accurate... Basically `gpt-3.5-turbo-instruct` finds that the best completion is to consider it as winning. A possible workaround is to ask `gpt-3.5-turbo-instruct` another completion (and move) when encountering 1-0. I didn't implement this workaround, since it's a grey zone: Are we here to assess GPT or to assess a corrected GPT? Is it fair to allow GPT to propose another move, when the move is illegal in the first place?
-
 
 
 A second pattern is the incorrect promotion. Instead of eg `gxh8=` the correct move is most likely `gxh8=Q` for promoting a queen (can well be a rook, a bishop, or knight...), but as `Q` is not specified, it's an illegal move. There are two possible fixes. First is related to max_tokens: experiments with this model and GPT-4, see hereafter, show that increasing max_tokens was not that helpful. A second approach is to help the GPT model and automatically modify the promotion as a queen, thus rewriting and fixing the syntactical move. It's again a grey zone: Are we assessing GPTs? Or can we take the liberty to fix outcomes of GPT? 
@@ -287,7 +287,6 @@ A second pattern is the incorrect promotion. Instead of eg `gxh8=` the correct m
 A third pattern is related to a kind of unfinished comment: `{` is the starting of a PGN comment. Yea, it's really a text completion! 
 
 A fourth pattern concerns incorrect moves (no 1-0, no 1-, no incorrect promotion, or starting comment). I've manually analyzed the 8 mistakes:
-
 * 3 cases where a piece is "pinned", that is, a piece cannot be moved, since otherwise the king is checked (eg Nxa3 is not possible here: https://lichess.org/foSmbmil#28 or another example here: https://lichess.org/iuVNGc8W#94)
 * 3 cases where a piece is jumping another (ie there is an intermediate piece before the targeted square) eg https://lichess.org/0GAW3gLY#28 and Qxc6 is not possible
 * 1 case where a pawn takes another pawn of the same side (bxc3 is not possible here https://lichess.org/ILffB9ri#26)
@@ -295,25 +294,42 @@ A fourth pattern concerns incorrect moves (no 1-0, no 1-, no incorrect promotion
 
 The mistakes are illegal moves. I don't necessarily want to rank illegal moves, but I found the three with pinned pieces a bit tricky. Anyway, rules are rules. 
 
+#### Do temperature and altered prompts influence the ability to play legal moves?
+
+I've increased the temperature to 0.8 (instead of 0) for some games. 
+19.73 % of games of the dataset are with temperature 0.8, the rest being temperature 0. 
+Among illegal games, 43 are with temperature=0 and 29 are with temperature=0.8. 
+It's not a huge difference and significant, but increasing temperature leads to slightly more illegal moves.
+A qualitative analysis of illegal moves with temperature=0.8 shows that the same patterns are present (1-0, incorrect promotion, etc.). 
+
+I've also tried to use an altered prompt (see above).
+99 games with `gpt-3.5-turbo-instruct` contains an altered prompt (19.34 % games with altered prompt). 
+19 illegal games are with altered prompts and 53 illegal games are with original prompts. 
+We have, again, similar patterns of illegal moves ("1-0" 16 times, incorrect promotion 1 time, and 2 illegal movements of pieces).
+
+Hence, it seems that **temperature and altered prompts have no significant effect on the ability to play legal moves**. 
+There is no magic prompt or PGN headers -- but the original prompt and idea of putting "in-context" PGN headers is a general good approach.
+
+
+
+#### Conclusion about ability of gpt-3.5-turbo-instruct to play legal moves
+
 A conclusion is that: 
 
-* On the one hand, `gpt-3.5-turbo-instruct` is not 100% robust and can generate illegal moves in numerous situations. Though some "easy" fixes/workarounds are possible (by rewriting the generated text or "fairly" re-asking an actual move), there are some invalid moves that remain. If we consider "1-0", "comments", and "unspecified promotions" as fixable, then 1.5% of games still contain illegal moves. A possible general strategy is to ask GPT several ordered answers/completions, and choose the next move if the first try is illegal. In any case, some effort is needed to fix GPT and there is no guarantee it will be 100% accurate. 
+* On the one hand, `gpt-3.5-turbo-instruct` is not 100% robust and can generate illegal moves in numerous situations (*14% of games!*). Though some "easy" fixes/workarounds are possible (by rewriting the generated text or "fairly" re-asking an actual move), there are some invalid moves that remain. If we consider "1-0", "comments", and "unspecified promotions" as fixable, then *1.5% of games still contain illegal moves*. A possible general strategy is to ask GPT several ordered answers/completions, and choose the next move if the first try is illegal. In any case, some effort is needed to fix GPT and there is no guarantee it will be 100% accurate. 
 
-* On the other hand, `gpt-3.5-turbo-instruct` is capable of playing very long games (up to 174 moves!) with an average game length of 50 moves (median is 44 moves). It's remarkable since an hypothesis is that GPT has more and more difficulties once a game progress, having more chances to encounter rare positions that are not in the training set.  Another remarkable perspective is to have a look at the frequency of legal moves: "only" 0.28% of moves are illegal (out of 25781 moves played against SF), and "only" 0.089% if we do not consider moves "1-0".  
+* On the other hand, `gpt-3.5-turbo-instruct` is capable of playing very long games (*up to 174 moves!*) with an average game length of 50 moves (median is 44 moves). See box plot below! It's remarkable since a hypothesis is that GPT has more and more difficulties once a game progress, having more chances to encounter rare positions that are not in the training set. It is not the case, at least for the ability to play legal moves. Another remarkable perspective is to have a look at the frequency of legal moves: *"only" 0.28% of moves are illegal (out of 25781 moves played against SF), and "only" 0.089% if we do not consider moves "1-0"*.  
 
   ![](/assets/gpt35_instruct_len_games_nmoves.png) 
 
-* Obviously, all these numbers should be put in perspective. In a more critical domain, such errors can be  dramatic and considered as unacceptable. 
-
-
-
+* Obviously, all these numbers should be put in perspective. In a more critical domain, such errors can be dramatic and considered as unacceptable. 
 
 
 #### Elo rating against SF 
 
-What is the rating of `gpt-3.5-turbo-instruct`? 
+Now a more ambitious question: What is the strength and rating of `gpt-3.5-turbo-instruct`? 
 
-A basic estimate is to have a look at the scores against SF. For instance, `gpt-3.5-turbo-instruct` scores 148.5 for games with only legal moves out of 440 games (one win is 1, one draw is 0.5). A score of 33.75%: `score = (total_wins + (total_draws * 0.5)) / (total_wins + total_losses + total_draws)` 
+A basic estimate is to have a look at the scores against SF. Specifically, `gpt-3.5-turbo-instruct` scores 148.5 for games with only legal moves out of 440 games (one win is 1, one draw is 0.5). A score of 33.75%: `score = (total_wins + (total_draws * 0.5)) / (total_wins + total_losses + total_draws)` 
 
 In addition to the raw score, we have to take the estimated ratings of opponents (SF) into account. In detail, here is the distribution of games against different SF at different skills, together with Elo estimates (see previous explanations).
 
