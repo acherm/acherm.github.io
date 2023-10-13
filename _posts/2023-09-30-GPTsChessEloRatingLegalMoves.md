@@ -7,6 +7,8 @@ tags: [ChatGPT, LLM, generative AI, variability, programming]
 
 Can GPTs like ChatGPT-4 play legal moves and finish chess games? What is the actual Elo rating of GPTs? There have been some hypes, (subjective) assessment, and buzz lately from "GPT is capable of beating 99% of players?" to "GPT plays lots of illegal moves" to "here is a magic prompt with Magnus Carlsen in the headers". There are more or less solid anecdotes here and there, with counter-examples showing impressive failures or magnified stories on how GPTs can play chess well. I've resisted for a long time, but I've decided to do it seriously! I have synthesized hundreds of games with different variants of GPT, different prompt strategies, against different chess engines (with various skills). This post is here to document the variability space of experiments I have explored so far... and the underlying insights and results. The tldr; is that `gpt-3.5-turbo-instruct` operates around 1750 Elo and, though there are avoidable errors, is often capable of playing end-to-end legal moves, even with black pieces or when the game starts with strange openings. ChatGPT-3.5-turbo and more surprisingly ChatGPT-4, however, are much more brittle. Please do not stop to the tldr; and read the entire blog posts: there are subtilities and findings worth discussing! 
 
+!["Photo of a chessboard with various parrots huddled together, symbolizing different GPT versions, looking puzzled at the chess pieces. On the opposite side, a serene fish, representing Stockfish, contemplates its next move. In the background, a vigilant woman referee observes the game, ensuring the rules are followed."](/assets/gptchessDallE3.png)
+
 
 ## GPTs and Chess since the 2020 prehistoric days 
 
@@ -328,12 +330,36 @@ A conclusion is that:
 #### Elo rating against SF 
 
 Now a more ambitious question: What is the strength and rating of `gpt-3.5-turbo-instruct`? 
-
-A basic estimate is to have a look at the scores against SF. Specifically, `gpt-3.5-turbo-instruct` scores 148.5 for games with only legal moves out of 440 games (one win is 1, one draw is 0.5). A score of 33.75%: `score = (total_wins + (total_draws * 0.5)) / (total_wins + total_losses + total_draws)` 
+A basic estimate is to have a look at the scores against SF. Specifically: 
+ * `gpt-3.5-turbo-instruct` scores 148.5 for games with only legal moves out of 440 games (one win is 1, one draw is 0.5). A score of 33.75%: `score = (total_wins + (total_draws * 0.5)) / (total_wins + total_losses + total_draws)` 
+ * if we count all 512 games (being legal of illegal, considering illegal moves lead to a defeat for GPT) `gpt-3.5-turbo-instruct` scores 29.0% 
 
 In addition to the raw score, we have to take the estimated ratings of opponents (SF) into account. In detail, here is the distribution of games against different SF at different skills, together with Elo estimates (see previous explanations).
 
 ![](/assets/stockfish_elo_distribution.png) 
+
+There are several [ways to compute the rating of a GPT](https://en.wikipedia.org/wiki/Chess_rating_system); it's part of the variability space of the experiments! 
+I have retained one method, based on [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system), specifically the method used in the FIDE rating system.
+In this system, the performance rating of a player is the average of the ratings of the opponents plus a constant `dp`.
+`dp` is based on a player's tournament percentage score `p`, which is then used as the key in a lookup table available from [FIDE Handbook](https://handbook.fide.com/chapter/B022017):
+```python
+def fide_elo_computation(dfe, model_name):
+  average_opponents_ratings = compute_average(dfe, model_name)
+  score = compute_score(dfe, model_name)
+  dp = lookup_fide_table(score)
+  return average_opponents_ratings + dp
+``` 
+
+There are debates about how FIDE should compute Elo rating. For example, read the clarification of K. Regan https://rjlipton.wpcomstaging.com/2019/02/03/a-strange-horizon/ in reaction to the [report of Jeff Sonas](https://www.fide.com/docs/presentations/Sonas%20Proposal%20-%20Repairing%20the%20FIDE%20Standard%20Elo%20Rating%20System.pdf) about ratings below 2000, a bit similar to the situation of GPTs.
+
+Anyway, what is the Elo rating of `gpt-3.5-turbo-instruct`?
+ * 1714 Elo, considering only legal games
+ * 1672 Elo considering all games
+
+`gpt-3.5-turbo-instruct` is capable of winning games against stronger Elo opponents (even more than 2000 Elo!), but it's not that frequent.
+Here is the distribution of scores against SF at different skills.
+
+![](/assets/elo_distribution-scores-GPT35-instruct.png)
 
 
 
