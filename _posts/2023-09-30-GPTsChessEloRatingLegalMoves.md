@@ -27,8 +27,8 @@ Overall, I have compiled a long list of chess+GPT things to explore and, well, I
 ## Signals and related work in the X/Twitter space  
 
 The basic reason is that Grant Slatton reported, on a quite viral tweet https://twitter.com/GrantSlatton/status/1703913578036904431, that "the new GPT model, gpt-3.5-turbo-instruct, can play chess around 1800 Elo." Interestingly, Grant had previously reported that ChatGPT-4 https://twitter.com/GrantSlatton/status/1699441158450270472 cannot really play chess, on par with my past observations and informal experiments. Following Grant's tweet, Joel Eriksson also suggested that "GPT-3.5 playing chess against Stockfish set to 1700 ELO." https://twitter.com/OwariDa/status/1704170914659582281 and shared some code.
-Though I completely disagree with "Ping @ylecun, @GaryMarcus & others who claim LLMs are incapable of reasoning, and don't create world models", I toke it as a **reproducibility** challenge ;-) 
-Also, Boris Power member of technical staff at OpenAI stated "I don’t think anything has been published unfortunately. ELO is around 1800" https://twitter.com/BorisMPower/status/1690050553525792768
+Though I disagree with the claim and the [follow-up tweet](https://twitter.com/OwariDa/status/1704060106114040086) (*"Ping @ylecun, @GaryMarcus & others who claim LLMs are incapable of reasoning, and don't create world models"*), I find the results intriguing and toke it as a **reproducibility** challenge ;-) 
+Also, Boris Power member of technical staff at OpenAI stated "I don’t think anything has been published, unfortunately. ELO is around 1800" https://twitter.com/BorisMPower/status/1690050553525792768
 
 Another signal that caught my attention was an experiment suggesting that if you throw the first random moves, GPTs fall apart: https://twitter.com/GaryMarcus/status/1706672864970363106. (Remarkably, the tweet has been deleted since then, with nice clarifications: https://twitter.com/paul_cal/status/1707303586932072862)
 
@@ -521,11 +521,6 @@ Details below:
 ![](/assets/elo_distribution-scores-gpt-4.png)
 
 
-#### Robustness and Elo rating of `gpt-4` vs random engine
-
-Owing to the different uncertainties regarding Stockfish engines actual Elo rating, the method to compute Elo, the number and diversity of games, and the fact that GPTs generate sometimes illegal moves, it is hard to give a precise and final number. Even providing confidence intervals is not that easy in this context! 
-Overall, a reasonable estimate is that the Elo **rating of `gpt-4` is 1700 Elo (+/- 50 Elo)**. 
-It is quite consistent with what have been reported in the informal X/Twitter space: 1700 Elo for Joel Eriksson, 1800 Elo for Grant Slatton and Boris Power. 
 
 
 #### Robustness and Elo rating of `gpt-4` vs random engine
@@ -573,6 +568,11 @@ The performance score of `gpt-4` is:
 
 Hence, *`gpt-4` is almost capable of winning with a perfect score against random chess engine, but there is a condition: it should be able to play legal moves all along, which is not the case*.
 
+#### Robustness of `gpt-4` with random first moves
+
+I didn't gather games with random first moves. 
+I considered that the results with `gpt-4` were already conclusive about its inability to play legal moves. 
+
 
 #### Conclusion and discussion about ChatGPT-4
  
@@ -615,7 +615,9 @@ However, we have solid results and insights:
  * `davinci-003`, another completion model, is not able to play an entire game because of illegal moves quickly generated, against basic Stockfish engine or random chess engine. It is not a big surprise and seems on par with what has been reported: a weak baseline. 
  * More surprisingly `ChatGPT-4` is much more brittle, with a lot of illegal moves (around 30% of the games) and a low Elo rating (around 1300). The illegal moves are not easy to fix, and seem related to inability to master chess rules. Hence, `ChatGPT-4`, despite being more recent, is a weaker model than `gpt-3.5-turbo-instruct` for playing chess. I discussed several possible explanations: prompt, temperature, training set, etc. The fine-tuning for chat seems to be the main reason.
   `ChatGPT-3.5-turbo` has been tested, too, but it is not able to play an entire game due to the generation of a lot of illegal moves.
- * There has been some inquiries about the hypothesis GPT-4 is getting worse over time. However, evidence is weak and lack of transparency of OpenAI does not help. For instance, this viral paper https://arxiv.org/abs/2307.09009 has too many flaws as demonstrated here: https://www.aisnakeoil.com/p/is-gpt-4-getting-worse-over-time. With this study, the results about `ChatGPT-4` and `gpt-3.5-turbo-instruct` provide the **first solid evidence that training for chat makes GPT *worse* on a well-defined problem**. That's a big deal. It is in contradiction with OpenAI claims https://twitter.com/npew/status/1679538687854661637 about non-regression of their versions. And to quote Simon Willison: "How are we meant to build dependable software on top of a platform that changes in completely undocumented and mysterious ways every few months?"
+ * There has been some inquiries about the hypothesis GPT-4 is getting worse over time. On the other hand, OpenAI claims about non-regression of their versions https://twitter.com/npew/status/1679538687854661637. Overall, current evidence is weak and lack of transparency of OpenAI does not help. For instance, this viral paper https://arxiv.org/abs/2307.09009 has too many flaws as demonstrated here: https://www.aisnakeoil.com/p/is-gpt-4-getting-worse-over-time. It has also been *suspected* that continuously updating/fine-tuning the model on new chat data can cause degradation of performance. 
+ With this study, the results about `ChatGPT-4` and `gpt-3.5-turbo-instruct` provide the **first solid evidence that training for chat makes GPT *worse* on a well-defined problem**. That's a big deal. To quote Simon Willison: "How are we meant to build dependable software on top of a platform that changes in completely undocumented and mysterious ways every few months?" In light of the results of this study, no need to say continual learning will be a big challenge for GPTs in the future! 
+
 
   
 I hope this blog post will help to debunk some overclaims and to clarify the situation. 
@@ -633,7 +635,7 @@ What is sure is that we, collectively, need to share more data and experiments t
 I ~~will~~ release data and source code ~~in the following days:~~ https://github.com/acherm/gptchess  
 
 
-
+*Acknowledgements*. I would like to thank Paul Calcraft and Gary Marcus for their feedbacks, reviews, and discussions.
 
 
 
