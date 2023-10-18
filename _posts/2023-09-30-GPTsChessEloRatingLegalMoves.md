@@ -394,13 +394,16 @@ Previous results apply to either temperature 0 or 0.8.
 With temperature=0:
  * 1789 Elo with only with legal games/moves
  * 1742 Elo with all games
+
 With temperature=0.8:
  * 1573 Elo with only legal games/moves
  * 1519 Elo with all games
+
 Hence, *increasing temperature tends to decrease the Elo rating*.
 
 I've also tried to use an altered prompt (see above).
 As temperature tends to decrease Elo, I've only tried with temperature=0.
+
 The Elo rating with altered prompt is:
  * 1808 Elo with only legal games/moves
  * 1752 Elo for all games
