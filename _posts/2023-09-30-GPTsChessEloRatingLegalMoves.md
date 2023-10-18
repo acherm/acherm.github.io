@@ -7,7 +7,7 @@ tags: [ChatGPT, LLM, generative AI, variability, programming]
 
 Can [GPTs](https://en.wikipedia.org/wiki/Generative_pre-trained_transformer) like ChatGPT-4 play legal moves and finish chess games? What is the actual Elo rating of GPTs? There have been some hypes, (subjective) assessment, and buzz lately from "GPT is capable of beating 99% of players?" to "GPT plays lots of illegal moves" to "here is a magic prompt with Magnus Carlsen in the headers". There are more or less solid anecdotes here and there, with counter-examples showing impressive failures or magnified stories on how GPTs can play chess well. I've resisted for a long time, but I've decided to do it seriously! I have synthesized hundreds of games with different variants of GPT, different prompt strategies, against different chess engines (with various skills). This post is here to document the variability space of experiments I have explored so far... and the underlying insights and results. 
 !["Photo of a chessboard with various parrots huddled together, symbolizing different GPT versions, looking puzzled at the chess pieces. On the opposite side, a serene fish, representing Stockfish, contemplates its next move. In the background, a vigilant woman referee observes the game, ensuring the rules are followed."](/assets/gptchessDallE3.png)
-The tldr; is that `gpt-3.5-turbo-instruct` operates around 1700 Elo and is capable of playing end-to-end legal moves, even with black pieces or when the game starts with strange openings. 
+The tldr; is that `gpt-3.5-turbo-instruct` operates around 1750 Elo and is capable of playing end-to-end legal moves, even with black pieces or when the game starts with strange openings. 
 However, though there are "avoidable" errors, the issue of generating illegal moves is still present in 16% of the games. Furthermore, ChatGPT-3.5-turbo and more surprisingly ChatGPT-4, however, are much more brittle. Hence, we provide first solid evidence that training for chat makes GPT *worse* on a well-defined problem (chess). Please do not stop to the tldr; and read the entire blog posts: there are subtleties and findings worth discussing! 
 
 
@@ -214,7 +214,7 @@ I limited the budget to 100$.
 
 ### Dataset 
 
-I've compiled 858 games using a combination of GPT models, configurations of chess engines and other variation points previously described:
+I've compiled 878 games using a combination of GPT models, configurations of chess engines and other variation points previously described:
 
  * gpt-3.5-turbo-instruct : 573 games, among 401 with white piece and 172 with black pieces
 
@@ -387,10 +387,36 @@ Hence, here, I would primarily look at *all games*, even those being illegal. It
 
 and the trend is reversed!
 
+#### Do temperature and altered prompts influence Elo?
+
+I've increased the temperature to 0.8 (instead of 0) for some games. 
+Previous results apply to either temperature 0 or 0.8.
+With temperature=0:
+ * 1789 Elo with only with legal games/moves
+ * 1742 Elo with all games
+With temperature=0.8:
+ * 1573 Elo with only legal games/moves
+ * 1519 Elo with all games
+Hence, *increasing temperature tends to decrease the Elo rating*.
+
+I've also tried to use an altered prompt (see above).
+As temperature tends to decrease Elo, I've only tried with temperature=0.
+The Elo rating with altered prompt is:
+ * 1808 Elo with only legal games/moves
+ * 1752 Elo for all games
+
+1752 Elo (resp. 1808 Elo) with altered prompt, temperature=0 is closed to 1742 Elo (resp. 1789 Elo) with original prompt, temperature=0.
+Hence, it seems that *altered prompts have no significant effect on Elo rating* (similar to our observations about move generation ability). 
+
+We should keep in mind that the dataset is imbalanced (99 games with altered prompts), but there is no reason so far to think that altered prompts would have a significant effect on Elo rating. 
+
+
+
 #### Conclusion about Elo rating of `gpt-3.5-turbo-instruct`
 
 Owing to the different uncertainties regarding Stockfish engines actual Elo rating, the method to compute Elo, the number and diversity of games, and the fact that GPTs generate sometimes illegal moves, it is hard to give a precise and final number. Even providing confidence intervals is not that easy in this context! 
-Overall, a reasonable estimate is that the Elo **rating of `gpt-3.5-turbo-instruct` is 1700 Elo (+/- 50 Elo)**. 
+A temperature different from 0.0 seems to have a negative effect, and as such it is certainly more fair to consider the Elo rating of `gpt-3.5-turbo-instruct` with temperature=0.0.
+Overall, a reasonable estimate is that the Elo **rating of `gpt-3.5-turbo-instruct` is 1750 Elo (+/- 50 Elo)**. 
 It is quite consistent with what have been reported in the informal X/Twitter space: 1700 Elo for Joel Eriksson, 1800 Elo for Grant Slatton and Boris Power. 
 
 
@@ -609,7 +635,7 @@ I have described the variability space of the experiments and thus the limitatio
 However, we have solid results and insights:
  * `gpt-3.5-turbo-instruct` is by far the best model: though there are avoidable errors, the text completion model is often capable of playing end-to-end legal games, even with black pieces or when the game starts with strange openings or against a random chess engine. Games can be long with dozens of moves (and up to 174 moves!). 
  * Even the best model (`gpt-3.5-turbo-instruct`) still makes illegal moves in *16% of the games and 0.3% of the total moves played*. While it is true that an external system could correct basic errors (like automated promotion or avoiding completing with `1-0`), in more open-ended and critical domains it is simply not acceptable. Even in a simple and well controlled domain like chess with stable rules and perhaps immense training sets, illegal moves are still present, suggesting that the system is not fully able to induce the rules.
- * The estimate is that `gpt-3.5-turbo-instruct` operates around 1700 Elo (+/- 50). It is quite consistent with what has been reported in the informal X/Twitter space. 1700 Elo is a good level, but it is far from a master level. In [Lichess](https://lichess.org/), it is in the top 30% of players for Blitz. 
+ * The estimate is that `gpt-3.5-turbo-instruct` operates around 1750 Elo (+/- 50). It is quite consistent with what has been reported in the informal X/Twitter space. 1750 Elo is a good level, but it is far from a master level. In [Lichess](https://lichess.org/), it is in the top 30% of players for Blitz. 
  * Modifying the prompt with other PGN headers does not alter performance `gpt-3.5-turbo-instruct` and ability to play legal moves -- there is no magic prompt or PGN headers, but the idea of putting "in-context" PGN headers is a general good approach.
  * Increasing temperature slightly decreases the performance of `gpt-3.5-turbo-instruct`.
  * `davinci-003`, another completion model, is not able to play an entire game because of illegal moves quickly generated, against basic Stockfish engine or random chess engine. It is not a big surprise and seems on par with what has been reported: a weak baseline. 
@@ -622,7 +648,7 @@ However, we have solid results and insights:
   
 I hope this blog post will help to debunk some overclaims and to clarify the situation. 
 There are several feelings when looking at the results: 
- * on the one hand, it is impressive that GPTs are capable of playing chess at 1700 Elo, even if it is not perfect. I know many people not capable of playing chess at this level. Also, `gpt-3.5-turbo-instruct` shows that end-to-end, long games can be played. It is, I think, quite new and remarkable! 
+ * on the one hand, it is impressive that GPTs are capable of playing chess at 1750 Elo, even if it is not perfect. I know many people not capable of playing chess at this level. Also, `gpt-3.5-turbo-instruct` shows that end-to-end, long games can be played. It is, I think, quite new and remarkable! 
  * It is mind-blowing to me that a text completion model can play chess at this level, without knowing the rules in the first place.
  * On the other hand, lots of illegal moves are still played. I don't know what the good attitude is when mistakes are generated: Should we fix them? If we fix, is it still assessing GPT? Should we let them as they are? Should we consider the game as lost? Should we ask GPT to play another move? 
  * The illegal move issue has not been solved and robustness matters in many domains and contexts. Perhaps it is not a big deal in chess. Yet, in general, illegal moves are incredibly significant. They are a kind of hallucination, and reflect serious issues in many real-world applications (e.g., military) that people might envision with GPT technology. 
@@ -633,6 +659,9 @@ I also hope the presented methodology and the modelling of variability of possib
 Exploring the whole variability space can strengthen the results and conclusions, and I will be interested to hear about other possible experiments to perform in the future. 
 What is sure is that we, collectively, need to share more data and experiments to have a better understanding of the situation. 
 I ~~will~~ release data and source code ~~in the following days:~~ https://github.com/acherm/gptchess  
+
+PS: I'm taking the liberty of editing this blog post to fix typos, clarify some points, and even expand the content. 
+You can track edits and commits here: https://github.com/acherm/acherm.github.io 
 
 
 *Acknowledgements*. I would like to thank Paul Calcraft and Gary Marcus for their feedbacks, reviews, and discussions.
