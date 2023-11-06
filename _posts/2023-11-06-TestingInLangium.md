@@ -18,7 +18,7 @@ In this post, I want to outline a setup for facilitating the testing of a DSL us
 
 Let us consider a simple DSL for chess game. 
 
-```
+```typescript
 grammar ChessGame
 
 entry Game: "White:" whitePlayer=STRING "Black:" blackPlayer=STRING (moves+=Move)+;
@@ -66,7 +66,7 @@ I was seeking a solution for testing DSLs in Langium and I found a solution that
 We first need a helper function that loads any program written in your DSL and returns the AST. 
 In TypeScript and leveraging the Langium API:
 
-```
+```typescript
 import { describe, expect, test } from 'vitest';
 
 import type { Game } from '../language/generated/ast.js';
@@ -96,7 +96,7 @@ You should adapt to your grammar and main entry point (rule) or DSL name.
 You can then call this function in a test, and puts further assertions on the AST, leveraging [vitest](https://vitest.dev/).
 For instance:
 
-```
+```typescript
 describe('Test basic game', () => {
     test('Two moves', async () => {
         const game = await assertModelNoErrors(`
@@ -122,7 +122,7 @@ In the same spirit, you can test the interpreter or compiler of your DSL.
 
 For instance:
 
-```
+```typescript
 import { convertMovesToPGNWithPython, generateMoves } from '../generator/pgn_converter.js';
 
 ...
@@ -154,7 +154,7 @@ test('Immortal game', async () => {
     });
 ```
 
-I tested an interpreter based on [chess.js][https://github.com/jhlywa/chess.js/tree/master] that translates a chess game into [PGN](https://en.wikipedia.org/wiki/Portable_Game_Notation) format. 
+I tested an interpreter based on [chess.js](https://github.com/jhlywa/chess.js/tree/master) that translates a chess game into [PGN](https://en.wikipedia.org/wiki/Portable_Game_Notation) format. 
 I also tested another translation into PGN, this time generating and executing Python code (based on [python-chess](https://python-chess.readthedocs.io/en/latest/)).
 More details here: https://github.com/acherm/dsl-langium/blob/main/Chess/src/generator/pgn_converter.ts
 
