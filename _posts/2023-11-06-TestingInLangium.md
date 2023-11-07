@@ -116,7 +116,7 @@ describe('Test basic game', () => {
 You can check some representative programs of your DSL that should be accepted or rejected by the parser.
 More examples here: https://github.com/acherm/dsl-langium/blob/main/Chess/src/test/validation-test.ts
 
-## Testing the interpreter
+## Testing interpreters and compilers
 
 In the same spirit, you can test the interpreter or compiler of your DSL.
 
@@ -156,7 +156,7 @@ test('Immortal game', async () => {
 
 I tested an interpreter based on [chess.js](https://github.com/jhlywa/chess.js/tree/master) that translates a chess game into [PGN](https://en.wikipedia.org/wiki/Portable_Game_Notation) format. 
 I also tested another translation into PGN, this time generating and executing Python code (based on [python-chess](https://python-chess.readthedocs.io/en/latest/)).
-More details here: https://github.com/acherm/dsl-langium/blob/main/Chess/src/generator/pgn_converter.ts
+More details here: https://github.com/acherm/dsl-langium/blob/main/Chess/src/generator/pgn_converter.ts and https://github.com/acherm/dsl-langium/blob/main/Chess/src/test/pgn-test.ts 
 
 ### Other technicalities
 
