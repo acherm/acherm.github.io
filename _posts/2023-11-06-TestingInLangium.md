@@ -175,6 +175,8 @@ I hope new versions of Langium will generate such testing facilities out of the 
 Github of the illustrative project: https://github.com/acherm/dsl-langium/tree/main/Chess. 
 See also DSLs in Langium here: https://github.com/acherm/dsl-langium/. 
 
+Post also available on dev.to: https://dev.to/diverse_research/testing-your-dsls-in-langium-gp9 
+
 
 
 
