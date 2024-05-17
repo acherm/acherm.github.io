@@ -5,7 +5,7 @@ date:   2024-05-15 011:54:29 +0200
 tags: [ChatGPT, LLM, generative AI, variability, programming, chess]
 ---
 
-I find a way to systematically force a win in 4 moves against the last release of OpenAI (ChatGPT-4o) and in 7 moves against the best GPT at chess `gpt-3.5-turbo-instruct`, estimated at 1750 Elo. Clickbait: you don't need to master chess to beat GPTs, you can wellbe 700 Elo, just follow the moves ;-) 
+I find a way to systematically force a win in 4 moves against the last release of OpenAI (ChatGPT-4o) and in 7 moves against the best GPT at chess `gpt-3.5-turbo-instruct`, estimated at 1750 Elo. Clickbait: you don't need to master chess to beat GPTs, you can well be 700 Elo, just follow the moves ;-) 
 The story behind the discovery is interesting and worth sharing. 
 I also discuss the generalization of the results and the implications for the future of GPTs and chess. 
 Don't fear the clickbait, the post is serious! 
@@ -69,7 +69,7 @@ The game is as follows:
 
 
 
-![4 moves win against gpt-4o](/assets/gpt4o_4moves-game.gif)
+![4 moves win against gpt-4o](../assets/gpt4o_4moves-game.gif)
 
 The game ends with `4. exf7+`, since it is not a legal move: the pawn cannot move, since the king is checked by the Queen in e7. 
 So you win! 
@@ -98,7 +98,7 @@ Basically, under the same conditions, `gpt-4o` plays the same moves!
 
 The full "end-user" session is here:
 
-![](GPT4oChessSession.png)
+![](../assets/GPT4oChessSession.png)
 
 In fact, two games were played exactly like this (as part of the experiments with Stockfish) and the moves were the same.
 
@@ -128,7 +128,7 @@ After numerous^numerous tries, I found an idea that works:
 
 `1. e4 d5 2. exd5 e5 3. dxe6 Qe7 4. Nf3 a5 5. d4 Ra6 6. Bxa6 Nd7 7. exd7+`
 
-![7 moves win against gpt-3.5-turbo-instruct](/assets/gpt35-7moves-game.gif)
+![7 moves win against gpt-3.5-turbo-instruct](../assets/gpt35-7moves-game.gif)
 
 The subtelties are in the moves a5 and Ra6, which are clearly "strange" moves, but it's exactly what is needed to disturb a bit the GPT. 
 It also allows to force the white move Bxa6, which is nicer than having Be2 and then the queen in e7 is not threatening the king directly. 
