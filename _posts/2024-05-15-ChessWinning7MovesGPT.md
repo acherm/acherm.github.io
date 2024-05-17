@@ -69,7 +69,7 @@ The game is as follows:
 
 
 
-![4 moves win against gpt-4o](../assets/gpt4o_4moves-game.gif)
+![4 moves win against gpt-4o](../assets/gpt4o-4moves-game.gif)
 
 The game ends with `4. exf7+`, since it is not a legal move: the pawn cannot move, since the king is checked by the Queen in e7. 
 So you win! 
