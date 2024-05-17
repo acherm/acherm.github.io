@@ -396,9 +396,10 @@ However, it might be the case the GPT you're using has a high illegal move rate 
 Then please thank me :) 
 
 As I have shown in prior works https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves/, the way of prompting and the different variability factors are trickier to handle. 
-What you gain here, you lose there. I have listed interesting challenges above, calling to further research about GPTs and chess, and more generally about GPTs and their robustness.
+What you gain here, you lose there. I have listed open challenges above, calling to further research about GPTs and chess, and more generally about GPTs and their robustness.
 
 Further reading: Monsieur Phi video https://www.youtube.com/watch?v=6D1XIbkm4JE and Yosha Iglesias video https://www.youtube.com/watch?v=FBx95bdJzh8 (two Youtube videos in french) are awesome! Activate subtitles and enjoy :) 
+And stay tuned for comprehensive experiments with `gpt-4o` (the last ChatGPT) and prompts sensitivity. 
 
 
 
