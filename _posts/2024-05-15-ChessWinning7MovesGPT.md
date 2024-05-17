@@ -394,9 +394,11 @@ For instance, you can replicate my attempt and get very different results with a
 And the trick of winning the game in `x` moves won't work. Sorry in this case :( 
 However, it might be the case the GPT you're using has a high illegal move rate (eg much higher than with the settings I've used) and a weaker Elo rating. 
 Then please thank me :) 
+
 As I have shown in prior works https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves/, the way of prompting and the different variability factors are trickier to handle. 
 What you gain here, you lose there. I have listed interesting challenges above, calling to further research about GPTs and chess, and more generally about GPTs and their robustness.
 
+Further reading: Monsieur Phi video https://www.youtube.com/watch?v=6D1XIbkm4JE and Yosha Iglesias video https://www.youtube.com/watch?v=FBx95bdJzh8 (two Youtube videos in french) are awesome! Activate subtitles and enjoy :) 
 
 
 
