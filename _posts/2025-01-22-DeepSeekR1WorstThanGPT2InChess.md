@@ -139,7 +139,7 @@ At move 13, after an illegal move and after my complain about the illegal move, 
 
 ![deepseekR1 illegal](../assets/deepseek-twoillegals.png)
 
-![deepseekR1 illegal](../assets/deepseek-illegalposition.png)
+![deepseekR1 illegal pos](../assets/deepseek-illegalposition.png)
 
 Here DeepSeek-R1 re-answered *13. Qxb2* an already proposed illegal move.
 Then re-answered *13. Rxb2!* an already proposed illegal move (note: `!` means good move in chess notation)
@@ -281,7 +281,7 @@ Around 12 % were illegal. More than 1 out of 10!
 The longest game was only 20.0 moves (40 plies, 20 white moves, 20 black moves).
 The average game length was 8.3 moves. The median game length was 8.0 moves.
 
-![illegal moves](../assets/deepseek-illegals.png]
+![illegal moves](../assets/deepseek-illegals.png)
 
 ### The only legal game
 
