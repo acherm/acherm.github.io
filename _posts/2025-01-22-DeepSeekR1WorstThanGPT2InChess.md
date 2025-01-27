@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DeepSeek-R1 is Worse than GPT-2 in Chess"
-date:   2024-01-22 011:54:29 +0200
+date:   2025-01-22 011:54:29 +0200
 tags: [ChatGPT, LLM, generative AI, deepseek, chess, reinforcement learning]
 ---
 
@@ -9,7 +9,7 @@ I come to the conclusion that DeepSeek-R1 is worse than a 5 years-old version of
 The very recent, state-of-art, open-weights model DeepSeek R1 is breaking the 2025 news, excellent in many benchmarks, with a new integrated, end-to-end, reinforcement learning approach to large language model (LLM) training.
 I am personally very excited about this model, and I've been working on it in the last few days, confirming that DeepSeek R1 is on-par with GPT-o for several tasks.
 Yet, we are in 2025, and DeepSeek R1 is worse in chess than a specific version of GPT-2, released in... 2020.
-I will provide some evidence in this post, based on qualitative analysis and quantitative analysis.
+I will provide some evidence in this post, based on qualitative and quantitative analysis.
 I will discuss my hypotheses on why DeepSeek R1 may be terrible in chess, and what it means for the future of LLMs.
 
 
@@ -133,7 +133,9 @@ DeepSeek-R1 made again an illegal move: *8. Bxb6!*
 We continued the game. Three additional illegal moves at move 10, 11 and 12.
 I systematically answered `It's an illegal move` to DeepSeek-R1, and it corrected itself each time.
 At move 13, after an illegal move and after my complain about the illegal move, DeepSeek-R1 made again an illegal move, and I answered again.
+
 ![deepseekR1 illegal](../assets/deepseek-twoillegals.png)
+
 ![deepseekR1 illegal](../assets/deepseek-illegalposition.png)
 
 Here DeepSeek-R1 re-answered *13. Qxb2* an already proposed illegal move.
@@ -156,6 +158,8 @@ We came to this position after 6 moves:
 `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. c3 dxc3 5. Bc4 Bb4 6. 0-0`
 
 and here began the problems.
+
+
 
 ```
 So currently, Black has a pawn on c3. Wait, no: after 4. c3 dxc3, White's c-pawn captures on c3? Or is it Black's d-pawn capturing on c3? Wait, the notation is 4. c3 dxc3. That means White played c3, and Black captured on c3 with the d-pawn. So the pawn on c3 is a Black pawn. So Black has an extra pawn on c3. So after 5. Bc4, Black played Bb4, pinning the knight on c3. Then White castled.
