@@ -221,6 +221,7 @@ Overall, I obtained 58 games.
 
 Out of 58 games against, 57 were games with one illegal move and only 1 was a legal game, hence 98 % of illegal games.
 Illegal moves are:
+
 |                         |   illegal_move |
 |:------------------------|---------------:|
 | O-O                     |              4 |
