@@ -284,7 +284,7 @@ The average game length was 8.3 moves. The median game length was 8.0 moves.
 
 The only legal game is as follows:
 
-![legal game (mate in 12)](../assets/deepseek-legal.gif)
+![legal game (mate in 12)](../assets/deepseek-legalmove.gif)
 
 The level of play is very low, with a queen given for free, and a mate in 12 moves.
 
