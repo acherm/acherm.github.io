@@ -104,8 +104,9 @@ Hence after this long reasoning, Nf3 is finally chosen. There is no strong reaso
 I continued with the bizarre `4... a5` (on purpose) and the answer was `5. Nc3`.
 
 The justification of the move is incorrect since Qxe6 is not a fatal error (yes, ?? means fatal error in chess notation) and Qd5 is simply not possible there is a pawn in d2:
+
 ```
-Developing another knight and indirectly defending the e6 pawn (if you take it with 5...Qxe6??, **I play 6. Qd5! forking your king and queen).**
+Developing another knight and indirectly defending the e6 pawn (if you take it with 5...Qxe6??, <b>**I play 6. Qd5! forking your king and queen).**</b>
 Black’s 4...a5 doesn’t address the center or development, so I’ll prioritize piece activity. Your move!
 ```
 
@@ -117,6 +118,7 @@ with a wrong justification `This develops the bishop with a threat: If you take 
 The game continued with `6... Nd7` and now `7. Bg5` (illegal).
 I answered `It's an illegal move`.
 DeepSeek-R1 corrected
+
 ```
 Oops, you’re absolutely right! My bad—7. Bg5 is impossible because the pawn on d2 blocks the dark-squared bishop’s path. Let me correct that!
 
@@ -125,6 +127,7 @@ A strong central pawn push, solidifying control of the center and opening lines 
 
 Your move! (Thanks for catching that earlier blunder—good eye! 🙌)
 ```
+
 and on `7... Nb6`
 DeepSeek-R1 made again an illegal move: *8. Bxb6!*
 
