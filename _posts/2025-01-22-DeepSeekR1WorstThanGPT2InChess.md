@@ -390,3 +390,5 @@ DeepSeek-R1 already shows great promises in many tasks, and it is a very excitin
 However, the road to a general model capable of excelling in any domain is still long, and we are not there yet.
 Everyone is excited about the future of LLMs, and it is important to keep in mind that there are still many challenges to overcome.
 It is an exciting time, and there are several research directions to explore.
+
+*Code/data with games, reasoning, etc. coming soon!*
