@@ -25,7 +25,7 @@ Here is the final result, impressive graphics demo with wave simulations, sky an
 There was no special instructions on how to **build** the project, except some pointers to tools like CurlyWAS or microw8. 
 Here is a script to automate (you need basic tools like Cargo, git, wasm-tools, etc.)
 
-```
+```bash
 #!/bin/bash
 
 set -e  # Exit on error
