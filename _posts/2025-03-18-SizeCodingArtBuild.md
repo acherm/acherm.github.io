@@ -7,8 +7,8 @@ tags: [programming, art, minification, wasm, sizecoding, code golf]
 
 I came across a [video](https://www.youtube.com/watch?v=J6StCkzpLoQ) by the amazing Laurie Wired about the art of fitting a quite impressive cinematic experience into 256 bytes. 
 Yes, 256 bytes. I'm usually interested by code minification/golfing (see, e.g., a chess puzzle resolver fitting in a Tweet here: https://blog.mathieuacher.com/ProgrammingChessPuzzles/).
-I struggled a bit to find the mentioned code, and to make it work. The basic idea is using a Rust-like syntax with a few lines of code, you can compile into WASM (Web assembly), and execute in a browser using microW8. 
-I'm quickly sharing here my experiment, and hope it might be useful to someone else. 
+I struggled a bit to find the mentioned code, and to make it work. The basic idea is using a language with a Rust-like syntax an with a few lines of code compile into WASM (Web assembly), and eventually execute in a browser using microW8. 
+I'm quickly sharing here my experiment/experience, and hope it might be useful to someone else. 
 
 
 [Sizecoding](http://www.sizecoding.org/) is the art of creating very tiny programs (a few bytes) for most popular types of CPUs. 
