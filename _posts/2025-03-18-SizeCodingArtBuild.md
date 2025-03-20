@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sizecoding a cinematic experience fitting into 256 bytes"
-date:   2025-01-22 011:54:29 +0200
+date:   2025-03-18 011:54:29 +0200
 tags: [programming, art, minification, wasm, sizecoding, code golf]
 ---
 
