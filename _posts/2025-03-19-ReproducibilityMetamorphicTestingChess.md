@@ -1,13 +1,10 @@
 ---
 layout: post
 title:  "Reproducibility, Metamorphic Testing, and the Subtleties of Assessing Inconsistencies in AI Systems"
-date:   2025-01-22 011:54:29 +0200
+date:   2025-03-19 011:54:29 +0200
 tags: [reproducibility, metamorphic testing, software testing, replicability, variability, chess, stockfish, software engineering]
 ---
 
-
-
-# Reproducibility, Metamorphic Testing, and the Subtleties of Assessing Inconsistencies in AI Systems  
 
 This is *not* just another blog post about chess—or at least, not only about chess. While the setting involves **Stockfish**, the world's strongest open-source chess engine, the real discussion here is broader:  
 **How do we carefully assess inconsistencies in complex AI systems?**
