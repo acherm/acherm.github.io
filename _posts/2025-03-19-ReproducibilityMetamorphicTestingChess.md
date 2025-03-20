@@ -6,9 +6,11 @@ tags: [reproducibility, metamorphic testing, software testing, replicability, va
 ---
 
 
-This is *not* just another blog post about chess—or at least, not only about chess. While the setting involves **Stockfish**, the world's strongest open-source chess engine, the real discussion here is broader:  
+This is *not* just another blog post about chess—or at least, not only about chess. While the setting involves [Stockfish](https://stockfishchess.org/), the world's strongest open-source chess engine, the real discussion here is broader:  
 How do we carefully assess inconsistencies in complex AI systems? When an AI model—or a highly optimized program—seems to violate fundamental expectations, how do we tell the difference between a genuine bug and an artifact of the evaluation setup?  
-These questions brought me to the paper *Metamorphic Testing of Chess Engines* ([IST, 2023](https://www.sciencedirect.com/science/article/pii/S0950584923001179)). The authors applied **metamorphic testing (MT)**—a well-known software testing technique—to Stockfish and found numerous evaluation inconsistencies, suggesting that Stockfish might be flawed in ways that had gone unnoticed.  
+These questions brought me to the paper *Metamorphic Testing of Chess Engines* ([IST, 2023](https://www.sciencedirect.com/science/article/pii/S0950584923001179)). The authors applied **metamorphic testing (MT)**—a well-known software testing technique—to Stockfish and found numerous evaluation inconsistencies, suggesting that Stockfish might be flawed in ways that had gone unnoticed.
+!["Generate an image suggesting all ideas of this text. 
+Please use a Rubik's cube with chess pieces, a hand manipulating it to reproduce/infer results, in particular whether there are bugs (with GPT4)"](/assets/SFMT-cube.png)  
 But one issue made me pause: the study was conducted at depth=10.  
 
 Depth is *everything* in chess engine analysis. At low depths, evaluations are unstable, and discrepancies may not reflect real errors but rather artifacts of the engine's limited search horizon. **Were these reported inconsistencies actual bugs, or just fragile observations that disappeared under different conditions?**  
@@ -49,7 +51,7 @@ This shouldn't happen at such a high depth. While many discrepancies at depth=10
 After a deep dive (*pun intended*) into the Stockfish code, we uncovered a fundamental truth:  
 
 🔹 These evaluation discrepancies are not bugs—they are a natural consequence of how chess engines explore positions.  
-🔹 At low depths, these discrepancies are essentially pointless**—the engine’s limited search horizon means its evaluation is far from stable or meaningful.  
+🔹 At low depths, these discrepancies are essentially pointless—the engine’s limited search horizon means its evaluation is far from stable or meaningful.  
 🔹 Stockfish orders legal moves differently depending on board symmetry, and we found where this happens in the source code.  
 
 This *move ordering mechanism* is one reason why metamorphic relations break down at certain depths. Small variations in the search order can lead to significant evaluation differences at low or intermediate depths. However, as depth increases, these differences tend to disappear as the search stabilizes.  
@@ -91,7 +93,7 @@ And this lesson applies far beyond chess engines—to *AI, software engineering,
 
 ## Want to Dig Deeper?  
 
-📄 **Read the full study:** [Link to paper](https://hal.science/hal-04943474v2) (Published in IST journal)  
+📄 **Read the full study:** [Link to paper](https://hal.science/hal-04943474v2) (Published in IST journal https://www.sciencedirect.com/science/article/pii/S0950584925000187)  
 📂 **Replication materials & data:** [GitHub](https://github.com/acherm/chess-MT-Stockfish)  
 
 Special thanks to **Fabien Libiszewski, Matthieu Cornette, Yosha Iglesias, Mathilde Choisy, Helge Spieker, Martin Monperrus, and Arnaud Gotlieb** for insightful discussions!  
