@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Quick Take on 'Why Can't We Make Simple Software?' by Peter van Hardenberg"
-date:   2025-04-02 11:54:29 +0200
+date:   2025-04-01 11:54:29 +0200
 tags: [software complexity, robustness, variability, software engineering, dependencies, abstractions, reproducibility]
 ---
 
