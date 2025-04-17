@@ -79,4 +79,4 @@ Not there yet, but I am definitely in.
 In fact, my current and future research will be about AI and sofware engineering for reproducible and replicable science. More to come soon ;)
 
 [^1]: you can find some "traces" of David in this work about... chess and LLM: https://github.com/acherm/gptchess/blob/main/analysis_prompt_variations.ipynb
-side note: The original transcript is available in a gist (in French, slightly edited out of OpenAI whisper)
+side note: The original transcript is available in a gist https://gist.github.com/acherm/549b6ae1f4caac47aaed8d4204433e3c (in French, slightly edited out of OpenAI whisper)
