@@ -44,7 +44,7 @@ Then, Hugo Duminil-Copin answers more specifically:
 > It won't just be about writing things up -- it'll be about contributing to the construction of the ideas. Like you were saying about architecture: maybe AI can't fully do the architectural planning yet, but it's starting to help with the actual building.
 
 
-with basically two arguments: (1) AI as a tool to help scientists connect the dots and explore new ideas/concepts; (2) AI as a way to automate boring, low-level, langfruits, error-prone tasks.
+with basically two arguments: (1) AI as a tool to help scientists connect the dots and explore new ideas/concepts; (2) AI as a way to automate boring, low-level, low-hanging fruit, error-prone tasks.
 I agree (1) is not there yet. In fact, it's a bit mysterious why LLMs haven't been able to find such connections, owing to the large amount of data available to train them.
 But when it will be the case, it will be for sure a revolution.
 For (2), I am also seeing a connection with software engineering, where the hardest part is not the pure coding itself, but the design and architecture of the system (among others).
