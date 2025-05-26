@@ -60,7 +60,7 @@ In the example, we can see greyed text.
 
 What is worst is that when continuing the game, 2 moves after, another illegal move has been made with `exd7+` (pawn taking the knight) since the pawn is not authorized to move in this direction (the white king is in check with queen in e7). Bis repetita `o3`!
 
-![another illegal move](../assets/illegal-move-o3-bis)
+![another illegal move](../assets/illegal-move-o3-bis.png)
 
 Let us decompose the "reasoning" trace. There is some evidence that such traces should not be interpreted blindly, ie traces may not have a link with the final answer. 
 But in our specific case, we can at least analyze the different attempts. 
