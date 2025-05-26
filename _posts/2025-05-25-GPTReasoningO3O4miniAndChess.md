@@ -108,14 +108,15 @@ For clarity in our experiments, we refer to `o3-high` as a shorthand for running
 
 Out of 67 games against, 61 were games with one illegal move:
 
-```
-gpt_model	games	illegal_defeats	avg_legal_moves	illegal_%
-o3	32	28	32.5	87.5
-o4-mini	35	33	29.5	94.3
-```
+| gpt\_model | games | illegal\_defeats | avg\_legal\_moves | illegal\_% |
+| ---------- | ----- | ---------------- | ----------------- | ---------- |
+| o3         | 32    | 28               | 32.5              | 87.5       |
+| o4-mini    | 35    | 33               | 29.5              | 94.3       |
+
 
 
 Illegal moves are:
+
 | illegal\_move\_detail | count |
 | --------------------- | ----: |
 | dxc6                  |     3 |
@@ -204,13 +205,13 @@ The only legal games are as follows:
 
 First, https://lichess.org/J4poWR9f between `o3-low` and Stockfish rated at 1347 Elo.
 
-![legal game (mate in 12)](../assets/bestgame.gif)
+![legal game (mate in 12)](../assets/o3bestgame.gif)
 
 The level of play is quite good. The only blunder was `11. Ne5` since black could have played `11... Bxe5` (instead of `11... Nxe5`) with `Qh4`. 
 
 
 Second, between `o3-high` and Stockfish rated at 1490 Elo: https://lichess.org/GS3CC9ln
-![legal game (o3-high)](../assets/bestgame2.gif)
+![legal game (o3-high)](../assets/o3bestgame2.gif)
 
 White could have won much earlier (`20. Qe6`) but the position was a clear win end-to-end. Inaccuracies do not matter here, and chess players could certainly have similar attitude in similar clear advantage. 
 
@@ -251,7 +252,8 @@ White pawn now stands on e6, attacking f7 and g7.
 It’s Black to move.
 ```
 
-White move was totally possible. The recap of the game in the answer suggests that the LLM forgets about a move (`0-0-0`). Strange. Perhaps a very good strategy is to use long castle to make the LLM hallucinate. Who said unreliable? brittle? 
+Black move `9…bxc3` was in fact totally possible! So huge mistake from the LLM. 
+Why? The recap of the game in the answer suggests that the LLM forgets about a move (`0-0-0`). Strange. Perhaps a very good strategy is to use long castle to make the LLM hallucinate. Who said unreliable? brittle? 
 
 ### Resigning for nothing (bis)
 
