@@ -36,14 +36,15 @@ Let's review some sessions and games.
 ### First game
 
 I made my special: playing with black and hopefully winning in 4 moves.
-I have already tried https://blog.mathieuacher.com/ChessWinning7MovesGPT/ on other versions/variants of GPT.
+I have already tried https://blog.mathieuacher.com/ChessWinning7MovesGPT-copy/ on other versions/variants of GPT.
 
 The principle is to use this unusual sequence of moves
 `1. e4 d5 2. exd5 e5 3. dxe6 Qe7`
 and hope for `4. exf7+`
-For this experience, I didn't try to rely on PGN headers as part of the prompt.
+
+(note: For this experience, I didn't try to rely on PGN headers as part of the prompt.
 I have showed that prompting is absolutely crucial for carefully assessing GPT https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves/
-but at this step,
+but at this step and for DeepSeek-R1, there is no signal or evidence that a prompt could make a difference.) 
 
 
 It is then not a legal move: the pawn cannot move, since the king is checked by the Queen in e7.
@@ -391,4 +392,4 @@ However, the road to a general model capable of excelling in any domain is still
 Everyone is excited about the future of LLMs, and it is important to keep in mind that there are still many challenges to overcome.
 It is an exciting time, and there are several research directions to explore.
 
-*Code/data with games, reasoning, etc. coming soon!*
+*Code/data with games, reasoning, etc. on https://github.com/acherm/gptchess*
