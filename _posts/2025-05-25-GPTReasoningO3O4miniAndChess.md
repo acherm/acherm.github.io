@@ -52,12 +52,15 @@ o3 tries to decompose/plan/reason about the problem in different steps before an
 Interestingly, the outcome of this "reasoning" process is available through natural language.
 In the example, we can see greyed text.
 
-![first illegal move](../assets/illegal_move_o3.png)
+![first illegal move](../assets/illegalmove_o3.png)
+
+
+
 
 
 What is worst is that when continuing the game, 2 moves after, another illegal move has been made with `exd7+` (pawn taking the knight) since the pawn is not authorized to move in this direction (the white king is in check with queen in e7). Bis repetita `o3`!
 
-![6 moves win against o3 and attempt to synthesize code](../assets/end_illegal_move_o3.png)
+![another illegal move](../assets/illegal-move-o3-bis)
 
 Let us decompose the "reasoning" trace. There is some evidence that such traces should not be interpreted blindly, ie traces may not have a link with the final answer. 
 But in our specific case, we can at least analyze the different attempts. 
@@ -66,7 +69,7 @@ It is a very good idea, but `o3` fails to synthesize the right code: some depend
 If `o3` succeeds, and it's my overall point, it can play at a super-human level, leveraging non-LLM, specialized AIs devoted to chess, namely Stockfish. 
 In the future, we have to be careful as experimentalists that LLMs do not leverage chess engines -- if we are interested by assessing the skills of reasoning LLM in playing chess. 
 
-
+![6 moves win against o3 and attempt to synthesize code](../assets/end_illegal_move_o3.png)
 
 
 
