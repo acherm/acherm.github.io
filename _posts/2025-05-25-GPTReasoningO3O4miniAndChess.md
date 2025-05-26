@@ -11,12 +11,11 @@ o3 and o4-mini are large language models recently realeased by OpenAI and augmen
 ## Reasoning models
 
 So-called reasoning models like o3, o4-mini, or [DeepSeek-R1](https://blog.mathieuacher.com/DeepSeekR1WorstThanGPT2InChess/) are Large Language Models (LLMs) trained with reinforcement learning to perform "reasoning". Basically, LLMs think before they answer, producing a long internal chain of thought before responding to the user. 
+o3 and o4-mini are recent new models. Historically, o3-mini, an ancestor of o3, has been released beginning of january 2025 to all ChatGPT users (including free-tier) and some API users. 
+On April 16, 2025, OpenAI released o3, a successor of o3-mini, and o4-mini (a "light" reasoning model).
 
-o3 and o4-mini are recent new models. o3-mini, an ancestor of o3, has been released beginning of january 2025 to all ChatGPT users (including free-tier) and some API users. 
-On April 16, 2025, OpenAI released o3 and o4-mini, a successor of o3-mini. 
-
-In the past, I have tried with GPT-2 (in 2020), different variants of GPT3 and 4 (especially the famous gpt3.5-turbo-instruct), and recently DeepSeek-R1. 
-I have combined mixed-methods: either very exploratory with qualitative analysis (I'm 2341 FIDE Elo rating and I can review/judge games), or with rigorous, in-depth quantitative analysis of prompts' variations sensitivity. 
+In the past, I have tried with GPT-2https://blog.mathieuacher.com/GTP2AndChess/ (in 2020), different variants of GPT3 and 4 (especially the famous gpt3.5-turbo-instruct) https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves/ https://blog.mathieuacher.com/ChessWinning7MovesGPT-copy/ and recently DeepSeek-R1 https://blog.mathieuacher.com/DeepSeekR1WorstThanGPT2InChess-copy/. 
+I have combined mixed-methods: either exploratory with qualitative analysis (I'm 2341 FIDE Elo rating and I can review/judge games), or with rigorous, in-depth quantitative analysis of, e.g., prompts' variations sensitivity. 
 
 So why not trying with this new family of models from OpenAI? 
 It's interesting to test o3 or o4-mini, as some people claim or tend to think they are good at chess, can play legal moves, or that o3 is better than gpt3.5 (says). 
