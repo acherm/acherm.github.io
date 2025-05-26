@@ -333,7 +333,7 @@ There is no apparent progress in chess in the world of (general) reasoning LLMs.
 `o3-high` seems a special beast that requires more investigation and $$$, but unfortunately we can already notice that it is an unreliable model -- we have at least one game where an illegal move occurs after 10 moves. 
 
 It is possible that the reasoning models have not been trained on chess data, and it is not able to play chess because of that.
-It is also possible that the reasoning process is not suited to domains like chess.
+It is also possible that the reasoning process as implemented is not suited to domains like chess.
 
 `o3` or `o4-mini` already show great promises in many tasks, and they are very exciting models. 
 I am personally using them a lot, mainly for programming and writing. 
