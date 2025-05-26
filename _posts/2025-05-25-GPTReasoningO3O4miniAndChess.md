@@ -1,16 +1,11 @@
 ---
 layout: post
-title:  "Reasoning models"
+title:  "General-Purpose AI in the Endgame: The Chess Limitations of o3/o4-mini"
 date:   2025-05-25 011:54:29 +0200
 tags: [ChatGPT, LLM, generative AI, openai, chess, reasoning models, reinforcement learning]
 ---
 
-I come to the conclusion that DeepSeek-R1 is worse than a 5 years-old version of GPT-2 in chess...
-The very recent, state-of-art, open-weights model DeepSeek R1 is breaking the 2025 news, excellent in many benchmarks, with a new integrated, end-to-end, reinforcement learning approach to large language model (LLM) training.
-I am personally very excited about this model, and I've been working on it in the last few days, confirming that DeepSeek R1 is on-par with GPT-o for several tasks.
-Yet, we are in 2025, and DeepSeek R1 is worse in chess than a specific version of GPT-2, released in... 2020.
-I will provide some evidence in this post, based on qualitative and quantitative analysis.
-I will discuss my hypotheses on why DeepSeek R1 may be terrible in chess, and what it means for the future of LLMs.
+o3 and o4-mini are large language models recently realeased by OpenAI and augmented with chain-of-thought reinforcement learning, designed to "think before they speak" by generating explicit, multi-step reasoning before producing an answer. How good these reasoning models are in chess? Using a simple four-move sequence, I suceed to force o3 into an illegal move, and across multiple matches both o3 and o4-mini struggle dramatically, by generating illegal moves in over 90% of cases and even resign incorrectly. I explore these failures quantitatively and qualitatively. In short, there is no apparent progress (perhaps o3-high has some potential), and worth the situation seems less good than for older LLMs like `gpt3.5-turbo-instruct` certainly specialized to chess. I discuss implications for building reliable generalist LLMs.
 
 
 ## Reasoning models
