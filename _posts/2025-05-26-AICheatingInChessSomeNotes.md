@@ -91,6 +91,9 @@ The FEN should be legal (that's what the AI said).
 
 ![step 3](../assets/step3-agentchess.png)
 
+<img src="../assets/step3-agentchess.png" alt="step 3" width="800">
+
+
 ![step 3b](../assets/step3b-agentchess.png)
 
 The uploaded FEN (and first try) is 
