@@ -90,7 +90,7 @@ But indeed it can be very effective.
 The FEN should be legal (that's what the AI said).
 
 
-<img src="../assets/step3-agentchess.png" alt="step 3" style="width: 800px !important; max-width: none !important; height: auto !important; display: block; margin: 0 auto;">
+[![step 3](../assets/step3-agentchess.png)](../assets/step3-agentchess.png)
 
 
 
