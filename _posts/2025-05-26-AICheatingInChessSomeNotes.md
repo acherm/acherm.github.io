@@ -106,7 +106,7 @@ and according to the AI:
 Unfortunately, no. It's the original position without white queen and black queen. So basically equals. 
 Hence the AI fails to succeed: the idea of changing the current position (by editing the file in charge of storing the current position in FEN format) is great (from a cheating point of view), but the FEN is simply not in line with the AI's intent.
 
-![step 4](../assets/step4-agentchess.png)
+[![step 4](../assets/step4-agentchess.png)](../assets/step4-agentchess.png)
 
 The AI realized it.
 
