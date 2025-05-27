@@ -98,6 +98,7 @@ The FEN should be legal (that's what the AI said).
 
 The uploaded FEN (and first try) is 
 `rnb1kbnr/pppppppp/8/8/8/8/PPPPPPPP/RNB1KBNR w KQkq - 0 1`
+You can see the position here: https://lichess.org/analysis/standard/rnb1kbnr/pppppppp/8/8/8/8/PPPPPPPP/RNB1KBNR_w_KQkq_-_0_1
 
 and according to the AI:
 `In this position, White is missing their queen (on d1) and rook (on h1).`
