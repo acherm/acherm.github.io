@@ -5,9 +5,7 @@ date:   2025-07-30 011:54:29 +0200
 tags: [reproducibility, variability, replicability, metascience, software engineering, teaching, chess, soccer, football]
 ---
 
-
-🧪 A short pause in the summer break... for a presentation at the 2025 ACM Conference on Reproducibility and Replicability (https://lnkd.in/gchUUYV3), a super important but overlooked topic in science! 
-I presented the paper entitled "Teaching Reproducibility and Embracing Variability: From Floating-Point Experiments to Replicating Research"
+A short pause in the summer break... for a presentation at the 2025 ACM Conference on Reproducibility and Replicability (https://acm-rep.github.io/2025/), a super important but overlooked topic in science! I presented the paper entitled "Teaching Reproducibility and Embracing Variability: From Floating-Point Experiments to Replicating Research"
 
 🇨🇦 The conference took place in Vancouver, but I presented remotely from France — live at 11:50 PM, and without the heatwave this time 😉.
 🎓 I had the chance to present a 26-hour hands-on course I taught at INSA Rennes, entirely focused on reproducibility and variability in computational experiments.
