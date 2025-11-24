@@ -7,7 +7,7 @@ tags: [ChatGPT, LLM, generative AI, openai, chess, french]
 
 
 "La Parole aux Machines" est un livre d'utilité publique. 
-L'ouvrage permet de comprendre l'intelligence artificielle générative et les grands modèles de langage (aka LLM) en amenant le lecteur vers des questionnements philosophiques (la compréhension, le fonctionnalisme, la conscience, l'alignement, l'autonomie, etc.) extrêmement importants pour la société actuelle et future. Monsieur Phi (aka Thibaut Giraud) a un talent rare : qui peut se targuer de maîtriser différents aspects techniques et philosophiques de l'IA générative et des LLMs, tout en étant extrêmement pédagogue ? T. Giraud réussit, à mon sens, la prouesse d'intéresser à la fois des personnes totalement ignorantes de l'IA générative, mais également des ingénieurs ou chercheurs du domaine. Nous avons urgemment besoin de philosophie (et d'expertise et de sciences informatiques) pour adresser les nombreuses questions que posent l'usage des IAs génératives, et ce livre est au bon niveau de détails et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique. J'en dis un peu plus dans ce court article (pour une fois en français !), et j'espère que ce ce livre sera lu et discuté intensément par le plus grand nombre. 
+L'ouvrage permet de comprendre l'intelligence artificielle générative et les grands modèles de langage (aka LLM) en amenant le lecteur vers des questionnements philosophiques (la compréhension, le fonctionnalisme, la conscience, l'alignement, l'autonomie, etc.) extrêmement importants pour la société actuelle et future. Monsieur Phi (aka Thibaut Giraud) a un talent rare : qui peut se targuer de maîtriser différents aspects techniques et philosophiques de l'IA générative et des LLMs, tout en étant extrêmement pédagogue ? T. Giraud réussit, à mon sens, la prouesse d'intéresser à la fois des personnes totalement ignorantes de l'IA générative, mais également des ingénieurs ou chercheurs du domaine. Nous avons urgemment besoin de philosophie (et d'expertise et de sciences informatiques) pour adresser les nombreuses questions que posent l'usage des IA génératives, et ce livre est au bon niveau de détails et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique. J'en dis un peu plus dans ce court article (pour une fois en français !), et j'espère que ce livre sera lu et discuté intensément par le plus grand nombre. 
 
 
 ## Nous avons perdu le monopole du langage
@@ -34,11 +34,11 @@ L'importance et la sensibilité au "prompt" sont par ailleurs très bien expliqu
 
 ## ChatGPT est nul... vraiment ?
 
-J'ai particulèrement aimé l'idée qu’on ne peut pas conclure à une incapacité générale de ChatGPT pour une tâche juste parce qu’on trouve des exemples où il se trompe lourdement. 
+J'ai particulièrement aimé l'idée qu’on ne peut pas conclure à une incapacité générale de ChatGPT pour une tâche juste parce qu’on trouve des exemples où il se trompe lourdement. 
 Cette thématique revient très souvent dans le livre. Elle n'est pas si simple à comprendre et à appréhender.
 
 
-Ceci dit, certaines personnes, parfois très présentes dans l'espace médiatique, se sont moqués de ChatGPT (pourquoi pas !) mais ont malheureusement immédiatement conclu et généralisé que ces LLMs étaient incapables de disserter sur de la philosophie, de résoudre certains problèmes logiques, etc.
+Ceci dit, certaines personnes, parfois très présentes dans l'espace médiatique, se sont moquées de ChatGPT (pourquoi pas !) mais ont malheureusement immédiatement conclu et généralisé que ces LLMs étaient incapables de disserter sur de la philosophie, de résoudre certains problèmes logiques, etc.
 Entendons-nous bien, il y a des limites fondamentales aux LLMs (j'y reviendrai !), mais trop de personnes, y compris chez certains universitaires, ont sous-estimé les capacités des LLMs, avec des impacts importants sur la qualité du débat. 
 Ce passage dit les termes: 
 
@@ -65,14 +65,13 @@ Or, il s'avère qu'avec un "prompt" plus adapté, utilisant le langage des éche
 Plus de détails ici: https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves/ (en anglais)
 De l'importance de la démarche scientifique et des expériences en Informatique, surtout quand on s'intéresse à des objets complexes comme les LLMs. J'en dis un peu plus dans une vidéo captation pour la fête de la science à l'INSA Rennes: https://www.youtube.com/watch?v=TtGiT-tWdmE 
 
-Alors un LLM avec un bon prompt ne permet pas de rivaliser avec les forts joueurs d'échecs, encore moins avec les IAs spécialisés comme Stockfish, mais au moins à clouer un peu le bec aux personnes qui accusent les LLMs d'être des perroquets stochastiques. 
-Surtout qu'il y a de plus en plus de preuves que les LLMs construisent des représentations internes qui vont au-delà 
+Alors un LLM avec un bon prompt ne permet pas de rivaliser avec les forts joueurs d'échecs, encore moins avec les IA spécialisés comme Stockfish, mais au moins à clouer un peu le bec aux personnes qui accusent les LLMs d'être des perroquets stochastiques. 
+Surtout qu'il y a de plus en plus de preuves que les LLMs construisent des représentations internes, actionables: c'est discuté avec le cas des échecs et d'un autre jeu (Othello), que les LLMs apprennent un modèle de monde non trivial. Bien sûr, la question de l'obtention d'un modèle de monde pour toute tâche et tout domaine reste ouverte... mais ces représentations internes vont au-delà de l'image du "perroquet stochastique".
 
 ## Perroquet?
 
 C'est d'ailleurs une autre thématique très bien couverte dans le livre: se cantonner à "LLM = perroquet qui récite quelque chose au hasard sans comprendre", c'est se priver d'un débat. 
-
-
+Et c'est intensément documenté et argumenté tout au long de l'ouvrage.
 
 > Parler encore de perroquets stochastiques en 2023 ressemble à du déni pur et simple ou à une méconnaissance de l’état de l’art. Pour emprunter les mots de Neel Nanda, directeur d’une équipe de recherche à DeepMind, interviewé en 2024 :
 > « Je ne comprends vraiment pas les personnes qui maintiennent encore la perspective des perroquets stochastiques de nos jours, pour être honnête. Je pense que ça a été largement falsifié » (Scarfe et Nanda, 2024).
@@ -85,13 +84,13 @@ C'est d'ailleurs une autre thématique très bien couverte dans le livre: se can
 ## Ne pas clore le débat...
 
 Justement, T. Giraud ne veut pas clore le débat, mais bien au contraire l'étendre à des questions encore plus précises et passionnantes, qui suivent par ailleurs les avancées récentes en IA générative (par exemple les modèles de raisonnement): Est-ce que les LLMs pensent? Est-ce que les LLMs ont une conscience? Est-ce qu'on peut contrôler des LLMs? Doit-on avoir peur des LLMs? 
-Toutes ces questions sont abordées dans les chapitres suivants, avec toujours un angle technique et philosophique. Et c'est toujours aussi pédagogique et passionant ! 
+Toutes ces questions sont abordées dans les chapitres suivants, avec toujours un angle technique et philosophique. Et c'est toujours aussi pédagogique et passionnant ! 
 
 Un questionnement particulièrement intéressant concerne l'alignement des LLMs. 
 Comme bien expliqué, la difficulté est qu'on ne programme plus explicitement un comportement souhaité (avec des lignes de code), mais il émerge à partir d'un apprentissage statistique sur des données très larges et variées (potentiellement tout le Web) et avec également des mécanismes pour prendre en compte les préférences (e.g., RLHF). 
-Les instructions (le "prompt") ne sont pas toujours suivis, et de nombreuses expériences montrent qu'un système à base de LLMs peut ne pas suivre les instructions ou passer par des sous-objectifs intermédiaires très dérangeants. De nombreux exemples sont données. Un exemple supplémentaire qui n'est pas dans le livre est ce système qui triche aux échecs, car le système comprend qu'il n'a aucune chance si une partie normale est jouée. Plus de détails ici: https://blog.mathieuacher.com/AICheatingInChessSomeNotes/ 
+Les instructions (via le "prompt") ne sont pas toujours suivies, et de nombreuses expériences montrent qu'un système à base de LLMs peut ne pas suivre les instructions ou passer par des sous-objectifs intermédiaires très dérangeants. De nombreux exemples sont donnés. Un exemple supplémentaire qui n'est pas dans le livre est ce système qui triche aux échecs, car le système comprend qu'il n'a aucune chance si une partie normale est jouée. Plus de détails ici: https://blog.mathieuacher.com/AICheatingInChessSomeNotes/ 
 
-Le problème de l'alignement est une instance d'un problème plus général, celui de la spécification et de la vérification/validation en informatique. En réalité, ce problème existe déjà quand on programme de manière classique: comment s'assurer que le logiciel développé, qui peut contenir des millions de ligne de code, et fonctionnant sur des processeurs pas forcément déterministes, va produire le bon résultat, et dans un temps raisonnable? Si on prend un programme d'échecs comme Stockfish, dur de déterminer a priori le coup qui va être proposé, à part en l'exécutant pour de bon. 
+Le problème de l'alignement est une instance d'un problème plus général, celui de la spécification et de la vérification/validation en informatique. En réalité, ce problème existe déjà quand on programme de manière classique: comment s'assurer que le logiciel développé, qui peut contenir des millions de lignes de code, et fonctionnant sur des processeurs pas forcément déterministes, va produire le bon résultat, et dans un temps raisonnable? Si on prend un programme d'échecs comme Stockfish, dur de déterminer a priori le coup qui va être proposé, à part en l'exécutant pour de bon. 
 C'est encore pire avec les LLMs: on découvre la (bonne ou mauvaise) surprise de la réponse au moment de son utilisation et du "prompt" utilisé 
 Disons qu'avec les LLMs le problème de la vérification est difficile, et encore plus critique peut-être, car plusieurs couches d'incertitude s'ajoutent. Comment spécifier clairement ce que l'on veut, comment tester et vérifier ce qu'on a effectivement construit, et comment rester lucide sur les limites de nos systèmes : un vaste programme qui va occuper de nombreux chercheurs (dont je fais partie !). 
 
@@ -99,20 +98,20 @@ Disons qu'avec les LLMs le problème de la vérification est difficile, et encor
 
 Quelques éléments techniques auraient pu être développés dans le livre. Par exemple, à propos de l'échantillonnage sur les probabilités de distribution (et notamment l'hyperparamètre de température) qui a à la fois un impact sur la créativité des LLMs (bien !) mais aussi qui a tendance à rendre encore plus incertaine les réponses (pas bien !). 
 Ou sur le fait que les systèmes d'IA ne reposent plus sur un LLM seul, mais sur une combinaison d'outils plus "traditionnels", comprenant du code et des programmes, et d'autres techniques d'IA (e.g., apprentissage automatique supervisé). 
-La raison est que les LLMs seuls ont quand même de sacrés limites, notamment pour raisonner et planifier... Les approches autorégressives comme les LLMs, qui prédisent mot après mot sans véritable modèle explicite du monde ni de leurs propres objectifs, se heurtent à des limites fondamentales dès qu'il s’agit de garantir une cohérence globale, une planification fiable ou le respect strict de contraintes complexes.
+La raison est que les LLMs seuls ont quand même de sacrées limites, notamment pour raisonner et planifier... Les approches autorégressives comme les LLMs, qui prédisent mot après mot sans véritable modèle explicite du monde ni de leurs propres objectifs, se heurtent à des limites fondamentales dès qu'il s’agit de garantir une cohérence globale, une planification fiable ou le respect strict de contraintes complexes.
 Pas étonnant donc d'avoir des systèmes hybrides, agentiques avec un ou plusieurs LLMs.
 
 Ces éléments techniques ne sont pas forcément cruciaux pour la compréhension du propos, et pour sûr, cela ne simplifie pas notre problème de complexité des IAs génératives. 
 
 ## Conclusion (achetez, lisez, offrez le livre)
 
-Le livre se conclue remarquablement par un résumé, quasiment une mise en garde:
+Le livre se conclut remarquablement par un résumé, quasiment une mise en garde:
 
 
-> En somme, il faut en philosophes commencer par reconnaître notre ignorance : les systèmes d’IA que nous > sommes en train de construire vont avoir un impact significatif sur nos existences futures, et nous ne > savons pas dans quelle mesure nous pourrons les contrôler. C’est une situation inédite et perturbante.
+> En somme, il faut en philosophes commencer par reconnaître notre ignorance : les systèmes d’IA que nous sommes en train de construire vont avoir un impact significatif sur nos existences futures, et nous ne savons pas dans quelle mesure nous pourrons les contrôler. C’est une situation inédite et perturbante.
 
 
-Je le traduirais ainsi: Nous avons urgemment besoin de philosophie (et d'expertise) pour adresser les nombreuses questions que posent l'usage des IAs génératives, et ce livre est au bon niveau de détail et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique.
+Je le traduirais ainsi: Nous avons urgemment besoin de philosophie (et d'expertise) pour adresser les nombreuses questions que posent l'usage des IA génératives, et ce livre est au bon niveau de détail et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique.
 
 C'est un livre par ailleurs très bien écrit. Ce n'est absolument pas un "simple" transcript des nombreuses vidéos de Monsieur Phi sur le sujet. (Même si cela avait été le cas, la qualité eut été au rendez-vous.) Le soin apporté aux liens entre les chapitres, la perspective historique, et les nombreuses explications précises, sourcées, et pédagogiques me font dire que c'est un livre utile à la fois à un public connaissant l'IA et en général à tout public. Pour continuer ensemble à réfléchir à ces machines un peu spéciales...
 
