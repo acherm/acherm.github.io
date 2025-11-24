@@ -66,7 +66,7 @@ Plus de détails ici: https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves
 De l'importance de la démarche scientifique et des expériences en Informatique, surtout quand on s'intéresse à des objets complexes comme les LLMs. J'en dis un peu plus dans une vidéo captation pour la fête de la science à l'INSA Rennes: https://www.youtube.com/watch?v=TtGiT-tWdmE 
 
 Alors un LLM avec un bon prompt ne permet pas de rivaliser avec les forts joueurs d'échecs, encore moins avec les IA spécialisés comme Stockfish, mais au moins à clouer un peu le bec aux personnes qui accusent les LLMs d'être des perroquets stochastiques. 
-Surtout qu'il y a de plus en plus de preuves que les LLMs construisent des représentations internes, actionables: c'est discuté avec le cas des échecs et d'un autre jeu (Othello), que les LLMs apprennent un modèle de monde non trivial. Bien sûr, la question de l'obtention d'un modèle de monde pour toute tâche et tout domaine reste ouverte... mais ces représentations internes vont au-delà de l'image du "perroquet stochastique".
+Surtout qu'il y a de plus en plus de preuves que les LLMs construisent des représentations internes, actionnables: c'est discuté avec le cas des échecs et d'un autre jeu (Othello), que les LLMs apprennent un modèle de monde non trivial. Bien sûr, la question de l'obtention d'un modèle de monde pour toute tâche et tout domaine reste ouverte... mais ces représentations internes vont au-delà de l'image du "perroquet stochastique".
 
 ## Perroquet?
 
@@ -111,7 +111,7 @@ Le livre se conclut remarquablement par un résumé, quasiment une mise en garde
 > En somme, il faut en philosophes commencer par reconnaître notre ignorance : les systèmes d’IA que nous sommes en train de construire vont avoir un impact significatif sur nos existences futures, et nous ne savons pas dans quelle mesure nous pourrons les contrôler. C’est une situation inédite et perturbante.
 
 
-Je le traduirais ainsi: Nous avons urgemment besoin de philosophie (et d'expertise) pour adresser les nombreuses questions que posent l'usage des IA génératives, et ce livre est au bon niveau de détail et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique.
+Je le traduirais ainsi: Nous avons urgemment besoin de philosophie (et d'expertise et de recherche en sciences informatiques) pour adresser les nombreuses questions que posent l'usage des IA génératives, et ce livre est au bon niveau de détail et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique.
 
 C'est un livre par ailleurs très bien écrit. Ce n'est absolument pas un "simple" transcript des nombreuses vidéos de Monsieur Phi sur le sujet. (Même si cela avait été le cas, la qualité eut été au rendez-vous.) Le soin apporté aux liens entre les chapitres, la perspective historique, et les nombreuses explications précises, sourcées, et pédagogiques me font dire que c'est un livre utile à la fois à un public connaissant l'IA et en général à tout public. Pour continuer ensemble à réfléchir à ces machines un peu spéciales...
 
