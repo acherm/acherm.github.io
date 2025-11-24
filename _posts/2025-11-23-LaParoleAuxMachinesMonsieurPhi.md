@@ -7,7 +7,7 @@ tags: [ChatGPT, LLM, generative AI, openai, chess, french]
 
 
 "La Parole aux Machines" est un livre d'utilité publique. 
-L'ouvrage permet de comprendre l'intelligence artificielle générative et les grands modèles de langage (aka LLM) en amenant le lecteur vers des questionnements philosophiques extrêmement importants (la compréhension, le fonctionnalisme, la conscience, l'alignement, l'autonomie, etc.) pour la société actuelle et future. Monsieur Phi (aka Thibaut Giraud) a un talent rare : qui peut maîtriser différents aspects techniques et philosophiques de l'IA générative et des LLMs, tout en étant extrêmement pédagogue ? T. Giraud réussit, à mon sens, la prouesse d'intéresser à la fois des personnes totalement ignorantes de l'IA générative, mais également des ingénieurs ou chercheurs du domaine. Nous avons urgemment besoin de philosophie (et d'expertise) pour adresser les nombreuses questions que posent l'usage des IAs génératives, et ce livre est au bon niveau de détail et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique. J'en dis un peu plus dans ce court article (pour une fois en français !), et j'espère que ce ce livre sera lu et discuté intensément par le plus grand nombre. 
+L'ouvrage permet de comprendre l'intelligence artificielle générative et les grands modèles de langage (aka LLM) en amenant le lecteur vers des questionnements philosophiques (la compréhension, le fonctionnalisme, la conscience, l'alignement, l'autonomie, etc.) extrêmement importants pour la société actuelle et future. Monsieur Phi (aka Thibaut Giraud) a un talent rare : qui peut se targuer de maîtriser différents aspects techniques et philosophiques de l'IA générative et des LLMs, tout en étant extrêmement pédagogue ? T. Giraud réussit, à mon sens, la prouesse d'intéresser à la fois des personnes totalement ignorantes de l'IA générative, mais également des ingénieurs ou chercheurs du domaine. Nous avons urgemment besoin de philosophie (et d'expertise et de sciences informatiques) pour adresser les nombreuses questions que posent l'usage des IAs génératives, et ce livre est au bon niveau de détails et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique. J'en dis un peu plus dans ce court article (pour une fois en français !), et j'espère que ce ce livre sera lu et discuté intensément par le plus grand nombre. 
 
 
 ## Nous avons perdu le monopole du langage
@@ -23,9 +23,9 @@ Tout va très très vite (ChatGPT est sorti en novembre 2022), mais cela aurait 
 ## Apprécier la perspective historique 
 
 J'ai particulièrement apprécié le chapitre sur GPT-2, car c'est via ce modèle que j'ai eu la sensation que quelque chose se passait... En expérimentant avec GPT-2 et le jeu d'échecs (une importante thématique du livre de T. Giraud !), j'écrivais tout début 2020:
-```
-Oui, GPT-2 n'a pas appris la signification complexe des échecs, mais il a appris quelque chose à partir de textes uniquement, ce qui s'apparente en quelque sorte au bluff (proche de l'effet ELIZA). L'approche brutale de GPT-2 peut être appliquée à de nombreux domaines (musique, poésie, recettes, etc.), puisqu'il existe des données textuelles. Je suppose que l'efficacité qui en résulte (effet ELIZA ?) peut varier considérablement et vaut la peine d'être essayée, mais pour le domaine des échecs, certaines « pièces » du processus d'apprentissage manquent ;)
-```
+
+> Oui, GPT-2 n'a pas appris la signification complexe des échecs, mais il a appris quelque chose à partir de textes uniquement, ce qui s'apparente en quelque sorte au bluff (proche de l'effet ELIZA). L'approche brutale de GPT-2 peut être appliquée à de nombreux domaines (musique, poésie, recettes, etc.), puisqu'il existe des données textuelles. Je suppose que l'efficacité qui en résulte (effet ELIZA ?) peut varier considérablement et vaut la peine d'être essayée, mais pour le domaine des échecs, certaines « pièces » du processus d'apprentissage manquent ;)
+
 
 GPT-2 a été un premier signal, et T. Giraud explique très bien son fonctionnement pour prédire les prochains "tokens". Aucun élément mathématique ou formel dans les explications, et pourtant, les explications sont à mon sens convaincantes et suffisantes pour comprendre comment marchent techniquement les LLMs, montrant au passage les (grandes) limites de GPT-2. Le livre explique aussi très bien qu'il ne faut pas sous-estimer cette tâche de prédiction de textes, qui paraît "simple" a priori, mais qui en fait ne l'est pas, et surtout qui ouvre de nombreuses perspectives sur d'autres tâches plus complexes, comme le résumé de texte, la traduction, des réponses à des questions diverses et variées, de la génération de programmes informatiques, etc.
 
@@ -42,9 +42,9 @@ Ceci dit, certaines personnes, parfois très présentes dans l'espace médiatiqu
 Entendons-nous bien, il y a des limites fondamentales aux LLMs (j'y reviendrai !), mais trop de personnes, y compris chez certains universitaires, ont sous-estimé les capacités des LLMs, avec des impacts importants sur la qualité du débat. 
 Ce passage dit les termes: 
 
-```
-Ce ne sont pas les pires, bien au contraire je les ai pris comme exemples parce que ce sont des universitaires, donc a priori des personnes compétentes quand elles font le choix de s’exprimer sur un sujet dans l’espace médiatique. La méconnaissance dont ils font preuve n’en est que plus frappante. Mais il faut bien garder en tête que de tels cas sont symptomatiques d’une tendance courante dans le traitement médiatique du sujet : des milliers d’articles de presse et d’interventions médiatiques du même genre, dans le même ton, diffusant les mêmes erreurs, ont profondément déformé la perception des LLM dans l’espace public.
-```
+
+> Ce ne sont pas les pires, bien au contraire je les ai pris comme exemples parce que ce sont des universitaires, donc a priori des personnes compétentes quand elles font le choix de s’exprimer sur un sujet dans l’espace médiatique. La méconnaissance dont ils font preuve n’en est que plus frappante. Mais il faut bien garder en tête que de tels cas sont symptomatiques d’une tendance courante dans le traitement médiatique du sujet : des milliers d’articles de presse et d’interventions médiatiques du même genre, dans le même ton, diffusant les mêmes erreurs, ont profondément déformé la perception des LLM dans l’espace public.
+
 
 Deux erreurs sont généralement faites. 
 La première, c'est d'utiliser des LLMs dépréciés, pas du tout à jour par rapport à l'état de l'art... Par exemple utiliser des LLMs de 2023 alors qu'on est en 2025... Ou de recycler des exemples de 2023 en 2025 sans vérifier et reproduire... dans un domaine où tout va très très vite. 
@@ -73,13 +73,14 @@ Surtout qu'il y a de plus en plus de preuves que les LLMs construisent des repr�
 C'est d'ailleurs une autre thématique très bien couverte dans le livre: se cantonner à "LLM = perroquet qui récite quelque chose au hasard sans comprendre", c'est se priver d'un débat. 
 
 
-```
-Parler encore de perroquets stochastiques en 2023 ressemble à du déni pur et simple ou à une méconnaissance de l’état de l’art. Pour emprunter les mots de Neel Nanda, directeur d’une équipe de recherche à DeepMind, interviewé en 2024 :
 
-« Je ne comprends vraiment pas les personnes qui maintiennent encore la perspective des perroquets stochastiques de nos jours, pour être honnête. Je pense que ça a été largement falsifié » (Scarfe et Nanda, 2024).
+> Parler encore de perroquets stochastiques en 2023 ressemble à du déni pur et simple ou à une méconnaissance de l’état de l’art. Pour emprunter les mots de Neel Nanda, directeur d’une équipe de recherche à DeepMind, interviewé en 2024 :
+> « Je ne comprends vraiment pas les personnes qui maintiennent encore la perspective des perroquets stochastiques de nos jours, pour être honnête. Je pense que ça a été largement falsifié » (Scarfe et Nanda, 2024).
+> Notez bien que rejeter la thèse des perroquets stochastiques n’implique pas que les LLM accèdent à une forme de compréhension. L’implication ne va que dans l’autre sens : si les LLM sont des perroquets 
+> stochastiques, alors ils ne comprennent rien ; accepter cette thèse, c’est fermer d’avance toute 
+> discussion sur le sujet. En la rejetant, au contraire, on ne fait qu’ouvrir la réflexion sur la 
+> possibilité d’une forme de compréhension dans les LLM, sans trancher a priori en faveur d’une conclusion.
 
-Notez bien que rejeter la thèse des perroquets stochastiques n’implique pas que les LLM accèdent à une forme de compréhension. L’implication ne va que dans l’autre sens : si les LLM sont des perroquets stochastiques, alors ils ne comprennent rien ; accepter cette thèse, c’est fermer d’avance toute discussion sur le sujet. En la rejetant, au contraire, on ne fait qu’ouvrir la réflexion sur la possibilité d’une forme de compréhension dans les LLM, sans trancher a priori en faveur d’une conclusion.
-```
 
 ## Ne pas clore le débat...
 
@@ -107,9 +108,9 @@ Ces éléments techniques ne sont pas forcément cruciaux pour la compréhension
 
 Le livre se conclue remarquablement par un résumé, quasiment une mise en garde:
 
-```
-En somme, il faut en philosophes commencer par reconnaître notre ignorance : les systèmes d’IA que nous sommes en train de construire vont avoir un impact significatif sur nos existences futures, et nous ne savons pas dans quelle mesure nous pourrons les contrôler. C’est une situation inédite et perturbante.
-```
+
+> En somme, il faut en philosophes commencer par reconnaître notre ignorance : les systèmes d’IA que nous > sommes en train de construire vont avoir un impact significatif sur nos existences futures, et nous ne > savons pas dans quelle mesure nous pourrons les contrôler. C’est une situation inédite et perturbante.
+
 
 Je le traduirais ainsi: Nous avons urgemment besoin de philosophie (et d'expertise) pour adresser les nombreuses questions que posent l'usage des IAs génératives, et ce livre est au bon niveau de détail et d'abstraction, loin de la médiocrité des ignorants et fainéants qui pullulent dans l'espace médiatique.
 
