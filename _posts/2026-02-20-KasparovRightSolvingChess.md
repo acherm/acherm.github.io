@@ -55,7 +55,6 @@ There is a key distinction in game theory that Kasparov's argument glosses over.
 - **Weak**: have a complete strategy from the starting position. Example: checkers.
 - **Strong**: know the best move from *every* legal position, including unreachable ones. Example: tic-tac-toe.
 
-![Three levels of solving](../assets/kasparov584_three_levels.png)
 
 When Kasparov says "chess will never be solved," he seems to assume *strong* solving -- mapping every position, including the 584-move monster. And yes, that might well be infeasible.
 

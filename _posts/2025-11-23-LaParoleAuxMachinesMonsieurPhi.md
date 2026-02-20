@@ -3,6 +3,7 @@ layout: post
 title:  "La Parole aux Machines (Philosophie des grands modèles de langage) par Monsieur Phi"
 date:   2025-11-23 011:54:29 +0200
 tags: [ChatGPT, LLM, generative AI, openai, chess, french]
+hidden: true
 ---
 
 
