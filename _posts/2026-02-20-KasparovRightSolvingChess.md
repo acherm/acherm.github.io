@@ -7,7 +7,7 @@ tags: [chess, solving chess, game theory, Kasparov, weak solving, Manim, endgame
 
 Garry Kasparov recently [tweeted](https://x.com/Kasparov63/status/2022016470826545287) about a chess endgame with just 8 pieces that requires 584 perfect moves to win. His conclusion: chess will never be solved, and even if it were, the results would be "practically meaningless." I think this reasoning has a subtle but important flaw. I made a short animated video and slides to explain why.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TODO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PcbvcG12A1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 (slides available [here as PDF](../assets/kasparov_chess_slides.pdf) and [here as Reveal.js](https://blog.mathieuacher.com/kasparov-chess-slides/))
 
