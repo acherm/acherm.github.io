@@ -9,7 +9,7 @@ Garry Kasparov recently [tweeted](https://x.com/Kasparov63/status/20220164708265
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TODO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-(slides available [here as PDF](TODO) and [here as Reveal.js](TODO))
+(slides available [here as PDF](../assets/kasparov_chess_slides.pdf) and [here as Reveal.js](https://blog.mathieuacher.com/kasparov-chess-slides/))
 
 ## The 584-Move Position Is Real
 
@@ -86,7 +86,7 @@ There is reason for hope.
 
 ## Going further
 
-I made a ~5-minute animated video with [Manim](https://www.manim.community/) (the engine behind 3Blue1Brown's videos) to walk through this argument visually: the 584-position, game trees, pruning, the checkers precedent, and the three levels of solving. The [slides are also available as PDF and as a Reveal.js presentation](TODO).
+I made a ~5-minute animated video with [Manim](https://www.manim.community/) (the engine behind 3Blue1Brown's videos) to walk through this argument visually: the 584-position, game trees, pruning, the checkers precedent, and the three levels of solving. The slides are also available [as a Reveal.js presentation](https://blog.mathieuacher.com/kasparov-chess-slides/).
 
 The video, the slides, and this blog post were produced with the help of [Claude Code](https://claude.ai/code) and GPT 5.2 Pro for the conceptual discussions. [Manim](https://www.manim.community/) is a fantastic tool for this kind of thing -- you describe scenes in Python and it renders publication-quality animations. Highly recommended for anyone wanting to explain visual or mathematical ideas.
 

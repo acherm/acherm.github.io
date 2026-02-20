@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Kasparov Right About Solving Chess?</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+  <style>
+    :root {
+      --r-background-color: #1A1A2E;
+    }
+    .reveal {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    /* Full-bleed frame slides */
+    .reveal .slide-background-content {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    /* Section title cards */
+    .section-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .section-title h2 {
+      color: #FFD700;
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-bottom: 0.3em;
+    }
+    .section-title .scene-num {
+      color: #95A5A6;
+      font-size: 0.7em;
+      margin-bottom: 0.6em;
+    }
+    .section-title p {
+      color: #EEEEEE;
+      font-size: 0.9em;
+      max-width: 70%;
+      text-align: center;
+      line-height: 1.5;
+    }
+    /* Progress bar color */
+    .reveal .progress span {
+      background: #FFD700;
+    }
+    /* Slide number styling */
+    .reveal .slide-number {
+      color: #95A5A6;
+      font-size: 14px;
+      right: 20px;
+      bottom: 12px;
+    }
+    /* Title slide styling */
+    .title-slide h1 {
+      color: #FFD700;
+      font-size: 2.0em;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    .title-slide .subtitle {
+      color: #EEEEEE;
+      font-size: 0.8em;
+      margin-top: 0.5em;
+    }
+    .title-slide .meta {
+      color: #95A5A6;
+      font-size: 0.55em;
+      margin-top: 1.5em;
+    }
+    /* End slide */
+    .end-slide h2 {
+      color: #FFD700;
+      font-size: 2.4em;
+      font-weight: bold;
+    }
+    .end-slide p {
+      color: #EEEEEE;
+      font-size: 0.9em;
+      margin-top: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 0: Title Card                            -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="title-slide">
+            <h1>Is Kasparov Right<br>about Solving Chess?</h1>
+            <p class="subtitle">The 584-move argument, game trees, and why there's hope to solve chess from move 1</p>
+            <p class="meta">Navigate: arrow keys or swipe &bull; Press <kbd>Esc</kbd> for overview</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s0_01_title.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 1: The Monster Position                 -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 1 / 10</span>
+            <h2>The Monster Position</h2>
+            <p>A chess endgame with only 8 pieces &mdash; yet it takes 584 perfect moves to win.</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s1_01_pieces_placed.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s1_02_white_to_move.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s1_03_584_counter.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s1_04_only_winning_move.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s1_05_one_slip.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 2: Kasparov's Verdict                   -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 2 / 10</span>
+            <h2>Kasparov's Verdict</h2>
+            <p>"Chess will never be solved" &mdash; but is he right?</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s2_01_quote_card.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s2_02_red_highlights.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s2_03_but_is_he_right.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 3: The Game Tree                        -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 3 / 10</span>
+            <h2>The Game Tree</h2>
+            <p>~10<sup>44</sup> legal positions &mdash; but does a solution need to visit them all?</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s3_01_first_moves.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s3_02_ten_to_44.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s3_03_584_in_tree.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s3_04_does_it_need.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 4: Cutting the Tree                     -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 4 / 10</span>
+            <h2>Cutting the Tree</h2>
+            <p>How pruning works: find one winning move, skip the rest.</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s4_01_white_picks.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4_02_move1_wins.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4_03_cant_beat.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4_04_584_deep.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4_05_pruned.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4_06_rules.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4_07_tiny_fraction.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 4c: Real-Life Proofs                    -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 5 / 10</span>
+            <h2>Real-Life Proofs</h2>
+            <p>Route planning and cave systems &mdash; exhibit one robust strategy, ignore the rest.</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s4c_01_route_found.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4c_02_irrelevant_roads.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4c_03_caves_visible.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4c_04_caves_greyed.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4c_05_one_strategy.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s4c_06_principle.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 5: Checkers Precedent                   -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 6 / 10</span>
+            <h2>The Checkers Precedent</h2>
+            <p>Schaeffer proved checkers is a draw in 2007 &mdash; most positions were irrelevant.</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s5_01_state_space.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s5_02_proof_subset.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s5_03_solved_2007.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s5_04_checkers_draw.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s5_05_could_chess.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 6: Three Levels of Solving              -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 7 / 10</span>
+            <h2>Three Levels of Solving</h2>
+            <p>Ultra-weak, weak, strong &mdash; Kasparov's hidden assumption.</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s6_01_three_tiers.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s6_02_which_solving.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s6_03_hidden_assumption.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s6_04_disagree.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s6_05_weak_sufficient.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 7: The Verdict                          -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 8 / 10</span>
+            <h2>The Verdict</h2>
+            <p>Decided branches get cut &mdash; the 584-move position may never arise.</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s7_01_kasparov_right.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s7_02_depth_corners.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s7_03_tree_verdicts.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s7_04_584_in_subtrees.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s7_05_pruned.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s7_06_reachable.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s7_07_summary.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s7_08_hope.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 8: TL;DR                               -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 9 / 10</span>
+            <h2>TL;DR</h2>
+            <p>The argument in 4 slides.</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s8_01_tldr_title.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s8_02_the_claim.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s8_03_pruning.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s8_04_hidden_assumption.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s8_05_hope.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 9: BONUS — Weak Solving Nuance           -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section>
+          <div class="section-title">
+            <span class="scene-num">Scene 10 / 10 &mdash; BONUS</span>
+            <h2>The Cons of Weak Solving</h2>
+            <p>Weak solving gives the verdict &mdash; but not the full map. What does that mean?</p>
+          </div>
+        </section>
+        <section data-background-image="slides_frames/s9_01_bonus_title.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s9_02_e4_wins.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s9_03_catch.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s9_04_incomplete.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s9_05_draw_all_covered.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s9_06_584_punchline.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+        <section data-background-image="slides_frames/s9_07_summary_cards.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- SCENE 10: Credits                              -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <section data-background-image="slides_frames/s10_01_credits.png"
+                 data-background-size="contain" data-background-color="#1A1A2E">
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════════════════════ -->
+      <!-- END SLIDE                                     -->
+      <!-- ══════════════════════════════════════════════ -->
+      <section>
+        <div class="end-slide">
+          <h2>Thank you</h2>
+          <p>Is Kasparov Right About Solving Chess?</p>
+          <p style="color: #95A5A6; font-size: 0.6em; margin-top: 1em;">
+            57 slides &bull; 12 scenes &bull; Generated from Manim video frames
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      showSlideNumber: 'all',
+      progress: true,
+      controls: true,
+      center: true,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      backgroundTransition: 'fade',
+      width: 1920,
+      height: 1080,
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 1.5,
+      keyboard: {
+        // Space and Enter advance through all slides (including vertical)
+        13: 'next',
+        32: 'next',
+      },
+    });
+  </script>
+</body>
+</html>
