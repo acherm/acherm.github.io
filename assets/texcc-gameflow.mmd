@@ -1,0 +1,50 @@
+flowchart TD
+  PM["playmove (L1240)"] --> PARSE["parsemove (L1153)"]
+  PARSE --> GENL_USER["generatelegal (L1048)"]
+  GENL_USER --> GALL["generateallmoves (L792)"]
+  GALL --> DISPATCH["gen@dispatch (L818)"]
+  DISPATCH --> PWN["genpawnmoves (L714)"]
+  DISPATCH --> KNI["genknightmoves (L523)"]
+  DISPATCH --> SLD["genslidingmoves (L659)"]
+  DISPATCH --> KNG["genkingmoves (L557)"]
+  KNG --> CASTLE_GEN["gencastlingmoves (L592)"]
+  PWN --> ADDMV["addmove (L503)"]
+  KNI --> ADDMV
+  SLD --> ADDMV
+  CASTLE_GEN --> ADDMV
+
+  GENL_USER --> FILTER["filterlegal (L984)"]
+  FILTER --> FLTEST["fl@testmove (L998)"]
+  FLTEST --> MAKE_TMP["makemove (L857)"]
+  FLTEST --> CASTLE_TEST["fl@testcastling (L1018)"]
+  MAKE_TMP --> FINDK["findkingsquare (L941)"]
+  FINDK --> ATK["issquareattacked (L351)"]
+  ATK --> UNMAKE_TMP["unmakemove (L897)"]
+
+  FILTER --> VALID["validateusermove (L1194)"]
+  VALID --> LEGALCHK["valid?"]
+  LEGALCHK -->|no| ILLEGAL["errmessage (illegal move)"]
+  LEGALCHK -->|yes| MAKE_USER["makemove (L857)"]
+  MAKE_USER --> UPDATE_USER["updategamestate (L1057)"]
+  UPDATE_USER --> ENDCHK1["checkgameend (L1213)"]
+  ENDCHK1 --> OVER1["game over?"]
+  OVER1 -->|yes| ENDMSG["displaygameresult"]
+  OVER1 -->|no| SEED["seedbeforeenginemove (L222)"]
+
+  SEED --> EMOVE["enginemove (L1270)"]
+  EMOVE --> GENL_ENG["generatelegal (L1048)"]
+  GENL_ENG --> PICK["pickenginemove (L2078)"]
+  PICK --> RAND["pickrandommove (L1118)"]
+  PICK --> GREEDY["pickgreedymove (L1594)"]
+  PICK --> MM2["pickbestmove depth2 (L1675)"]
+  PICK --> MM3["pickbestmovethree depth3 (L1843)"]
+
+  MM3 --> SB["mm@searchB (L1887)"]
+  SB --> SC["mm@searchC (L1948)"]
+  SC --> Q["mm@quiesce (L2011)"]
+  Q --> EVAL["evaluate (L1507)"]
+  Q --> PUSHPOP["pushstate/popstate (L1553/L1567)"]
+  Q --> MAKEUNMAKE["makemove/unmakemove (L857/L897)"]
+
+  EMOVE --> UPDATE_ENG["updategamestate (L1057)"]
+  UPDATE_ENG --> ENDCHK2["checkgameend (L1213)"]

@@ -1,0 +1,19 @@
+flowchart LR
+  SRC["Program: chess-engine.tex macros"] --> EXEC["TeX macro execution engine"]
+
+  EXEC --> RAM_BOARD["Board RAM: count200..263 (64 squares)"]
+  EXEC --> RAM_STATE["State registers: side, castling, ep, clocks"]
+  EXEC --> RAM_STACK["Search stack RAM: count10000+ (push/pop)"]
+  EXEC --> RAM_MOVES["Move arrays as token lists: movelist/legalmovelist"]
+
+  RAM_BOARD --> RULES["Rule unit: generateallmoves + filterlegal"]
+  RAM_STATE --> RULES
+  RAM_MOVES --> RULES
+
+  RULES --> TRANS["Transition unit: makemove/unmakemove/updategamestate"]
+  TRANS --> SEARCH["Search unit: negamax alpha-beta + quiescence"]
+  SEARCH --> EVAL["Eval unit: material + PST"]
+  EVAL --> SEARCH
+
+  SEARCH --> OUT["Output unit: writeengineoutput -> engine-output.dat"]
+  OUT --> UCI["UCI bridge: chess-uci.py"]
