@@ -1,24 +1,23 @@
 ---
 layout: post
-title:  "TexCCChess: How Coding Agents Wrote a Chess Engine in Pure TeX"
+title:  "TeXCCChess: How Coding Agents Wrote a Chess Engine in Pure TeX"
 date:   2026-02-24 11:00:00 +0200
 tags: [chess, chess engine, LLM, coding agents, LaTeX, TeX, pdfLaTeX, Elo, software engineering, generative AI, llm4code, Claude Code]
 ---
-{% raw %}
 
-What happens when you ask a coding agent to build a chess engine from scratch (with no plan, no architecture document, no step-by-step guidance) in a language that was never designed for this purpose? Building a chess engine is a non-trivial software engineering challenge: it involves board representation, move generation with dozens of special rules (castling, en passant, promotion), recursive tree search with pruning, evaluation heuristics, as well as a way to assess engine correctness and performance, including Elo rating. Doing it from scratch, with minimal human guidance, is a serious test of what coding agents can do today. Doing it in LaTeX's macro language, which has no arrays, no functions with return values, no convenient local variables or stack frames, and no built-in support for complex data structures or algorithms? More than that, as far as I can tell, it has never been done before (I could not find any existing TeX chess engine on CTAN, GitHub, or TeX.SE). Yet, the coding agent built a functional chess engine in pure TeX that runs on `pdflatex` and reaches around 1280 Elo (the level of a casual tournament player). This post dives deep into how this engine, called TexCCChess, works, the TeX-specific challenges encountered during development. You can play against it in Overleaf https://youtu.be/ngHMozcyfeY or your local TeX installation https://youtu.be/Tg4r_bu0ANY, while the source code is available on GitHub!
+What happens when you ask a 2026 coding agent like Claude Code to build a chess engine from scratch (with no plan, no architecture document, no step-by-step guidance) in a language that was never designed for this purpose? Building a chess engine is a non-trivial software engineering challenge: it involves board representation, move generation with dozens of special rules (castling, en passant, promotion), recursive tree search with pruning, evaluation heuristics, as well as a way to assess engine correctness and performance, including Elo rating. Doing it from scratch, with minimal human guidance, is a serious test of what coding agents can do today. Doing it in LaTeX's macro language, which has no arrays, no functions with return values, no convenient local variables or stack frames, and no built-in support for complex data structures or algorithms? More than that, as far as I can tell, it has never been done before (I could not find any existing TeX chess engine on CTAN, GitHub, or TeX.SE). Yet, the coding agent built a functional chess engine in pure TeX that runs on `pdflatex` and reaches around 1280 Elo (the level of a casual tournament player). This post dives deep into how this engine, called TeXCCChess, works, the TeX-specific challenges encountered during development. You can play against it in [Overleaf](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fgithub.com%2Facherm%2Fagentic-chessengine-latex-TeXCCChess%2Freleases%2Fdownload%2Fv1.0%2FTeXCCChess.zip&engine=pdflatex&main_document=chess-game.tex) (see demo https://youtu.be/ngHMozcyfeY) or your local TeX installation https://youtu.be/Tg4r_bu0ANY, while the source code is available on GitHub https://github.com/acherm/agentic-chessengine-latex-TeXCCChess/
 
 ## Motivation
 
 
-Among all the engines produced in my experiment of asking coding agents to build chess engines from scratch across 12 programming languages, TexCCChess is perhaps the most surprising and delightful. It is a chess engine written entirely in TeX (the macro language behind LaTeX) and it runs on `pdflatex`. 
+Among all the engines produced in my experiment of [asking coding agents to build chess engines from scratch across 12 programming languages](https://blog.mathieuacher.com/FromScratchChessEnginesPolyglot/), TeXCCChess is perhaps the most surprising and delightful. It is a chess engine written entirely in TeX (the macro language behind LaTeX) and it runs on `pdflatex`. 
 Yes, LaTeX is usually used for writing reports or  scientific papers, not at all for writing chess engines. Between, why TeX?
 The honest answer: because it shouldn't work and has never been done before. TeX has no arrays, no functions with return values, no convenient local variables or stack frames, no integers bigger than 2^{31}-1, no bitwise operations. Macro expansion can recurse, but you get no call stack and deep recursion quickly hits engine limits. What TeX does have is a Turing-complete macro expansion engine and, with e-TeX extensions (used by modern pdfTeX), up to 32,768 integer registers called `\count`. That turns out to be *just barely enough* to implement a chess engine.
-I could not find any prior chess engine in TeX (I searched CTAN, GitHub, and TeX Stack Exchange). There exist LaTeX packages for *rendering* chess positions and games (the excellent `chessboard` and `xskak` packages), but nothing that actually *plays chess*. TexCCChess appears to be the first.
+I could not find any prior chess engine in TeX (I searched CTAN, GitHub, and TeX Stack Exchange). There exist LaTeX packages for *rendering* chess positions and games (the excellent `chessboard` and `xskak` packages), but nothing that actually *plays chess*. TeXCCChess appears to be the first.
 
-If this is indeed the first full TeX chess engine, it is very unlikely the model memorized one verbatim. That makes TexCCChess a useful counterpoint to the plausible critique that "coding agents just regurgitate training data". Of course, the model may have seen discussions about chess programming in TeX, or small macro-expansion tricks, but a full working engine is a different artifact. (We will see in other posts that for engines in more mainstream languages, the pure memorization hypothesis is also questionable given the diversity of architectures and features, but here it is even more so).
+If this is indeed the first full TeX chess engine, it is very unlikely the model memorized one verbatim. That makes TeXCCChess a useful counterpoint to the plausible critique that "coding agents just regurgitate training data". Of course, the model may have seen discussions about chess programming in TeX, or small macro-expansion tricks, but a full working engine is a different artifact. (We will see in other posts that for engines in more mainstream languages, the pure memorization hypothesis is also questionable given the diversity of architectures and features, but here it is even more so).
 
-TexCCChess was built by [Claude Code](https://docs.anthropic.com/en/docs/claude-code), Anthropic's agentic coding tool, powered by Claude Opus 4.6. The "CC" in the name stands for Claude Code (and if you squint, an allusion to the Chaos Computer Club). A second variant was independently built by [Codex CLI](https://github.com/openai/codex) (powered by GPT-5.2), but it is out of the scope of this post (I will cover it in a future post, along with engines in other languages). 
+TeXCCChess was built by [Claude Code](https://docs.anthropic.com/en/docs/claude-code), Anthropic's agentic coding tool, powered by Claude Opus 4.6. The "CC" in the name stands for Claude Code (and if you squint, an allusion to the Chaos Computer Club). A second variant was independently built by [Codex CLI](https://github.com/openai/codex) (powered by GPT-5.2), but it is out of the scope of this post (I will cover it in a future post, along with engines in other languages). 
 
 The challenge I gave Claude Code was deliberately vague: *I want to build a chess engine in LaTeX... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of "similar" levels.* I did not specify the architecture, the search algorithm, or the data structures. The agent made all those decisions itself, discovered the TeX pitfalls the hard way, and iteratively debugged its own code across multiple sessions.
 
@@ -37,12 +36,12 @@ What emerges from this design is something resembling a **tiny virtual machine**
 
 The following diagram (generated by Codex during a code exploration session) shows how the components of this tiny VM connect (from the TeX macros through memory registers to the UCI bridge):
 
-![TexCCChess architecture: from TeX macros through memory registers to UCI bridge](/assets/texcc-architecture.png)
+![TeXCCChess architecture: from TeX macros through memory registers to UCI bridge](/assets/texcc-architecture.png)
 ([Mermaid source](/assets/texcc-architecture.mmd))
 
 And here is the full game flow (from the moment you call `\playmove{e2e4}` to the engine's response). It shows move parsing, pseudo-legal generation with piece-specific dispatchers, legality filtering via make/unmake + attack detection, and the search tree (depth-3 negamax cascading through searchB, searchC, and quiescence):
 
-![TexCCChess game flow: from playmove through move generation, legality filtering, and depth-3 search](/assets/texcc-gameflow.png)
+![TeXCCChess game flow: from playmove through move generation, legality filtering, and depth-3 search](/assets/texcc-gameflow.png)
 ([Mermaid source](/assets/texcc-gameflow.mmd))
 
 ## Board Representation: 64 Count Registers
@@ -262,15 +261,15 @@ Building a chess engine in TeX surfaced a collection of language-specific traps 
 
 **Register collision is the TeX equivalent of variable shadowing bugs.** Since everything is global, a macro that uses `\count190` as a loop counter will silently corrupt any outer macro also using `\count190`. The engine reserves specific register ranges for specific purposes: 200-263 for the board, 188-194 for scratch math, 10000+ for the search state stack.
 
-## Playing Against TexCCChess
+## Playing Against TeXCCChess
 
 The source code, instructions, and all tooling are available on GitHub: [**acherm/agentic-chessengine-latex-TeXCCChess**](https://github.com/acherm/agentic-chessengine-latex-TeXCCChess). You can play interactively by editing a `.tex` file and recompiling with `pdflatex` (works locally and on [Overleaf](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fgithub.com%2Facherm%2Fagentic-chessengine-latex-TeXCCChess%2Freleases%2Fdownload%2Fv1.0%2FTeXCCChess.zip&engine=pdflatex&main_document=chess-game.tex)), or run automated Elo tournaments against Stockfish via the UCI wrapper. The README covers everything: setup, interactive play, UCI mode, and tournament scripts.
 
-Here is a demo of an interactive game against TexCCChess in Overleaf (note: depth > 0 may take too much time for Overleaf's limits, so the engine is set to depth default=0 for this demo):
+Here is a demo of an interactive game against TeXCCChess in Overleaf (note: depth > 0 may take too much time for Overleaf's limits, so the engine is set to depth default=0 for this demo):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ngHMozcyfeY" frameborder="0" allowfullscreen></iframe>
 
-And here is a demo of an interactive game against TexCCChess in local (here the engine is set to depth=3 negamax + quiescence):
+And here is a demo of an interactive game against TeXCCChess in local (here the engine is set to depth=3 negamax + quiescence):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tg4r_bu0ANY" frameborder="0" allowfullscreen></iframe>
 
@@ -294,7 +293,7 @@ The main limitations are:
 
 ## The Development Process: 5 Sessions, 10 Days
 
-The entire development of TexCCChess is traceable through 5 Claude Code sessions spanning 10 days (Feb 13-23, 2026). It started with a single sentence: *"I want to implement a chess engine in LaTeX... and have the ability to play with this engine."* Here is what happened, session by session.
+The entire development of TeXCCChess is traceable through 5 Claude Code sessions spanning 10 days (Feb 13-23, 2026). It started with a single sentence: *"I want to implement a chess engine in LaTeX... and have the ability to play with this engine."* Here is what happened, session by session.
 
 ### Session 1: The Plan
 
@@ -367,7 +366,7 @@ In total: 5 sessions, ~650 API calls, ~53 pdflatex compilations, ~22 test suite 
 ~1000 Elo gained from better search and evaluation (a massive improvement from pure TeX macro optimization, all discovered and implemented by the coding agent).
 
 
-## What Makes TexCCChess Remarkable
+## What Makes TeXCCChess Remarkable
 
 1. **It exists.** As far as I can tell, there is no prior chess engine in TeX. A coding agent synthesized one from scratch, with no known example to draw from.
 2. **It plays legal chess (with high confidence).** Castling, en passant, promotion, check detection, stalemate, and the 50-move rule are implemented and validated with a 23-case test suite (though not all rules have exhaustive coverage). Threefold repetition and insufficient-material draws are not yet implemented. Beyond unit tests, the engine completed hundreds of tournament games against Stockfish; in rare occasions, an illegal move or protocol error occurred, though it is unclear whether these stem from the TeX engine logic or from the UCI wrapper. This gives reasonable confidence that the core move generation and rule handling are robust, if not formally verified.
@@ -387,7 +386,7 @@ The complete source code and Elo assessment infrastructure are available at [**g
 ```bibtex
 @misc{acher2026texccchess,
   author = {Mathieu Acher},
-  title = {TexCCChess: How Coding Agents Wrote a Chess Engine in Pure TeX},
+  title = {TeXCCChess: How Coding Agents Wrote a Chess Engine in Pure TeX},
   year = {2026},
   month = {feb},
   howpublished = {\url{https://blog.mathieuacher.com/TeXChessEngine/}},
