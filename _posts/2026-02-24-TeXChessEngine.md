@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "TexCCChess: How Coding Agents Wrote a Chess Engine in Pure TeX"
-date:   2026-02-24 011:00:00 +0200
+date:   2026-02-24 11:00:00 +0200
 tags: [chess, chess engine, LLM, coding agents, LaTeX, TeX, pdfLaTeX, Elo, software engineering, generative AI, llm4code, Claude Code]
 ---
+{% raw %}
 
 What happens when you ask a coding agent to build a chess engine from scratch (with no plan, no architecture document, no step-by-step guidance) in a language that was never designed for this purpose? Building a chess engine is a non-trivial software engineering challenge: it involves board representation, move generation with dozens of special rules (castling, en passant, promotion), recursive tree search with pruning, evaluation heuristics, as well as a way to assess engine correctness and performance, including Elo rating. Doing it from scratch, with minimal human guidance, is a serious test of what coding agents can do today. Doing it in LaTeX's macro language, which has no arrays, no functions with return values, no convenient local variables or stack frames, and no built-in support for complex data structures or algorithms? More than that, as far as I can tell, it has never been done before (I could not find any existing TeX chess engine on CTAN, GitHub, or TeX.SE). Yet, the coding agent built a functional chess engine in pure TeX that runs on `pdflatex` and reaches around 1280 Elo (the level of a casual tournament player). This post dives deep into how this engine, called TexCCChess, works, the TeX-specific challenges encountered during development. You can play against it in Overleaf https://youtu.be/ngHMozcyfeY or your local TeX installation https://youtu.be/Tg4r_bu0ANY, while the source code is available on GitHub!
 
@@ -393,3 +394,4 @@ The complete source code and Elo assessment infrastructure are available at [**g
   note = {\url{https://blog.mathieuacher.com/TeXChessEngine/}}
 }
 ```
+{% endraw %}
