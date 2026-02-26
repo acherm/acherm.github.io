@@ -5,8 +5,8 @@ date:   2026-02-23 11:00:00 +0100
 tags: [chess, chess engine, LLM, coding agents, programming languages, polyglot, Elo, benchmark, Rust, Java, COBOL, LaTeX, Rocq, Lean, Brainfuck, software engineering, generative AI, llm4code]
 ---
 
-What happens when you ask coding agents to write a chess engine from scratch and you repeat the experiment across 12 programming languages: Rust? C++? COBOL?! Rocq!? LaTeX!!?? or even Brainfuck??!!
-Over the past weeks, I have been running exactly this experiment. The short take-away: coding agents can now generate functional, UCI-compliant chess engines from scratch across a wide range of languages, some reaching over 2000 Elo. To my knowledge, this is the first time coding agents have been shown to produce non-trivial, end-to-end software of this complexity — with no architecture document, no step-by-step guidance, and across languages as diverse as Rust, COBOL, and LaTeX.
+What happens when you ask coding agents to write a chess engine from scratch, with minimal guidance and you replicate the experiment across 12 programming languages: Rust? C++? COBOL?! Rocq!? LaTeX!!?? or even Brainfuck??!!
+Over the past weeks, I have been running exactly this experiment. The short take-away: coding agents can now generate functional, UCI-compliant chess engines from scratch across a wide range of languages, some reaching over 2000 Elo. To my knowledge, this is the first time coding agents have been shown to produce non-trivial, end-to-end software of this complexity (with no architecture document, no step-by-step guidance) and across languages as diverse as Rust, COBOL, and LaTeX.
 I couldn't find prior art for a full playing engine in LaTeX, Brainfuck, or Rocq ([formerly Coq; renamed with Rocq 9.0](https://rocq-prover.org/releases/9.0.0)), yet coding agents produced playable engines in all three. This is a *research preview* but the diversity of features, architectures, and performance is striking and raises many questions about coding agents' capabilities and programming languages.
 
 
