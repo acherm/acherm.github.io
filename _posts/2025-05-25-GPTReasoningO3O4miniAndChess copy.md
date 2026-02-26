@@ -343,3 +343,16 @@ However, the road to a general model capable of excelling in any domain is still
 
 
 *Code/data with games released on Github https://github.com/acherm/gptchess*
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025gptreasoningo3o4miniandchesscopy,
+  author = {Mathieu Acher},
+  title = {General-Purpose AI in the Endgame: The Chess Limitations of o3/o4-mini},
+  year = {2025},
+  month = {may},
+  howpublished = {\url{https://blog.mathieuacher.com/GPTReasoningO3O4miniAndChess-copy/}},
+  note = {\url{https://blog.mathieuacher.com/GPTReasoningO3O4miniAndChess-copy/}}
+}
+```

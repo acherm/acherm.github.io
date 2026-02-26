@@ -5,7 +5,7 @@ date:   2026-02-24 011:00:00 +0200
 tags: [chess, chess engine, LLM, coding agents, LaTeX, TeX, pdfLaTeX, Elo, software engineering, generative AI, llm4code, Claude Code]
 ---
 
-What happens when you ask a coding agent to build a chess engine from scratch (with no plan, no architecture document, no step-by-step guidance) in a language that was never designed for this purpose? Building a chess engine is a non-trivial software engineering challenge: it involves board representation, move generation with dozens of special rules (castling, en passant, promotion), recursive tree search with pruning, evaluation heuristics, as well as a way to assess engine correctness and performance, including Elo rating. Doing it from scratch, with minimal human guidance, is a serious test of what coding agents can do today. Doing it in LaTeX's macro language, which has no arrays, no functions with return values, no convenient local variables or stack frames, and no built-in support for complex data structures or algorithms? More than that, as far as I can tell, it has never been done before (I could not find any existing TeX chess engine on CTAN, GitHub, or TeX.SE). Yet, the coding agent built a fully functional chess engine in pure TeX that runs on `pdflatex` and reaches around 1300 Elo (the level of a casual tournament player). This post dives deep into how this engine, called TexCCChess, works, the TeX-specific challenges encountered during development. You can play against it in Overleaf https://youtu.be/ngHMozcyfeY or your local TeX installation https://youtu.be/Tg4r_bu0ANY, while the source code is available on GitHub!
+What happens when you ask a coding agent to build a chess engine from scratch (with no plan, no architecture document, no step-by-step guidance) in a language that was never designed for this purpose? Building a chess engine is a non-trivial software engineering challenge: it involves board representation, move generation with dozens of special rules (castling, en passant, promotion), recursive tree search with pruning, evaluation heuristics, as well as a way to assess engine correctness and performance, including Elo rating. Doing it from scratch, with minimal human guidance, is a serious test of what coding agents can do today. Doing it in LaTeX's macro language, which has no arrays, no functions with return values, no convenient local variables or stack frames, and no built-in support for complex data structures or algorithms? More than that, as far as I can tell, it has never been done before (I could not find any existing TeX chess engine on CTAN, GitHub, or TeX.SE). Yet, the coding agent built a functional chess engine in pure TeX that runs on `pdflatex` and reaches around 1280 Elo (the level of a casual tournament player). This post dives deep into how this engine, called TexCCChess, works, the TeX-specific challenges encountered during development. You can play against it in Overleaf https://youtu.be/ngHMozcyfeY or your local TeX installation https://youtu.be/Tg4r_bu0ANY, while the source code is available on GitHub!
 
 ## Motivation
 
@@ -28,9 +28,9 @@ The engine is ~2,100 lines of pure TeX code in a single file (`chess-engine.tex`
 - **Board representation:** 64 TeX `\count` registers (`\count200` through `\count263`)
 - **Piece encoding:** integers from -6 to +6 (positive = white, negative = black, 0 = empty)
 - **Move generation:** pseudo-legal generation + legality filtering via make/unmake
-- **Search:** depth-3 negamax with alpha-beta pruning + quiescence search
-- **Evaluation:** material counting + piece-square tables (Simplified Eval Function)
-- **UCI support:** a thin Python wrapper bridges `pdflatex` to the UCI protocol
+- **Search:** depth-3 [negamax](https://chessprogramming.org/Negamax) with [alpha-beta pruning](https://chessprogramming.org/Alpha-Beta) + [quiescence search](https://chessprogramming.org/Quiescence_Search)
+- **Evaluation:** material counting + [piece-square tables](https://chessprogramming.org/Piece-Square_Tables) ([Simplified Eval Function](https://chessprogramming.org/Simplified_Evaluation_Function))
+- **UCI support:** a thin Python wrapper bridges `pdflatex` to the [UCI](https://chessprogramming.org/UCI) protocol
 
 What emerges from this design is something resembling a **tiny virtual machine** built on top of TeX's macro expansion engine. The `\count` registers serve as RAM (with dedicated address ranges for the board (200-263), scratch computation (188-194), and the search call stack (10000+)). The `\csname` lookup tables act as a read-only ROM for precomputed data (file/rank mappings, piece-square tables, material values). Token lists (`\movelist`, `\legalmovelist`) serve as dynamically allocated buffers. Macros like `\makemove`/`\unmakemove` and `\pushstate`/`\popstate` are the instruction set. TeX's `\ifnum` and `\loop` primitives provide the control flow. The whole thing is a register machine with no stack frames, no heap, and no garbage collector (just flat integer registers and name-based indirection). pdflatex is, in effect, the CPU executing this VM.
 
@@ -200,7 +200,7 @@ Each depth level has its own cutoff flag (`\ifmm@cutoffB`, `\ifmm@cutoffC`, `\if
 
 ### Move Ordering
 
-Good alpha-beta depends on examining the best moves first. The engine uses a 4-pass MVV-LVA (Most Valuable Victim - Least Valuable Attacker) ordering:
+Good alpha-beta depends on examining the best moves first. The engine uses a 4-pass [MVV-LVA](https://chessprogramming.org/MVV-LVA) (Most Valuable Victim - Least Valuable Attacker) ordering:
 
 1. Promotions + captures of queens/rooks
 2. Captures of bishops/knights
@@ -211,7 +211,7 @@ This is implemented by iterating the legal move list four times, each time extra
 
 ### Quiescence Search
 
-At the leaves of the depth-3 search, a quiescence search extends the analysis for captures only. This prevents the horizon effect (e.g., stopping evaluation right after we hang a piece but before the opponent recaptures):
+At the leaves of the depth-3 search, a quiescence search extends the analysis for captures only. This prevents the [horizon effect](https://chessprogramming.org/Horizon_Effect) (e.g., stopping evaluation right after we hang a piece but before the opponent recaptures):
 
 ```tex
 \def\mm@quiesce{%
@@ -232,7 +232,7 @@ At the leaves of the depth-3 search, a quiescence search extends the analysis fo
 
 ## Evaluation
 
-The evaluation function scans all 64 squares and sums material values plus piece-square table (PST) bonuses. The PSTs follow the well-known Simplified Evaluation Function from the Chess Programming Wiki: pawns are rewarded for advancing toward the center, knights prefer central squares, kings prefer the corners in the middlegame, etc.
+The evaluation function scans all 64 squares and sums material values plus piece-square table (PST) bonuses. The PSTs follow the well-known [Simplified Evaluation Function](https://chessprogramming.org/Simplified_Evaluation_Function) from the [Chess Programming Wiki](https://chessprogramming.org/): pawns are rewarded for advancing toward the center, knights prefer central squares, kings prefer the corners in the middlegame, etc.
 
 ```tex
 \expandafter\def\csname piecemat@1\endcsname{100}%  pawn
@@ -263,7 +263,7 @@ Building a chess engine in TeX surfaced a collection of language-specific traps 
 
 ## Playing Against TexCCChess
 
-The source code, instructions, and all tooling are available on GitHub: [**acherm/agentic-chessengine-latex-TeXCCChess**](https://github.com/acherm/agentic-chessengine-latex-TeXCCChess). You can play interactively by editing a `.tex` file and recompiling with `pdflatex` (works locally and on Overleaf), or run automated Elo tournaments against Stockfish via the UCI wrapper. The README covers everything: setup, interactive play, UCI mode, and tournament scripts.
+The source code, instructions, and all tooling are available on GitHub: [**acherm/agentic-chessengine-latex-TeXCCChess**](https://github.com/acherm/agentic-chessengine-latex-TeXCCChess). You can play interactively by editing a `.tex` file and recompiling with `pdflatex` (works locally and on [Overleaf](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fgithub.com%2Facherm%2Fagentic-chessengine-latex-TeXCCChess%2Freleases%2Fdownload%2Fv1.0%2FTeXCCChess.zip&engine=pdflatex&main_document=chess-game.tex)), or run automated Elo tournaments against Stockfish via the UCI wrapper. The README covers everything: setup, interactive play, UCI mode, and tournament scripts.
 
 Here is a demo of an interactive game against TexCCChess in Overleaf (note: depth > 0 may take too much time for Overleaf's limits, so the engine is set to depth default=0 for this demo):
 
@@ -275,12 +275,18 @@ And here is a demo of an interactive game against TexCCChess in local (here the 
 
 ## Strength and Elo
 
-TexCCChess was evaluated in gauntlet matches against Stockfish at various calibrated levels. A 100-game tournament against Stockfish 1320 gave **41 wins, 10 draws, 49 losses (estimated Elo ~1292, 95% CI: 1222-1360)**. A separate gauntlet with a different calibration suite yielded **~1379 Elo**. The headline estimate is **~1300 Elo** (depth-3 + alpha-beta + quiescence + PSTs). Test conditions: 10s+0.1s time control, Stockfish with `UCI_Elo` skill limiting, no opening book, single-threaded, on an Apple M3 Max.
+**Estimated strength: ~1280 Elo** (95% CI: ~1225–1345, measured against Stockfish at 120+1 time control, CCRL 40/4 scale).
 
-For reference, ~1300 Elo is roughly the level of a casual tournament player who has studied some openings and doesn't hang pieces in obvious ways. The engine beats Stockfish limited to 800 Elo with a solid score and loses convincingly to Stockfish above 1500.
+All matches used Stockfish with `UCI_LimitStrength=true` at the **120+1s** time control, which is the time control Stockfish's `UCI_Elo` scale was calibrated against (anchored to [CCRL 40/4](https://www.computerchess.org.uk/ccrl/404/)). Test conditions: no opening book, single-threaded, on an Apple M3 Max. All game records (PGN) are available on [GitHub](https://github.com/acherm/agentic-chessengine-latex-TeXCCChess).
+
+### Evaluation details
+
+A **100-game baseline** against Stockfish set to 1320 Elo gave **45 wins, 7 draws, 48 losses** (48.5% score, estimated Elo ~1310). An **extended evaluation** (3 x 50 games against Stockfish at 1320, 1400, and 1500 Elo) produced a combined estimate of ~1260 Elo. A small number of games ended due to UCI protocol issues (illegal moves); after removing those, the estimate stabilizes at **~1285 Elo** (95% CI: ~1225–1345).
+
+Overall, the engine performs around **1280–1300 Elo** at 120+1. For reference, this is roughly the level of a casual tournament player who has studied some openings and does not hang pieces in obvious ways. The engine loses convincingly to Stockfish above 1500.
 
 The main limitations are:
-- **Search depth**: capped at 3 plies + quiescence. Deeper search would require either much faster execution (impossible in TeX) or a time budget of minutes per move.
+- **Search depth**: capped at 3 plies + quiescence. Deeper search would require either much faster execution (highly challenging in TeX) or a time budget of minutes per move.
 - **No opening book**: the engine starts from scratch every game.
 - **Simplified evaluation**: material + PSTs only; no pawn structure, king safety, or mobility terms.
 - **Always promotes to queen**: no under-promotion.
@@ -334,7 +340,7 @@ The Elo progression within this single session tells the story:
 
 The initial depth-3 implementation was a disaster: move 3 took 30 seconds in complex positions, hitting the UCI timeout. Games ended with *"illegal move: 0000"* (the timeout fallback). The agent spent over 30 turns debugging (fixing alpha-beta cutoffs (the TeX idiom for `>=` is `\ifnum X < Y \relax\else`, since there is no `\ifge` primitive), then pragmatically capping depth-C at 12 moves). Since MVV-LVA sorts captures first, all tactical moves are always searched even under the cap. Timing dropped to 0.5-3.5s per move.
 
-Then a measurement bug: the agent set `UCI_Elo: 800` for Stockfish, but recent Stockfish versions enforce a minimum `UCI_Elo` around 1300-1350 (the exact floor depends on version and build) and silently clamp values below it. The "5.5/10 vs Stockfish 800" result was actually against a much stronger opponent. After correcting the configuration (verified by inspecting Stockfish's `uci` option output), a proper 100-game tournament vs Stockfish 1320 gave: **41 wins, 10 draws, 49 losses (estimated Elo ~1292 (95% CI: 1222-1360))**.
+Then a measurement bug: the agent set `UCI_Elo: 800` for Stockfish, but recent Stockfish versions enforce a minimum `UCI_Elo` around 1300-1350 (the exact floor depends on version and build) and silently clamp values below it. The "5.5/10 vs Stockfish 800" result was actually against a much stronger opponent. After correcting the configuration (verified by inspecting Stockfish's `uci` option output), a preliminary 100-game tournament vs Stockfish 1320 confirmed the engine was in the ~1280 Elo range. A more rigorous evaluation using the Stockfish UCI_Elo calibration time control (120+1s) is reported in the [Strength and Elo](#strength-and-elo) section above.
 
 ### Effort Summary
 
@@ -347,7 +353,7 @@ Then a measurement bug: the agent set `UCI_Elo: 800` for Stockfish, but recent S
 | 5 | PST + AB + D3 + quiescence | 212 | 38% |
 | **Total** | | **~650** | **100%** |
 
-In total: 5 sessions, ~650 API calls, ~53 pdflatex compilations, ~22 test suite runs. The engine grew from 0 to 1,342 lines (random moves) to 2,093 lines (depth-3 + quiescence), and from ~300 Elo to ~1300 Elo. Session 5 (the "big push" to depth-3 with quiescence) consumed the most resources (38% of the total), reflecting the difficulty of getting search, pruning, and move ordering right in TeX. The initial implementation (session 2) was the second largest at 24%, which makes sense: building a full rule-compliant chess engine from scratch is the foundational effort.
+In total: 5 sessions, ~650 API calls, ~53 pdflatex compilations, ~22 test suite runs. The engine grew from 0 to 1,342 lines (random moves) to 2,093 lines (depth-3 + quiescence), and from ~300 Elo to ~1280 Elo. Session 5 (the "big push" to depth-3 with quiescence) consumed the most resources (38% of the total), reflecting the difficulty of getting search, pruning, and move ordering right in TeX. The initial implementation (session 2) was the second largest at 24%, which makes sense: building a full rule-compliant chess engine from scratch is the foundational effort.
 
 ### Elo Progression
 
@@ -355,15 +361,15 @@ In total: 5 sessions, ~650 API calls, ~53 pdflatex compilations, ~22 test suite 
 |-----------|-----|-------------|
 | Random move picker | ~300 | 1,342 |
 | Depth-2 minimax + material eval | ~550 | ~1,500 |
-| Depth-3 + alpha-beta + quiescence + PSTs | **~1300** | 2,093 |
+| Depth-3 + alpha-beta + quiescence + PSTs | **~1280** | 2,093 |
 
-~900 Elo gained from better search and evaluation (a massive improvement from pure TeX macro optimization, all discovered and implemented by the coding agent).
+~1000 Elo gained from better search and evaluation (a massive improvement from pure TeX macro optimization, all discovered and implemented by the coding agent).
 
 
 ## What Makes TexCCChess Remarkable
 
 1. **It exists.** As far as I can tell, there is no prior chess engine in TeX. A coding agent synthesized one from scratch, with no known example to draw from.
-2. **It plays legal chess.** Castling, en passant, promotion, check detection, stalemate, and the 50-move rule are implemented and covered by a 23-case test suite. (Threefold repetition and insufficient-material draws are not yet implemented.)
+2. **It plays legal chess (with high confidence).** Castling, en passant, promotion, check detection, stalemate, and the 50-move rule are implemented and validated with a 23-case test suite (though not all rules have exhaustive coverage). Threefold repetition and insufficient-material draws are not yet implemented. Beyond unit tests, the engine completed hundreds of tournament games against Stockfish; in rare occasions, an illegal move or protocol error occurred, though it is unclear whether these stem from the TeX engine logic or from the UCI wrapper. This gives reasonable confidence that the core move generation and rule handling are robust, if not formally verified.
 3. **It thinks.** Three plies of lookahead with alpha-beta pruning and quiescence search, using only TeX macro expansion and integer registers.
 4. **It is entirely self-contained.** The core engine is a single `.tex` file. No shell-escape, no LuaTeX, no external computation.
 5. **It produces a typeset PDF.** You play by editing a `.tex` file and compiling with `pdflatex`. The output is a beautifully typeset chess document (because, after all, it's still TeX running inside the LaTeX ecosystem).

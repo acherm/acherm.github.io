@@ -232,3 +232,16 @@ As we move toward "offensive" AIs more and more capable of probing, reasoning, a
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025aicheatinginchesssomenotes,
+  author = {Mathieu Acher},
+  title = {AI Cheating at Chess: Some Notes},
+  year = {2025},
+  month = {may},
+  howpublished = {\url{https://blog.mathieuacher.com/AICheatingInChessSomeNotes/}},
+  note = {\url{https://blog.mathieuacher.com/AICheatingInChessSomeNotes/}}
+}
+```

@@ -101,3 +101,16 @@ Reproducibility is a long standing issue in science, and Docker new policy chall
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2020dockerreproduciblesciencechallenges,
+  author = {Mathieu Acher},
+  title = {Docker New Inactive Image Policy and Reproducible Science},
+  year = {2020},
+  month = {sep},
+  howpublished = {\url{https://blog.mathieuacher.com/DockerReproducibleScienceChallenges/}},
+  note = {\url{https://blog.mathieuacher.com/DockerReproducibleScienceChallenges/}}
+}
+```

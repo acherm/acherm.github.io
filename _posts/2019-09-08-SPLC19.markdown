@@ -45,3 +45,16 @@ I particularly appreciated the session with papers about:
  * advanced IDE for a family of languages (with the now famous tiramisu example!) 
 
 I had to leave earlier than expected but from what I have heard thursday and friday were also a very interesting day with regular papers, tool demonstrations, etc. What is sure is that SPLC was a success with a very nice organisation in Paris and nice interactions in the community or with ECSA crowd. Special thanks to Laurence Duchien, Tewfik Ziadi, Camille Salinesi, and Juliana Alves Pereira! 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019splc19,
+  author = {Mathieu Acher},
+  title = {Variants Everywhere: My report of SPLC 2019},
+  year = {2019},
+  month = {sep},
+  howpublished = {\url{https://blog.mathieuacher.com/SPLC19/}},
+  note = {\url{https://blog.mathieuacher.com/SPLC19/}}
+}
+```

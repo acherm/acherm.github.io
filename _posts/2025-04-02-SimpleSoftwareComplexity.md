@@ -21,3 +21,16 @@ I especially appreciated the use of simple, intuitive examples to illustrate eac
 There is no silver bullet, but the suggestions of doing less with less (also: more constraints imposed to reduce complexity) or starting over (possibly from scratch) are intriguing. Long road ahead, but it's a good start to acknowledge the complexity and start addressing it.
 
 Highly recommended viewing for anyone interested in building more resilient, understandable systems: 📺 [Watch the talk on YouTube](https://www.youtube.com/watch?v=czzAVuVz7u4)
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025simplesoftwarecomplexity,
+  author = {Mathieu Acher},
+  title = {A Quick Take on 'Why Can't We Make Simple Software?' by Peter van Hardenberg},
+  year = {2025},
+  month = {apr},
+  howpublished = {\url{https://blog.mathieuacher.com/SimpleSoftwareComplexity/}},
+  note = {\url{https://blog.mathieuacher.com/SimpleSoftwareComplexity/}}
+}
+```

@@ -45,3 +45,16 @@ Please share underrated gems!
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2022clubquarantineunderrated,
+  author = {Mathieu Acher},
+  title = {Underrated Electronic Music Tracks (The Case of Club Quarantine)},
+  year = {2022},
+  month = {mar},
+  howpublished = {\url{https://blog.mathieuacher.com/ClubQuarantineUnderRated/}},
+  note = {\url{https://blog.mathieuacher.com/ClubQuarantineUnderRated/}}
+}
+```

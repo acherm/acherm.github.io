@@ -166,3 +166,16 @@ I've put the source code of my procedures (Jupyter notebooks, see e.g., [benchan
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019wikipediamatrixchallenge,
+  author = {Mathieu Acher},
+  title = {The WikipediaMatrix Challenge},
+  year = {2019},
+  month = {jan},
+  howpublished = {\url{https://blog.mathieuacher.com/WikipediaMatrixChallenge/}},
+  note = {\url{https://blog.mathieuacher.com/WikipediaMatrixChallenge/}}
+}
+```

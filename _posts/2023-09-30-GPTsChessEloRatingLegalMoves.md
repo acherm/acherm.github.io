@@ -711,3 +711,16 @@ You can track edits and commits here: https://github.com/acherm/acherm.github.io
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023gptschesseloratinglegalmoves,
+  author = {Mathieu Acher},
+  title = {Debunking the Chessboard: Confronting GPTs Against Chess Engines to Estimate Elo Ratings and Assess Legal Move Abilities},
+  year = {2023},
+  month = {sep},
+  howpublished = {\url{https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves/}},
+  note = {\url{https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves/}}
+}
+```

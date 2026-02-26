@@ -123,3 +123,16 @@ C'est un livre par ailleurs très bien écrit. Ce n'est absolument pas un "simpl
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025laparoleauxmachinesmonsieurphi,
+  author = {Mathieu Acher},
+  title = {La Parole aux Machines (Philosophie des grands modèles de langage) par Monsieur Phi},
+  year = {2025},
+  month = {nov},
+  howpublished = {\url{https://blog.mathieuacher.com/LaParoleAuxMachinesMonsieurPhi/}},
+  note = {\url{https://blog.mathieuacher.com/LaParoleAuxMachinesMonsieurPhi/}}
+}
+```

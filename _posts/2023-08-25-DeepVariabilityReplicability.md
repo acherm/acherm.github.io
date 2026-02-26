@@ -18,3 +18,16 @@ Abstract:
 > By harnessing deep variability, we can generate more robust, generalizable scientific findings, presenting a fresh perspective for computational science's future.
 
 It was great to meet the Japanese software engineering community!
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023deepvariabilityreplicability,
+  author = {Mathieu Acher},
+  title = {Deep Software Variability for Replicability in Computational Science (talk in Japan)},
+  year = {2023},
+  month = {aug},
+  howpublished = {\url{https://blog.mathieuacher.com/DeepVariabilityReplicability/}},
+  note = {\url{https://blog.mathieuacher.com/DeepVariabilityReplicability/}}
+}
+```

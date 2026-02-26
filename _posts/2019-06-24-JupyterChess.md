@@ -37,3 +37,16 @@ What's the point of having a chess reader inside Jupyter? Obviously, there are b
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019jupyterchess,
+  author = {Mathieu Acher},
+  title = {Jupyter and chess analysis},
+  year = {2019},
+  month = {jun},
+  howpublished = {\url{https://blog.mathieuacher.com/JupyterChess/}},
+  note = {\url{https://blog.mathieuacher.com/JupyterChess/}}
+}
+```

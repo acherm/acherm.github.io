@@ -41,3 +41,16 @@ PS: I am not an expert in model-based reinforcement learning, I have given a can
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019muzerochess,
+  author = {Mathieu Acher},
+  title = {MuZero: A new revolution for Chess?},
+  year = {2019},
+  month = {nov},
+  howpublished = {\url{https://blog.mathieuacher.com/MuZeroChess/}},
+  note = {\url{https://blog.mathieuacher.com/MuZeroChess/}}
+}
+```

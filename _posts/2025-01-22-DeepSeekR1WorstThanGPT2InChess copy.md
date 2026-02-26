@@ -393,3 +393,16 @@ Everyone is excited about the future of LLMs, and it is important to keep in min
 It is an exciting time, and there are several research directions to explore.
 
 *Code/data with games, reasoning, etc. on https://github.com/acherm/gptchess*
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025deepseekr1worstthangpt2inchesscopy,
+  author = {Mathieu Acher},
+  title = {DeepSeek-R1 is Worse than GPT-2 in Chess},
+  year = {2025},
+  month = {jan},
+  howpublished = {\url{https://blog.mathieuacher.com/DeepSeekR1WorstThanGPT2InChess-copy/}},
+  note = {\url{https://blog.mathieuacher.com/DeepSeekR1WorstThanGPT2InChess-copy/}}
+}
+```

@@ -60,3 +60,16 @@ As a final note,  re-engineering code variants is challenging for generative AI/
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023variantsandllm,
+  author = {Mathieu Acher},
+  title = {ChatGPT for Reengineering Variants},
+  year = {2023},
+  month = {aug},
+  howpublished = {\url{https://blog.mathieuacher.com/VariantsAndLLM/}},
+  note = {\url{https://blog.mathieuacher.com/VariantsAndLLM/}}
+}
+```

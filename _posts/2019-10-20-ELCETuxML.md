@@ -40,3 +40,16 @@ By the way, the abstract of the talk can be found below:
  * [configuration failures/bugs](https://hal.inria.fr/hal-02147012)
  * [kernel size prediction](https://hal.inria.fr/hal-02314830)
  * **[Youtube video of the talk is online](https://youtu.be/UBghs-cwQX4)** 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019elcetuxml,
+  author = {Mathieu Acher},
+  title = {Talk at Embedded Linux Conference Europe 2019},
+  year = {2019},
+  month = {oct},
+  howpublished = {\url{https://blog.mathieuacher.com/ELCETuxML/}},
+  note = {\url{https://blog.mathieuacher.com/ELCETuxML/}}
+}
+```

@@ -21,7 +21,7 @@ What about opening a terabyte file with vim, emacs, more or less? Good luck ;)
 
 # Matrices
 
-Another story occured when mining millions of tabular data out of Wikipedia dumps (a bit in the spirit of a [previous blog post](http://blog.mathieuacher.com/WikipediaMatrixChallenge/)). 
+Another story occured when mining millions of tabular data out of Wikipedia dumps (a bit in the spirit of a [previous blog post](https://blog.mathieuacher.com/WikipediaMatrixChallenge/)). 
 The size of files was OK (a few octets), but the number of files was not: millions of files! 
 A mistake to never make is to copy into an USB hard disk files by files. Instead, produce an archive (a tar, a bzip, whatever) since only one file is then copied (it avoids infinite I/O calls), and the information is also compressed. The real story is that I recovered an existing hard disk containing a huge directory with millions of files, and then you're screwed: either you produce the archive, but I/O calls will happen within the hard disk, or you copy files by files (it can be looooog) and perform the compression on your local hard disk. 
 I would have appreciated to have a single file, an archive ;)
@@ -68,3 +68,16 @@ It's not a big trick but I wanted to share it, just in case. And also illustrate
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019dumpingtrickssql,
+  author = {Mathieu Acher},
+  title = {Some tricks to backup large data (like dump with SQL)},
+  year = {2019},
+  month = {apr},
+  howpublished = {\url{https://blog.mathieuacher.com/DumpingTricksSQL/}},
+  note = {\url{https://blog.mathieuacher.com/DumpingTricksSQL/}}
+}
+```

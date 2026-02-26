@@ -43,3 +43,16 @@ I thank [Manuel Leduc](https://mleduc.xyz/) for his nice advices about DSL and X
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019xtextstandaloneparsing,
+  author = {Mathieu Acher},
+  title = {Standalone Solution for Loading Models with Xtext},
+  year = {2019},
+  month = {mar},
+  howpublished = {\url{https://blog.mathieuacher.com/XtextStandaloneParsing/}},
+  note = {\url{https://blog.mathieuacher.com/XtextStandaloneParsing/}}
+}
+```

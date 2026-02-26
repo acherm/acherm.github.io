@@ -47,7 +47,7 @@ There are obviously some threats to my experience (I didn't perform the task in 
 
 Don't you hear the voice of *"Don't reinvent the wheel, reuse!"*? This principle applies to many cases, but reuse what? it's a chess puzzle with 4 queens and 1 bishop... Is there a chess library that supports it?
 
-I knew [python-chess](http://python-chess.readthedocs.io/) quite well, I even implemented a chess game player on top of it, within a notebook (see my [blog post](http://blog.mathieuacher.com/JupyterChess/)). But I was thinking the library was not *designed* for tackling my problem, like: it cannot handle illegal chess positions (eg without kings!), it won't help me much (eg it's mainly a library for reading PGN game), or I will hardly generalize my solution to strange cases (eg like puzzle with 6x6 board) and I don't want to stuck on a third party library. I was wrong and missed an opportunity. 
+I knew [python-chess](http://python-chess.readthedocs.io/) quite well, I even implemented a chess game player on top of it, within a notebook (see my [blog post](https://blog.mathieuacher.com/JupyterChess/)). But I was thinking the library was not *designed* for tackling my problem, like: it cannot handle illegal chess positions (eg without kings!), it won't help me much (eg it's mainly a library for reading PGN game), or I will hardly generalize my solution to strange cases (eg like puzzle with 6x6 board) and I don't want to stuck on a third party library. I was wrong and missed an opportunity. 
 
 So I decided to apply what I called *opportunistic reuse*, i.e., reusing a library that is not supposed to resolve your exact problem (who says "hack" a library). After further exploring the library, all the assumptions above collapsed:
 
@@ -141,3 +141,16 @@ Maybe the easiest is to watch my talk [Towards programming puzzle spaces availab
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2020programmingchesspuzzles,
+  author = {Mathieu Acher},
+  title = {Programming (Chess) Puzzles with a Tweet},
+  year = {2020},
+  month = {apr},
+  howpublished = {\url{https://blog.mathieuacher.com/ProgrammingChessPuzzles/}},
+  note = {\url{https://blog.mathieuacher.com/ProgrammingChessPuzzles/}}
+}
+```

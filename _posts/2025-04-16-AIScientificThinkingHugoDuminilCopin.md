@@ -80,3 +80,16 @@ In fact, my current and future research will be about AI and sofware engineering
 
 [^1]: you can find some "traces" of David in this work about... chess and LLM: https://github.com/acherm/gptchess/blob/main/analysis_prompt_variations.ipynb
 side note: The original transcript is available in a gist https://gist.github.com/acherm/549b6ae1f4caac47aaed8d4204433e3c (in French, slightly edited out of OpenAI whisper)
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025aiscientificthinkinghugoduminilcopin,
+  author = {Mathieu Acher},
+  title = {Creative Collaboration with AI: Insights from Hugo Duminil-Copin on Mathematics and Discovery},
+  year = {2025},
+  month = {apr},
+  howpublished = {\url{https://blog.mathieuacher.com/AIScientificThinkingHugoDuminilCopin/}},
+  note = {\url{https://blog.mathieuacher.com/AIScientificThinkingHugoDuminilCopin/}}
+}
+```

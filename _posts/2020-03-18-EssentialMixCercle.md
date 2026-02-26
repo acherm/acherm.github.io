@@ -46,3 +46,16 @@ It's too early and fresh, but I found many similarities (quality and diversity-w
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2020essentialmixcercle,
+  author = {Mathieu Acher},
+  title = {Is Cercle the new Essential Mix?},
+  year = {2020},
+  month = {mar},
+  howpublished = {\url{https://blog.mathieuacher.com/EssentialMixCercle/}},
+  note = {\url{https://blog.mathieuacher.com/EssentialMixCercle/}}
+}
+```

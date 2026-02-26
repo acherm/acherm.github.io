@@ -227,3 +227,16 @@ Post also available on dev.to: https://dev.to/diverse_research/testing-your-dsls
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023testinginlangium,
+  author = {Mathieu Acher},
+  title = {Testing your DSLs in Langium},
+  year = {2023},
+  month = {nov},
+  howpublished = {\url{https://blog.mathieuacher.com/TestingInLangium/}},
+  note = {\url{https://blog.mathieuacher.com/TestingInLangium/}}
+}
+```

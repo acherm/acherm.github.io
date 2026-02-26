@@ -105,3 +105,16 @@ Special thanks to **Fabien Libiszewski, Matthieu Cornette, Yosha Iglesias, Mathi
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025reproducibilitymetamorphictestingchess,
+  author = {Mathieu Acher},
+  title = {Reproducibility, Metamorphic Testing, and the Subtleties of Assessing Inconsistencies in AI Systems},
+  year = {2025},
+  month = {mar},
+  howpublished = {\url{https://blog.mathieuacher.com/ReproducibilityMetamorphicTestingChess/}},
+  note = {\url{https://blog.mathieuacher.com/ReproducibilityMetamorphicTestingChess/}}
+}
+```

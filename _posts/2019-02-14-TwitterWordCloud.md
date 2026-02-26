@@ -55,3 +55,16 @@ Anyway, this service is fun and has the merit of being easy to use. But you know
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019twitterwordcloud,
+  author = {Mathieu Acher},
+  title = {Twitter and Word Cloud},
+  year = {2019},
+  month = {feb},
+  howpublished = {\url{https://blog.mathieuacher.com/TwitterWordCloud/}},
+  note = {\url{https://blog.mathieuacher.com/TwitterWordCloud/}}
+}
+```

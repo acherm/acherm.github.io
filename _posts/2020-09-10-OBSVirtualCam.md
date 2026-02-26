@@ -91,3 +91,16 @@ This virtual camera can be seen as an independent way to share whatever you want
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2020obsvirtualcam,
+  author = {Mathieu Acher},
+  title = {OBS and Virtual Cam (Linux)},
+  year = {2020},
+  month = {sep},
+  howpublished = {\url{https://blog.mathieuacher.com/OBSVirtualCam/}},
+  note = {\url{https://blog.mathieuacher.com/OBSVirtualCam/}}
+}
+```

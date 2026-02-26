@@ -34,3 +34,16 @@ I found it useful to have a transcript of the interview, so I am sharing it here
 Interestingly it reminds me of a [Slashdot interview](https://linux.slashdot.org/story/15/06/30/0058243/interviews-linus-torvalds-answers-your-question) where Linus said in early 2015:
 "We'll get AI, and it will almost certainly be through something very much like recurrent neural networks. And the thing is, since that kind of AI will need training, it won't be "reliable" in the traditional computer sense. It's not the old rule-based prolog days, when people thought they'd *understand* what the actual decisions were in an AI."
 Also interesting to read again this inspiring and impactful piece of Karpathy on [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) and his experiments on Linux source code (see eg https://cs.stanford.edu/people/karpathy/char-rnn/linux.txt). 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023linustorvaldsllm,
+  author = {Mathieu Acher},
+  title = {Linus Torvalds on LLM},
+  year = {2023},
+  month = {nov},
+  howpublished = {\url{https://blog.mathieuacher.com/LinusTorvaldsLLM/}},
+  note = {\url{https://blog.mathieuacher.com/LinusTorvaldsLLM/}}
+}
+```

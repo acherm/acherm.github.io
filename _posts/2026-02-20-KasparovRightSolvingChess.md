@@ -91,3 +91,16 @@ I made a ~5-minute animated video with [Manim](https://www.manim.community/) (th
 The video, the slides, and this blog post were produced with the help of [Claude Code](https://claude.ai/code) and GPT 5.2 Pro for the conceptual discussions. [Manim](https://www.manim.community/) is a fantastic tool for this kind of thing -- you describe scenes in Python and it renders publication-quality animations. Highly recommended for anyone wanting to explain visual or mathematical ideas.
 
 Let me know what you think!
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2026kasparovrightsolvingchess,
+  author = {Mathieu Acher},
+  title = {Is Kasparov Right about Solving Chess? The 584-Move Monster in a Cave and Why There's Hope},
+  year = {2026},
+  month = {feb},
+  howpublished = {\url{https://blog.mathieuacher.com/KasparovRightSolvingChess/}},
+  note = {\url{https://blog.mathieuacher.com/KasparovRightSolvingChess/}}
+}
+```

@@ -62,3 +62,16 @@ And then it's working, just upload the wasm file using https://exoticorn.github.
 
 I still don't know how to reduce the size further and obtain 256 bytes, but well, not that far. 
 Anyway, an impressive demonstration of the art of sizecoding!
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025sizecodingartbuild,
+  author = {Mathieu Acher},
+  title = {Size Coding a Cinematic Experience Fitting Into 256 bytes},
+  year = {2025},
+  month = {mar},
+  howpublished = {\url{https://blog.mathieuacher.com/SizeCodingArtBuild/}},
+  note = {\url{https://blog.mathieuacher.com/SizeCodingArtBuild/}}
+}
+```

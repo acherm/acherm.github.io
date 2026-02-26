@@ -65,3 +65,16 @@ Abstract:
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023chatgptvariability,
+  author = {Mathieu Acher},
+  title = {ChatGPT for Programming Variability and Variants},
+  year = {2023},
+  month = {aug},
+  howpublished = {\url{https://blog.mathieuacher.com/ChatGPTVariability/}},
+  note = {\url{https://blog.mathieuacher.com/ChatGPTVariability/}}
+}
+```

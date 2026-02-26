@@ -19,9 +19,9 @@ tags: [scholar, publications, review]
 
 * reject of ICSE SEIP submission: [preprint](https://hal.inria.fr/hal-02147012) is available… again on Linux and its configuration space. I strongly believe we need a "smart" continuous integration system capable of tracking/dealing with configuration failures of the Linux kernel
 
-* [talk](http://blog.mathieuacher.com/ELCETuxML/) at Embedded Linux Conference Europe 2019: a very nice experience (I hope to attend/talk again in such non-academic events!)
+* [talk](https://blog.mathieuacher.com/ELCETuxML/) at Embedded Linux Conference Europe 2019: a very nice experience (I hope to attend/talk again in such non-academic events!)
 
-* [an intense year of teaching](http://blog.mathieuacher.com/Teaching1819/): a kind of failure (too much!) and success (I learned a lot eg <http://blog.mathieuacher.com/WikipediaMatrixChallenge/>)
+* [an intense year of teaching](https://blog.mathieuacher.com/Teaching1819/): a kind of failure (too much!) and success (I learned a lot eg <https://blog.mathieuacher.com/WikipediaMatrixChallenge/>)
 
 * a few blog posts 
 
@@ -36,3 +36,16 @@ tags: [scholar, publications, review]
 * back in the football business every friday night ;-) fully for 90 minutes (sometimes midfielder, sometimes centre-forward)
 
    
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2020failuresandsuccess2019,
+  author = {Mathieu Acher},
+  title = {(Academic) Failures and Successes in 2019},
+  year = {2020},
+  month = {jan},
+  howpublished = {\url{https://blog.mathieuacher.com/FailuresAndSuccess2019/}},
+  note = {\url{https://blog.mathieuacher.com/FailuresAndSuccess2019/}}
+}
+```

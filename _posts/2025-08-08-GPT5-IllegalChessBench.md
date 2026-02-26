@@ -57,3 +57,16 @@ The recent and exciting initiative of Kaggle https://www.kaggle.com/benchmarks/k
 On the other hand, chess requires planning and reasoning. Current AI models fail, as demonstrated in this post.
 
 Numerous possible future work: a thorough evaluation of GPT-5 (but also Grok 4 and Gemini Pro), an analysis of games played at Kaggle (and ideally the numerous illegal moves authorized during the competition https://www.kaggle.com/benchmarks/kaggle/chess-text/discussion/596609), or a fine-tuning of `gpt-oss` on chess, an open weight model released by OpenAI.
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025gpt5illegalchessbench,
+  author = {Mathieu Acher},
+  title = {GPT-5 and GPT-5 Thinking as Other LLMs in Chess: Illegal Move After 4th Turn},
+  year = {2025},
+  month = {aug},
+  howpublished = {\url{https://blog.mathieuacher.com/GPT5-IllegalChessBench/}},
+  note = {\url{https://blog.mathieuacher.com/GPT5-IllegalChessBench/}}
+}
+```

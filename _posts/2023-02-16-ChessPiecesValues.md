@@ -168,3 +168,16 @@ But it's good to me to keep traces of my current knowledge. And secretly I hope 
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023chesspiecesvalues,
+  author = {Mathieu Acher},
+  title = {Stockfish(1): Chess Piece Values},
+  year = {2023},
+  month = {feb},
+  howpublished = {\url{https://blog.mathieuacher.com/ChessPiecesValues/}},
+  note = {\url{https://blog.mathieuacher.com/ChessPiecesValues/}}
+}
+```

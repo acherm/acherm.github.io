@@ -16,3 +16,16 @@ I have been involved in several scientific activities:
  * many, many discussions
 
 Japan was truly amazing, I highly recommend, and we researchers are lucky to visit incredible locations and meet diverse people!
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023scientifictripsplc23japan,
+  author = {Mathieu Acher},
+  title = {Scientific Trip in Japan and SPLC 2023},
+  year = {2023},
+  month = {aug},
+  howpublished = {\url{https://blog.mathieuacher.com/ScientificTripSPLC23Japan/}},
+  note = {\url{https://blog.mathieuacher.com/ScientificTripSPLC23Japan/}}
+}
+```

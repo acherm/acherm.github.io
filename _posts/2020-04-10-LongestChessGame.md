@@ -58,7 +58,7 @@ but in fact he gave an interesting comment on [Twitter](https://twitter.com/tom7
 > This was actually a bug in my PGN code (it considered rook and rook-that-can-still-castle as different for disambiguation purposes).
 > Now fixed (should be Rgg8 since file-based disambiguation takes precedence), thanks!!
 
-Anyway, I've also succeeded to open the game with my chess player reader made on top of Jupyter notebook (see [my previous blog post](http://blog.mathieuacher.com/JupyterChess/)) and with python-chess library. Like this, I can have further fun (see below)
+Anyway, I've also succeeded to open the game with my chess player reader made on top of Jupyter notebook (see [my previous blog post](https://blog.mathieuacher.com/JupyterChess/)) and with python-chess library. Like this, I can have further fun (see below)
 
 ![Extraction process](/assets/longest-jupyter.png)
 
@@ -114,3 +114,16 @@ I really enjoy reading the paper, the idea, the algorithm, the source code. It i
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2020longestchessgame,
+  author = {Mathieu Acher},
+  title = {On the Longest Chess Game Ever(!?)},
+  year = {2020},
+  month = {apr},
+  howpublished = {\url{https://blog.mathieuacher.com/LongestChessGame/}},
+  note = {\url{https://blog.mathieuacher.com/LongestChessGame/}}
+}
+```

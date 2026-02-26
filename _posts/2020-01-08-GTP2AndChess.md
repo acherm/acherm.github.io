@@ -31,3 +31,16 @@ GPT-2 based chess engine is a fun experiment that may serve to further question 
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2020gtp2andchess,
+  author = {Mathieu Acher},
+  title = {GPT-2 and Chess},
+  year = {2020},
+  month = {jan},
+  howpublished = {\url{https://blog.mathieuacher.com/GTP2AndChess/}},
+  note = {\url{https://blog.mathieuacher.com/GTP2AndChess/}}
+}
+```

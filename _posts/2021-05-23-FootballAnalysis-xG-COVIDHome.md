@@ -157,3 +157,16 @@ Don't hesitate to correct me or suggest improvements!
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2021footballanalysisxgcovidhome,
+  author = {Mathieu Acher},
+  title = {COVID and Home Advantage in Football: An Analysis of Results and xG Data in European Leagues},
+  year = {2021},
+  month = {may},
+  howpublished = {\url{https://blog.mathieuacher.com/FootballAnalysis-xG-COVIDHome/}},
+  note = {\url{https://blog.mathieuacher.com/FootballAnalysis-xG-COVIDHome/}}
+}
+```

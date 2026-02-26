@@ -42,3 +42,16 @@ main.js															 python-markdown-pre.png  python-markdown.yaml  trusted.pn
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2019markdownjupyter,
+  author = {Mathieu Acher},
+  title = {Jupyter and Markdown},
+  year = {2019},
+  month = {jan},
+  howpublished = {\url{https://blog.mathieuacher.com/MarkdownJupyter/}},
+  note = {\url{https://blog.mathieuacher.com/MarkdownJupyter/}}
+}
+```

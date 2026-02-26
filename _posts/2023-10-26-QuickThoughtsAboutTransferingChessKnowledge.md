@@ -105,3 +105,16 @@ Right now it reads like super-intelligent teachers have been synthesized for che
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2023quickthoughtsabouttransferingchessknowledge,
+  author = {Mathieu Acher},
+  title = {Quick Thoughts about "Bridging the Human–AI Knowledge Gap: Concept Discovery and Transfer in AlphaZero},
+  year = {2023},
+  month = {oct},
+  howpublished = {\url{https://blog.mathieuacher.com/QuickThoughtsAboutTransferingChessKnowledge/}},
+  note = {\url{https://blog.mathieuacher.com/QuickThoughtsAboutTransferingChessKnowledge/}}
+}
+```

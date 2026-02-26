@@ -189,3 +189,16 @@ courses in which you can play with papers or produce papers. Great, thank you.
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2025teachingreproducibilityvariability,
+  author = {Mathieu Acher},
+  title = {Teaching Reproducibility and Embracing Variability: From Floating-Point Experiments to Replicating Research},
+  year = {2025},
+  month = {jul},
+  howpublished = {\url{https://blog.mathieuacher.com/TeachingReproducibilityVariability/}},
+  note = {\url{https://blog.mathieuacher.com/TeachingReproducibilityVariability/}}
+}
+```

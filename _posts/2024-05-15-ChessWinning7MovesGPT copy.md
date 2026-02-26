@@ -445,3 +445,16 @@ And stay tuned for comprehensive experiments with `gpt-4o` (the last ChatGPT) an
 
 
 
+
+*(new!) I realized that some of my blog post entries are sometimes cited in academic works, so why not using the following bibtex entry?*
+
+```bibtex
+@misc{acher2024chesswinning7movesgptcopy,
+  author = {Mathieu Acher},
+  title = {How to Win in 4 or 7 Chess Moves against GPTs},
+  year = {2024},
+  month = {may},
+  howpublished = {\url{https://blog.mathieuacher.com/ChessWinning7MovesGPT-copy/}},
+  note = {\url{https://blog.mathieuacher.com/ChessWinning7MovesGPT-copy/}}
+}
+```
