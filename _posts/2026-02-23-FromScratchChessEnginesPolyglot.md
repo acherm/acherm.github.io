@@ -40,7 +40,7 @@ Based on gauntlet matches against Stockfish (50 games per engine, logistic/inver
 
 **Between 1500 and 2000 Elo (intermediate to strong club level):** Claudius (C++, Claude Code), Why3CC (Why3/OCaml, Claude Code), JavaCodex (Java, Codex), and PyCC (Python, Claude Code) fall in the ~1700–1900 range. Why3Codex (Why3/OCaml, Codex) and CoboChess (COBOL, Codex) sit around ~1530–1560. These engines implement solid search and evaluation but with fewer advanced features.
 
-**Below 1500 Elo (beginner to intermediate):** ChessRocq (Rocq/OCaml, Claude Code) at ~1450, [TeXCCChess](https://blog.mathieuacher.com/TeXChessEngine/) (LaTeX, Claude Code) at ~1280, SQLChess (SQL, Claude Code) at ~1120, and TeXCodex (LaTeX, Codex) at ~900. These engines are constrained by their languages' computational limitations but still play complete games.
+**Below 1500 Elo (beginner to intermediate):** ChessRocq (Rocq/OCaml, Claude Code) at ~1450, [TeXCCChess](https://blog.mathieuacher.com/TeXCCChessEngine/) (LaTeX, Claude Code) at ~1280, SQLChess (SQL, Claude Code) at ~1120, and TeXCodex (LaTeX, Codex) at ~900. These engines are constrained by their languages' computational limitations but still play complete games.
 
 A Java engine at ~2200 Elo. A COBOL engine at ~1530. A LaTeX engine at ~1280. Let that sink in.
 
@@ -72,7 +72,7 @@ This blog post is a *research preview*. There is much, much more to share:
 - AI session analysis (how many turns, tokens, and dollars each engine took to build)
 - How far we can push toward state-of-the-art chess engines
 
-Starting soon, I'll publish a series of blog posts (roughly one every three days) each diving deep into a specific engine. The first installment will cover [TeXCCChess](https://blog.mathieuacher.com/TeXChessEngine/), the LaTeX chess engine, because frankly, a chess engine that runs inside `pdflatex` deserves its own post.
+Starting soon, I'll publish a series of blog posts (roughly one every three days) each diving deep into a specific engine. The first installment will cover [TeXCCChess](https://blog.mathieuacher.com/TeXCCChessEngine/), the LaTeX chess engine, because frankly, a chess engine that runs inside `pdflatex` deserves its own post.
 It has never been done, and coding agents open a new path towards more possibilities and questions. There will be a thirteenth programming language, because 13 is special; and it will be a language that is both suited and challenging for chess programming.
 A detailed report covering the full methodology, data, and analysis will also follow.
 
