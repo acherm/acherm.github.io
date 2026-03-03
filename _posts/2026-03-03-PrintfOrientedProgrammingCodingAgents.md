@@ -5,7 +5,7 @@ date:   2026-03-03 11:00:00 +0200
 tags: [chess, chess engine, LLM, coding agents, C, printf, software engineering, generative AI, llm4code, Claude Code, Codex]
 ---
 
-What happens when you ask coding agents to implement a chess engine in C where the entire game loop is a single `printf` call? No `if`, no `switch`, no explicit control flow in `main()` -- just `while(*d) printf(fmt, arg);`. Sounds absurd? It works. And two different coding agents pulled it off.
+What happens when you ask coding agents to implement a non trivial program in C where the entire game loop is a single `printf` call? No `if`, no `switch`, no explicit control flow in `main()`. Just `while(*d) printf(fmt, arg);`. Sounds absurd? It works. And two different coding agents master so called "printf-oriented programming" (POP) to create fully playable chess games, with legal move validation, check/checkmate/stalemate detection, and a random AI opponent. Never been done before, and a fun demonstration of the creativity and adaptability of coding agents when given the right challenge and reference.
 
 ## Printf-Oriented Programming
 
