@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Can Coding Agents Master Printf-Oriented Programming?"
-date:   2026-03-05 11:00:00 +0100
+date:   2026-03-05 09:00:00 +0100
 tags: [LLM, coding agents, C, printf, software engineering, generative AI, llm4code, Claude Code, Codex, chess, chess engine, compilers]
 ---
 
