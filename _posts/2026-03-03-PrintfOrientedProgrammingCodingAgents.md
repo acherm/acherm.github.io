@@ -11,7 +11,7 @@ I tried. The answer is: it's complicated, fascinating, and ultimately led me som
 ## Printf-Oriented Programming
 
 [Printf-oriented programming (POP)](https://github.com/carlini/printf-tac-toe) is a brilliant paradigm invented by Nicholas Carlini for the [IOCCC 2020](https://www.ioccc.org/).
-The idea: encode a program in `printf`'s format string and arguments, exploiting specifiers like `%hhn` (write the byte count to a pointer) and `%.*s` (conditional output via precision) to implement memory access and control flow. One `printf` invocation becomes a tiny virtual machine.
+The idea is to encode program behavior inside printf's format string and arguments. Using specifiers like %hhn to write the number of printed bytes to memory, together with positional parameters and dynamic width/precision modifiers (e.g., %2$d, %3$.*4$d), the format string updates state and drives the program's execution. One `printf` invocation becomes a tiny virtual machine.
 Carlini demonstrated this with [printf-tac-toe](https://github.com/carlini/printf-tac-toe): a fully playable tic-tac-toe where `printf` *is* the execution engine, not just the renderer.
 
 Can we go beyond tic-tac-toe? Can we scale POP to *chess*? Can coding agents master this esoteric paradigm? I gave the challenge to two agents:
