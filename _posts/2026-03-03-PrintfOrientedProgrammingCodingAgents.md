@@ -2,8 +2,7 @@
 layout: post
 title:  "Can Coding Agents Master Printf-Oriented Programming?"
 date:   2026-03-05 11:00:00 +0100
-tags: [chess, chess engine, LLM, coding agents, C, printf, software engineering, generative AI, llm4code, Claude Code, Codex, compilers]
-published: false
+tags: [LLM, coding agents, C, printf, software engineering, generative AI, llm4code, Claude Code, Codex, chess, chess engine, compilers]
 ---
 
 Can coding agents understand and apply a programming paradigm they've (almost certainly) never seen in training data? Not a standard design pattern, not something from a textbook, but an esoteric hack from an obfuscated C contest: Printf-Oriented Programming (aka POP). The idea is that printf is Turing complete, but can coding agents leverage that fact to write real programs *in* `printf`?
