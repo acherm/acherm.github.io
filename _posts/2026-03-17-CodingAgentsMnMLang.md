@@ -7,16 +7,15 @@ tags: [LLM, coding agents, esoteric languages, MNM Lang, Brainfuck, generative A
 
 What happens when you challenge a coding agent with an esoteric programming language it has never seen (freshly invented, with very few examples), and where the source code is literally colored M&Ms on a table? No documentation beyond the opcode table. No Stack Overflow threads. No training examples to memorize. Just six candy colors, a stack machine, and a dare.
 
+![Multiplication table in MNM Lang, written by Claude Code and rendered as M&M candies](/assets/mnm-mul-table.png)
+
 I tried it with [MNM Lang](https://github.com/mufeedvh/mnmlang), a toy language amazingly created by [Mufeed VH](https://mufeedvh.com/posts/i-made-a-programming-language-with-mnms/) where programs are grids of candy-colored tokens (`B`lue, `G`reen, `R`ed, `Y`ellow, `O`range, brow`N`). Token length encodes operand values. Strings and inputs live in a sidecar JSON file. The whole thing compiles to a PNG of M&M sprites. So funny by design, for humans. But could an LLM learn to write it?
 
 Again: no training examples, no worked solutions, no hints. Just the README spec and the opcode table. Could an LLM figure out the semantics and produce correct MNM Lang programs?
 
 I gave [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Claude Opus 4.6) 26 challenges of increasing difficulty, from "sum 1 to N" to "write a Brainfuck interpreter". No hand-holding, no worked examples beyond the opcode table in the README. The agent had to figure out the language semantics from the spec and produce working programs.
 
-The result: all 26 challenges solved. Including a 1,260-line Brainfuck interpreter. Here is what a [FizzBuzz program](#fizzbuzz-rendered) written by the agent looks like when rendered as candy:
-
-![FizzBuzz in MNM Lang, written by Claude Code and rendered as M&M candies](/assets/mnm-fizzbuzz.png)
-*FizzBuzz in MNM Lang, written by Claude Code. 30 lines of candy. [It works.](#fizzbuzz-rendered)*
+The result: all 26 challenges solved. Including a 1,260-line Brainfuck interpreter.
 
 ## What MNM Lang Looks Like
 
@@ -63,8 +62,8 @@ Three subroutines (`fetch`, `tape_load`, `tape_store`), each a linear scan over 
 
 And it works. Here's what it looks like as candy:
 
-![Recursive Fibonacci in MNM Lang](/assets/mnm-fibonacci.png)
-*The recursive Fibonacci challenge (39 lines). The Brainfuck interpreter is 1,260 lines of this.*
+![M&M Histogram challenge in MNM Lang](/assets/mnm-histogram.png)
+*The M&M histogram challenge (53 lines), which prints horizontal bar charts of candy counts. The Brainfuck interpreter is 1,260 lines of this.*
 
 ## Cross-Validation
 
@@ -112,8 +111,6 @@ The cross-validation test suite:
 ```bash
 uv run --extra dev pytest tests/test_brainfuck.py -v
 ```
-
-<a id="fizzbuzz-rendered"></a>
 
 ```bibtex
 @misc{acher2026mnmlang,
