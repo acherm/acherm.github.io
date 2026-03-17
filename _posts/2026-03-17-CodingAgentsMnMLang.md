@@ -13,41 +13,14 @@ Again: no training examples, no worked solutions, no hints. Just the README spec
 
 I gave [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Claude Opus 4.6) 26 challenges of increasing difficulty, from "sum 1 to N" to "write a Brainfuck interpreter". No hand-holding, no worked examples beyond the opcode table in the README. The agent had to figure out the language semantics from the spec and produce working programs.
 
-The result: all 26 challenges solved. Including a 1,260-line Brainfuck interpreter.
+The result: all 26 challenges solved. Including a 1,260-line Brainfuck interpreter. Here is what a [FizzBuzz program](#fizzbuzz-rendered) written by the agent looks like when rendered as candy:
 
+![FizzBuzz in MNM Lang, written by Claude Code and rendered as M&M candies](/assets/mnm-fizzbuzz.png)
+*FizzBuzz in MNM Lang, written by Claude Code. 30 lines of candy. [It works.](#fizzbuzz-rendered)*
 
 ## What MNM Lang Looks Like
 
-Here's what a factorial program looks like as source code:
-
-```text
-OOO O        # READ_INT queue 0
-GGG G        # STORE var[0]
-G RR         # PUSH 1
-GGG GG       # STORE var[1]
-N B          # LABEL 0
-GG G         # LOAD var[0]
-G RR         # PUSH 1
-YYYYYYYY     # GT
-BB BB        # JZ label 1
-GG GG        # LOAD var[1]
-GG G         # LOAD var[0]
-YYY          # MUL
-GGG GG       # STORE var[1]
-GGGGGGG G    # DEC var[0]
-B B          # JMP label 0
-N BB         # LABEL 1
-GG GG        # LOAD var[1]
-O            # PRINT
-OOOOOO       # NEWLINE
-BBBBBB       # HALT
-```
-
-And here's what it looks like rendered as candy:
-
-![Factorial program in MNM Lang, rendered as M&M candies](/assets/mnm-factorial.png)
-
-Every row is one instruction. The opcode is determined by the color and length of the first token. Operands follow. `GGG GG` means `STORE` (3 greens) into variable slot 1 (2 greens, value = length - 1 = 1). That's the entire encoding: count the candies.
+Each row is one instruction. The opcode is determined by the color and length of the first token. Operands follow. `GGG GG` means `STORE` (3 greens) into variable slot 1 (2 greens, value = length - 1 = 1). That's the entire encoding: count the candies.
 
 ## The Challenges
 
@@ -140,9 +113,7 @@ The cross-validation test suite:
 uv run --extra dev pytest tests/test_brainfuck.py -v
 ```
 
-![FizzBuzz in MNM Lang](/assets/mnm-fizzbuzz.png)
-*FizzBuzz rendered as M&Ms. 30 lines of candy. It works.*
-
+<a id="fizzbuzz-rendered"></a>
 
 ```bibtex
 @misc{acher2026mnmlang,
