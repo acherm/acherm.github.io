@@ -6,9 +6,7 @@ tags: [LLM, coding agents, esoteric languages, MNM Lang, Brainfuck, generative A
 ---
 
 What happens when you challenge a coding agent with an esoteric programming language it has never seen (freshly invented, with very few examples), and where the source code is literally colored M&Ms on a table? No documentation beyond the opcode table. No Stack Overflow threads. No training examples to memorize. Just six candy colors, a stack machine, and a dare.
-
 ![Multiplication table in MNM Lang, written by Claude Code and rendered as M&M candies](/assets/mnm-mul-table.png)
-
 I tried it with [MNM Lang](https://github.com/mufeedvh/mnmlang), a toy language amazingly created by [Mufeed VH](https://mufeedvh.com/posts/i-made-a-programming-language-with-mnms/) where programs are grids of candy-colored tokens (`B`lue, `G`reen, `R`ed, `Y`ellow, `O`range, brow`N`). Token length encodes operand values. Strings and inputs live in a sidecar JSON file. The whole thing compiles to a PNG of M&M sprites. So funny by design, for humans. But could an LLM learn to write it?
 
 Again: no training examples, no worked solutions, no hints. Just the README spec and the opcode table. Could an LLM figure out the semantics and produce correct MNM Lang programs?
