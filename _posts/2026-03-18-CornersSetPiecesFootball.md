@@ -225,7 +225,7 @@ L'entraîneur de l'OM a la même lecture que les données. Les CPA, c'est bien, 
 
 ## En résumé
 
-Les CPA sont un bonus, pas un moteur. Tottenham est le meilleur d'Europe sur corners et lutte pour le maintien. L'OM était un des pires de Ligue 1 sur corners en 2024-25 et a fini 2e. Les données de 484 équipes-saisons le confirment : pour les bonnes équipes, la conversion CPA ne prédit rien.
+Les CPA sont un bonus, pas un moteur. Tottenham est sur le podium européen des corners (14 buts, 3e) et lutte pour le maintien. L'OM était un des pires de Ligue 1 sur corners en 2024-25 et a fini 2e. Les données de 484 équipes-saisons le confirment : pour les bonnes équipes, la conversion CPA ne prédit rien.
 
 Ce qui distingue Arsenal ou le Bayern, ce n'est pas uniquement d'être bons sur CPA. C'est d'être bons partout. Les phases arrêtées ne sont qu'une cerise sur un gâteau qui doit d'abord exister. Lens est inefficace depuis novembre sur CPA, mais est un très beau et méritant 2ème.  
 

@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "Corners, Free Kicks, and Set Pieces Across Europe's Top Leagues: What the Data Actually Says"
+title:  "Corners, Free Kicks, and Set Pieces Across Europe's Top Football Leagues: What the Data Actually Says"
 date:   2026-03-18 12:00:00 +0100
 tags: [football, data analysis, corners, set pieces, Ligue 1, Premier League, Marseille, Arsenal, xG, Understat]
-hidden: true
 ---
 
 Corners and set pieces are one of football's most debated topics. "Arsenal are unstoppable from corners," "Marseille are hopeless on free kicks," and so on. Opinions, gut feelings, conventional wisdom. But sometimes the data surprises: did you know that Tottenham, fighting relegation in the Premier League, are on the European podium for corner goals this season, just behind Arsenal and Inter?
@@ -219,7 +218,7 @@ Marseille's coach reads it the same way as the data. Set pieces are worth workin
 
 ## In summary
 
-Set pieces are a bonus, not an engine. Tottenham are Europe's best from corners and are fighting relegation. Marseille were among Ligue 1's worst from corners in 2024-25 and finished 2nd. Data from 484 team-seasons confirms it: for good teams, dead ball conversion predicts nothing.
+Set pieces are a bonus, not an engine. Tottenham are on Europe's corner podium (14 goals, 3rd) and are fighting relegation. Marseille were among Ligue 1's worst from corners in 2024-25 and finished 2nd. Data from 484 team-seasons confirms it: for good teams, dead ball conversion predicts nothing.
 
 What sets Arsenal or Bayern apart isn't just being good from set pieces. It's being good at everything. Set pieces are merely the icing on a cake that needs to exist first. Lens have been ineffective from set pieces since November, but are a deserving and impressive 2nd.
 
