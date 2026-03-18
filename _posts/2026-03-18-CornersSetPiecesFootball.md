@@ -16,7 +16,7 @@ J'ai analysé **5 saisons de données** sur les 5 grands championnats européens
 
 C'est l'histoire la plus folle de cette saison (en cours, ~30 journées de PL jouées). Tottenham est **co-leader européen** sur les buts marqués sur corners : 14 buts, à égalité avec l'Inter Milan. Conversion de 21.5%, la meilleure d'Europe.
 
-Le problème ? Les Spurs sont **16es de Premier League** avec 30 points.
+Le problème ? Les Spurs sont actuellement **16es de Premier League** avec 30 points.
 
 <img src="/assets/fr_tottenham_open_vs_corners.png" alt="Tottenham vs Arsenal, Jeu ouvert vs Corners">
 
@@ -80,7 +80,7 @@ Zéro. 21 tirs issus de coups francs indirects cette saison, pas un seul but. Un
 
 <img src="/assets/fr_table_top10_ligue1.png" alt="Top 10 Ligue 1, Phases arrêtées">
 
-Regardons Lorient : 10e au classement, 37 points, et pourtant **à égalité avec le PSG et Lens** sur les buts CPA (10 chacun). Lorient marque 4 buts sur coups francs indirects. L'OM : zéro. Même Metz, dernier de Ligue 1 (13 points), a marqué 3 buts sur CPA hors corners.
+Regardons Lorient : 10e au classement, 37 points, et pourtant à égalité avec le PSG et Lens sur les buts CPA (10 chacun). Lorient marque 4 buts sur coups francs indirects. L'OM : zéro. Même Metz, dernier de Ligue 1 (13 points), a marqué 3 buts sur CPA hors corners.
 
 La comparaison est cruelle mais pose des questions.
 
@@ -103,7 +103,7 @@ Si vous cherchez un modèle, c'est le Bayern. Pas parce qu'ils sont les meilleur
 | Buts CPA/match | 0.54 | 2e |
 | Conversion corners | 20.0% | 2e |
 
-C'est le **seul club** situé en haut à droite de tous les nuages de points : élite en jeu ouvert ET en phases arrêtées. Arsenal est excellent sur CPA mais modeste en jeu ouvert (1.19 but/match). Barcelone est fort en jeu ouvert mais moyen sur CPA. Inter est bon partout mais à un cran en dessous. Le Bayern n'a aucun angle mort.
+C'est le **seul club** situé en haut à droite de tous les nuages de points : élite en jeu ouvert ET en phases arrêtées. Arsenal est excellent sur CPA mais relativement modeste en jeu ouvert (1.19 but/match). Barcelone est fort en jeu ouvert mais moyen sur CPA. Inter est bon partout mais à un cran en dessous. Le Bayern n'a aucun angle mort.
 
 Et contrairement à Dortmund ou Tottenham, cette efficacité est soutenue par les xG : 9.8 xG CPA pour 14 buts, une surperformance de +4.2, élevée mais pas délirante.
 
@@ -111,11 +111,11 @@ Et contrairement à Dortmund ou Tottenham, cette efficacité est soutenue par le
 
 ## 6. Dortmund : un château de cartes construit sur corners?
 
-Borussia Dortmund est le leader européen des buts sur phases arrêtées cette saison : **18 buts** (12 corners, 6 coups francs indirects). Impressionnant ? Oui. Durable ? Probablement pas.
+Borussia Dortmund est le leader européen des buts sur phases arrêtées cette saison : 18 buts (12 corners, 6 coups francs indirects). Impressionnant ? Oui. Durable ? Probablement pas.
 
 <img src="/assets/fr_bundesliga_big3_evolution.png" alt="Bundesliga Big 3, Évolution 5 saisons">
 
-Le problème est dans les xG : Dortmund a marqué 18 buts pour **seulement 10.8 xG**. C'est une surperformance de **+7.2**, la deuxième plus élevée de tout notre dataset (484 équipes-saisons). La seule saison comparable ? Union Berlin 2022-23, avec +10.5 de surperformance sur CPA. L'année suivante, Union Berlin s'est écroulé.
+Le problème est dans les xG : Dortmund a marqué 18 buts pour seulement 10.8 xG. C'est une surperformance de +7.2, la deuxième plus élevée de tout notre dataset (484 équipes-saisons). La seule saison comparable ? Union Berlin 2022-23, avec +10.5 de surperformance sur CPA. L'année suivante, Union Berlin s'est écroulé.
 
 <img src="/assets/fr_table_top20_all_seasons.png" alt="Top 20 meilleures saisons CPA en Europe">
 
@@ -156,7 +156,7 @@ Le plus ironique : les commentateurs continuent de vanter les CPA lensoises en m
 
 ## 8. La Ligue 1, dernière de la classe sur phases arrêtées
 
-Ce n'est pas juste un problème de Marseille ou de tel club. C'est **tout le championnat** qui est en retard.
+Ce n'est pas juste un problème de Marseille ou de tel club. C'est tout le championnat qui est en retard.
 
 <img src="/assets/fr_ligues_evolution_5saisons.png" alt="Moyennes par ligue, Évolution 5 saisons">
 
@@ -170,7 +170,7 @@ Ce n'est pas juste un problème de Marseille ou de tel club. C'est **tout le cha
 
 La Ligue 1 est **dernière sur tout** : moins de buts, moins bonne conversion, moins bonne qualité d'occasion (xG/tir). Et l'écart se creuse : en 2021-22, la L1 était à 9.8 buts CPA par équipe, devant la Premier League (9.2). En 2025-26, elle est à 5.3 contre 8.9. Le décrochage est spectaculaire.
 
-Est-ce un problème tactique ? De qualité des tireurs de corners ? De gabarit des défenseurs/attaquants sur les phases aériennes ? Probablement un peu de tout. Mais les données sont claires : à investissement égal dans les CPA, un club de Ligue 1 en tirera significativement moins qu'un club de Premier League.
+Est-ce un problème tactique ? De qualité des tireurs de corners ? De qualité des défenses ? De gabarit des défenseurs/attaquants sur les phases aériennes ? Probablement un peu de tout. Mais les données sont claires : à investissement égal dans les CPA, un club de Ligue 1 en tirera significativement moins qu'un club de Premier League.
 
 ---
 
@@ -192,13 +192,13 @@ J'ai découpé les 484 équipes-saisons en quartiles de performance (par points,
 **Pour les équipes du top 25%, la conversion CPA est légèrement négativement corrélée avec les points.** Autrement dit, parmi les bonnes équipes, mieux convertir les CPA ne te fait pas monter au classement. Ça peut même être le signe d'une sur-dépendance (hello Tottenham).
 
 Les exemples sont parlants :
-- **Juventus 2024-25** : 2.7% de conversion CPA, 70 points (4e de Serie A)
-- **Tottenham 2025-26** : 21.5% de conversion CPA, 30 points (16e de PL)
-- **Marseille 2024-25** : 6.8% de conversion CPA, 65 points (2e de Ligue 1)
+- Juventus 2024-25 : 2.7% de conversion CPA, 70 points (4e de Serie A)
+- Tottenham 2025-26 : 21.5% de conversion CPA, 30 points (16e de PL)
+- Marseille 2024-25 : 6.8% de conversion CPA, 65 points (2e de Ligue 1)
 
-La corrélation glissante (graphique en bas à droite) montre que l'effet de la conversion CPA est **maximal entre 30 et 50 points** :les équipes de milieu de tableau. Pour elles, les phases arrêtées peuvent faire la différence entre le maintien et la relégation. Mais au-delà de 65 points, l'effet disparaît complètement.
+La corrélation glissante (graphique en bas à droite) montre que l'effet de la conversion CPA est maximal entre 30 et 50 points :les équipes de milieu de tableau. Pour elles, les phases arrêtées peuvent faire la différence entre le maintien et la relégation. Mais au-delà de 65 points, l'effet disparaît complètement.
 
-**Entre les groupes**, l'écart est massif : les 10% meilleurs convertisseurs CPA ont en moyenne **16.8 points de plus** que les 10% pires (p<0.001). Mais **à l'intérieur** d'un même groupe de niveau, la conversion CPA n'explique rien.
+Entre les groupes, l'écart est massif : les 10% meilleurs convertisseurs CPA ont en moyenne 16.8 points de plus que les 10% pires (p<0.001). Mais à l'intérieur d'un même groupe de niveau, la conversion CPA n'explique rien.
 
 ---
 
@@ -219,19 +219,19 @@ Et c'est exactement ce que dit Habib Beye, [relayé par @MassiliaZone](https://x
 
 L'entraîneur de l'OM a la même lecture que les données. Les CPA, c'est bien, il faut y travailler (et le staff ne le fait certainement pas assez). Mais le plafond de Marseille ne se joue pas forcément là. Beye le sait, les xG le confirment.
 
-**L'OM doit d'avantage investir dans les CPA, surtout les coups francs, mais avec un "rendement modéré". Ce n'est pas le seul levier qui change le plafond de Marseille.**
+**L'OM doit d'avantage investir dans les CPA, surtout les coups francs, mais le "retour sur investissement" risque d'être modéré. Ce n'est pas le seul levier qui change le plafond de Marseille.**
 
 ---
 
 ## En résumé
 
-Les CPA sont un bonus, pas un moteur. Tottenham est le meilleur d'Europe sur corners et lutte pour le maintien. L'OM était le pire de Ligue 1 sur corners en 2024-25 et a fini 2e. Les données de 484 équipes-saisons le confirment : pour les bonnes équipes, la conversion CPA ne prédit rien.
+Les CPA sont un bonus, pas un moteur. Tottenham est le meilleur d'Europe sur corners et lutte pour le maintien. L'OM était un des pires de Ligue 1 sur corners en 2024-25 et a fini 2e. Les données de 484 équipes-saisons le confirment : pour les bonnes équipes, la conversion CPA ne prédit rien.
 
 Ce qui distingue Arsenal ou le Bayern, ce n'est pas uniquement d'être bons sur CPA. C'est d'être bons partout. Les phases arrêtées ne sont qu'une cerise sur un gâteau qui doit d'abord exister. Lens est inefficace depuis novembre sur CPA, mais est un très beau et méritant 2ème.  
 
 Bien sûr, sur 2025-26, l'échantillon reste fragile (26-30 journées), et certaines tendances (la surperformance de Dortmund, l'effondrement de Lens, la conversion de Tottenham) pourraient se corriger d'ici la fin de saison. Les quatre saisons précédentes, elles, sont complètes et solides. C'est tout l'intérêt de croiser les analyses. 
 
-On peut parler de football avec des données sans trahir le jeu. Les CPA sont un sujet parfait : assez technique pour que les chiffres apportent quelque chose, assez visible pour que tout le monde ait un avis. Et souvent, les données confirment l'intuition des supporters et des coachs ou des "experts". A titre d'exemple, j'étais persuadé que l'OM était catastrophique sur CPA. C'est un peu plus subtile. Aussi, parfois, les données corrigent les avis. 
+On peut parler de football avec des données sans trahir le jeu. Les CPA sont un sujet parfait : assez technique pour que les chiffres apportent quelque chose, assez visible pour que tout le monde ait un avis. Et souvent, les données confirment l'intuition des supporters et des coachs ou des "experts". A titre d'exemple, j'étais persuadé que l'OM était catastrophique sur CPA. C'est un peu plus subtile que ce que je pensais. Aussi, parfois, les données corrigent les avis. 
 
 
 **Les données sont un point de départ, un indice, du grain à moudre, pas un jugement final. Elles ne disent pas tout, mais poussent parfois à changer ou raffiner son jugement initial ou un avis tranché. Avec la démocratisation des outils et des données, on peut espérer des débats foot un peu moins à l'instinct et un peu plus étayés. Et pourquoi pas, plus passionnants.**
