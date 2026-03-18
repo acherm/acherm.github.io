@@ -6,27 +6,27 @@ tags: [football, data analysis, corners, set pieces, Ligue 1, Premier League, Ma
 hidden: true
 ---
 
-On parle souvent des corners et des coups de pied arrêtés (CPA) au café du commerce, sur les réseaux sociaux, ou dans les médias. "Arsenal est injouable sur corners", "L'OM est nul sur coups francs", etc. Des impressions, des ressentis. Et parfois des surprises : saviez-vous que Tottenham, à la lutte pour le maintien en Premier League, est le meilleur club d'Europe sur corners cette saison ? Non ? Oui ? 
+On parle souvent des corners et des coups de pied arrêtés (CPA) au café du commerce, sur les réseaux sociaux, ou dans les médias. "Arsenal est injouable sur corners", "L'OM est nul sur coups francs", etc. Des impressions, des ressentis. Et parfois des surprises : saviez-vous que Tottenham, à la lutte pour le maintien en Premier League, est sur le podium européen des buts sur corners cette saison, juste derrière Arsenal et l'Inter ? Non ? Oui ? 
 Et si on allait vérifier ?
 J'ai analysé **5 saisons de données** sur les 5 grands championnats européens (Premier League, Ligue 1, Serie A, Bundesliga, La Liga). Chaque tir, chaque but, chaque expected goal (xG) sur corner, coup franc indirect, coup franc direct. 484 équipes-saisons. Voici ce que j'ai trouvé en 10 points clés, et certains résultats me semblent surprenants, méconnus, ou contre-intuitifs.
 
-*Données : Understat via soccerdata. 5 ligues européennes, 5 saisons (2021-2026), 484 équipes-saisons, ~180 000 tirs analysés. Note : la saison 2025-26 est en cours (~26-30 journées selon les championnats). Les tendances sont claires mais les chiffres évolueront. Je mettrai à jour en fin de saison.*
+*Données : Understat via understatapi. 5 ligues européennes, 5 saisons (2021-2026), 484 équipes-saisons. Note : la saison 2025-26 est en cours (~26-30 journées selon les championnats). Les tendances sont claires mais les chiffres évolueront. Je mettrai à jour en fin de saison.*
 
 ## 1. Tottenham, roi des corners... et 16e de Premier League
 
-C'est l'histoire la plus folle de cette saison (en cours, ~30 journées de PL jouées). Tottenham est **co-leader européen** sur les buts marqués sur corners : 14 buts, à égalité avec l'Inter Milan. Conversion de 21.5%, la meilleure d'Europe.
+C'est l'histoire la plus folle de cette saison (en cours, ~30 journées de PL jouées). Tottenham est **3e européen** sur les buts marqués sur corners : 14 buts, derrière Arsenal (16) et l'Inter (15). Conversion de 21.5%, la meilleure d'Europe.
 
 Le problème ? Les Spurs sont actuellement **16es de Premier League** avec 30 points.
 
 <img src="/assets/fr_tottenham_open_vs_corners.png" alt="Tottenham vs Arsenal, Jeu ouvert vs Corners">
 
-Le graphique est sans appel. Tottenham est isolé en haut à gauche : beaucoup de buts sur corners, très peu en jeu ouvert (25 buts, 14e du championnat). Arsenal, lui, est en haut à droite : 13 buts sur corners ET 37 en jeu ouvert.
+Le graphique est sans appel. Tottenham est isolé en haut à gauche : beaucoup de buts sur corners, très peu en jeu ouvert (25 buts, 14e du championnat). Arsenal, lui, est en haut à droite : 16 buts sur corners ET 39 en jeu ouvert.
 
-**35.9% des buts de Tottenham viennent de phases arrêtées.** C'est le taux le plus élevé d'Europe, tous championnats confondus. Quand plus d'un tiers de tes buts dépendent de situations de jeu qui représentent ~15% des tirs, tu construis sur du sable.
+**35.0% des buts de Tottenham viennent de phases arrêtées.** C'est le taux le plus élevé parmi les clubs des grands championnats (hors relégables). Quand plus d'un tiers de tes buts dépendent de situations de jeu qui représentent ~15% des tirs, tu construis sur du sable.
 
 À titre de comparaison, le Bayern Munich, meilleure attaque d'Europe, n'est qu'à 15.6% de dépendance aux CPA. Parce que quand tu marques 65 buts en jeu ouvert, les corners sont un bonus, pas une béquille.
 
-Et puis il y a Arsenal, l'ovni : 13 buts sur corners (2e en Europe), mais également 37 en jeu ouvert, 70 points (1er de Premier League). Arsenal ne se contente pas d'être redoutable offensivement sur CPA, ils le sont aussi dans le jeu. Lors du match de Ligue des Champions contre le Bayer Leverkusen, [le compte officiel du Bayer 04](https://x.com/bayer04_en/status/2031723079886401891) a veinement interdit à Arsenal d'obtenir des corners. Des voies s'élèvent même en Premier League. 
+Et puis il y a Arsenal, l'ovni : **16 buts sur corners (1er en Europe)**, mais également 39 en jeu ouvert, 70 points (1er de Premier League). Arsenal ne se contente pas d'être redoutable offensivement sur CPA, ils le sont aussi dans le jeu. Lors du match de Ligue des Champions contre le Bayer Leverkusen, [le compte officiel du Bayer 04](https://x.com/bayer04_en/status/2031723079886401891) a veinement interdit à Arsenal d'obtenir des corners. Des voies s'élèvent même en Premier League. 
 Dans une interview explosive, John Obi Mikel a carrément accusé Arsenal de tricher ou que le succès d'Arsenal dépend uniquement des corners: https://talksport.com/football/4043546/john-obi-mikel-interview-arsenal-chelsea-mourinho-nigeria/. 
 Tottenham est un parfait contre-exemple : il n'y a pas que les corners... 
 Et on peut aussi penser que Tottenham est en grand danger, car sans les CPA la situation serait encore plus compliquée que la 16ème place. 
@@ -91,7 +91,7 @@ Il suffirait d'un ou deux buts sur coup franc pour remettre l'OM à niveau me di
 
 ## 5. Bayern Munich : la meilleure attaque d'Europe, point final
 
-Si vous cherchez un modèle, c'est le Bayern. Pas parce qu'ils sont les meilleurs sur CPA (Dortmund a 18 buts contre 14), mais parce qu'ils sont les meilleurs **partout en même temps**.
+Si vous cherchez un modèle, c'est le Bayern. Pas parce qu'ils sont les meilleurs sur CPA (Arsenal et Dortmund font 19 buts CPA contre 14), mais parce qu'ils sont les meilleurs **partout en même temps**.
 
 <img src="/assets/fr_bayern_contexte_europeen.png" alt="Bayern en contexte européen">
 
@@ -103,7 +103,7 @@ Si vous cherchez un modèle, c'est le Bayern. Pas parce qu'ils sont les meilleur
 | Buts CPA/match | 0.54 | 2e |
 | Conversion corners | 20.0% | 2e |
 
-C'est le **seul club** situé en haut à droite de tous les nuages de points : élite en jeu ouvert ET en phases arrêtées. Arsenal est excellent sur CPA mais relativement modeste en jeu ouvert (1.19 but/match). Barcelone est fort en jeu ouvert mais moyen sur CPA. Inter est bon partout mais à un cran en dessous. Le Bayern n'a aucun angle mort.
+C'est le **seul club** situé en haut à droite de tous les nuages de points : élite en jeu ouvert ET en phases arrêtées. Arsenal est co-leader sur CPA (19 buts, à égalité avec Dortmund) mais relativement modeste en jeu ouvert (1.26 but/match). Barcelone est fort en jeu ouvert mais moyen sur CPA. Inter est bon partout mais à un cran en dessous. Le Bayern n'a aucun angle mort.
 
 Et contrairement à Dortmund ou Tottenham, cette efficacité est soutenue par les xG : 9.8 xG CPA pour 14 buts, une surperformance de +4.2, élevée mais pas délirante.
 
@@ -111,21 +111,21 @@ Et contrairement à Dortmund ou Tottenham, cette efficacité est soutenue par le
 
 ## 6. Dortmund : un château de cartes construit sur corners?
 
-Borussia Dortmund est le leader européen des buts sur phases arrêtées cette saison : 18 buts (12 corners, 6 coups francs indirects). Impressionnant ? Oui. Durable ? Probablement pas.
+Borussia Dortmund est co-leader européen des buts sur phases arrêtées cette saison avec Arsenal : **19 buts** (13 corners, 6 coups francs indirects). Impressionnant ? Oui. Durable ? Probablement pas.
 
 <img src="/assets/fr_bundesliga_big3_evolution.png" alt="Bundesliga Big 3, Évolution 5 saisons">
 
-Le problème est dans les xG : Dortmund a marqué 18 buts pour seulement 10.8 xG. C'est une surperformance de +7.2, la deuxième plus élevée de tout notre dataset (484 équipes-saisons). La seule saison comparable ? Union Berlin 2022-23, avec +10.5 de surperformance sur CPA. L'année suivante, Union Berlin s'est écroulé.
+Le problème est dans les xG : Dortmund a marqué 19 buts pour seulement 11.8 xG. C'est une surperformance de +7.2, la deuxième plus élevée de tout notre dataset (484 équipes-saisons). La seule saison comparable ? Union Berlin 2022-23, avec +10.5 de surperformance sur CPA. L'année suivante, Union Berlin s'est écroulé.
 
 <img src="/assets/fr_table_top20_all_seasons.png" alt="Top 20 meilleures saisons CPA en Europe">
 
-Mais il y a peut-être un signal d'alarme et une "dépendance" : **33.3% des buts de Dortmund viennent de CPA**. Seulement 32 buts en jeu ouvert en 26 matchs, le pire de leur 5 dernières saisons. Les phases arrêtées masquent une attaque en jeu ouvert qui tourne au ralenti. Il reste 8 journées en Bundesliga : la fin de saison dira si cette surperformance tient ou si elle se corrige, comme elle l'a fait historiquement pour d'autres clubs.
+Mais il y a peut-être un signal d'alarme et une "dépendance" : **34.5% des buts de Dortmund viennent de CPA**. Seulement 32 buts en jeu ouvert en 26 matchs, le pire de leur 5 dernières saisons. Les phases arrêtées masquent une attaque en jeu ouvert qui tourne au ralenti. Il reste 8 journées en Bundesliga : la fin de saison dira si cette surperformance tient ou si elle se corrige, comme elle l'a fait historiquement pour d'autres clubs.
 
 ---
 
 ## 7. Lens : la machine à corners qui s'est enrayée en novembre
 
-Lens est 2e de Ligue 1 avec 56 points et leader sur les corners en L1 (9 buts). Mais il y a un avant et un après novembre.
+Lens est 2e de Ligue 1 avec 56 points et leader sur les corners en L1 (10 buts). Mais il y a un avant et un après novembre.
 
 Sur X (ex-Twitter), [@Laurentmazure](https://x.com/Laurentmazure/status/2032907605606080960) s'agaçait récemment :
 
