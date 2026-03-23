@@ -243,3 +243,14 @@ On peut parler de football avec des données sans trahir le jeu. Les CPA sont un
 *La saison 2025-26 n'est pas terminée : les chiffres actuels reflètent ~26-30 journées selon les championnats. Les tendances identifiées sont robustes, mais les classements finaux et certaines surperformances (Dortmund, Tottenham) pourraient évoluer. Je publierai une mise à jour en fin de saison pour voir ce qui a tenu et ce qui s'est corrigé.*
 
 *Vous avez un avis, une question, envie de partager l'article sur d'autres medium ? Ou simplement savoir comment je m'y suis pris ? Contactez-moi mathieu.acher@irisa.fr*
+
+```bibtex
+@misc{acher2026cornersfootballfr,
+  author = {Mathieu Acher},
+  title = {Corners, coups francs, fantasmes et surprises dans les grands championnats européens de football : ce que les données disent vraiment},
+  year = {2026},
+  month = {mar},
+  howpublished = {\url{https://blog.mathieuacher.com/CornersSetPiecesFootball/}},
+  note = {\url{https://blog.mathieuacher.com/CornersSetPiecesFootball/}}
+}
+```

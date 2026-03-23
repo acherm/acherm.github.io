@@ -228,3 +228,14 @@ You can play interactively with `python3 play.py` or run tournaments with `pytho
 BFChess is weaker, slower, and harder to improve than TeXCCChess. But it exists: a complete, legal-move-generating, UCI-speaking, depth-3-searching chess engine in a language with eight instructions and no memory abstraction. It is a solid starting point and, to the best of our knowledge, the first of its kind. Making it stronger will require more work, more compute, and likely some creative rethinking of what is feasible within Brainfuck's severe constraints.
 
 *BFChess was developed by [Mathieu Acher](https://mathieuacher.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Opus 4.6). Source code: [https://github.com/acherm/agentic-chessengine-brainfuck](https://github.com/acherm/agentic-chessengine-brainfuck)*
+
+```bibtex
+@misc{acher2026bfchess,
+  author = {Mathieu Acher},
+  title = {BFChess: A Chess Engine in Brainfuck, Built by a Coding Agent},
+  year = {2026},
+  month = {mar},
+  howpublished = {\url{https://blog.mathieuacher.com/BrainfuckChessEngine/}},
+  note = {\url{https://blog.mathieuacher.com/BrainfuckChessEngine/}}
+}
+```

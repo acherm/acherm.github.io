@@ -235,3 +235,14 @@ You can talk about football with data without betraying the game. Set pieces are
 *The 2025-26 season is not over: current figures reflect ~26-30 matchdays depending on the league. The trends identified are robust, but final standings and some overperformances (Dortmund, Tottenham) may shift. I'll publish an update at the end of the season to see what held up and what corrected.*
 
 *Have an opinion, a question, or want to share this article? Want to know how I did it? Contact me at mathieu.acher@irisa.fr*
+
+```bibtex
+@misc{acher2026cornersfootball,
+  author = {Mathieu Acher},
+  title = {Corners, Free Kicks, and Set Pieces Across Europe's Top Football Leagues: What the Data Actually Says},
+  year = {2026},
+  month = {mar},
+  howpublished = {\url{https://blog.mathieuacher.com/CornersSetPiecesFootballEN/}},
+  note = {\url{https://blog.mathieuacher.com/CornersSetPiecesFootballEN/}}
+}
+```
