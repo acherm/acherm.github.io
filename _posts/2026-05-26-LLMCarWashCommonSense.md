@@ -224,6 +224,12 @@ Ce n'est pas une condamnation des LLMs. GPT-5.5 et Sonnet 4.6 sont des outils qu
 
 Côté méthodes, un message pour le lecteur qui teste les LLMs un peu comme moi : essayer un prompt une fois, c'est très insuffisant, et *particulièrement* quand le modèle a juste. Une bonne réponse à un essai ne dit pas si elle se reproduira ni si elle survivra à une reformulation. Une mauvaise réponse, à l'inverse, suffit à identifier un problème : c'est asymétrique. Donc surtout quand "ça marche", il faut répéter. Pour juger un modèle sur un piège donné : n significatif (10+ pour une vérification rapide, 100+ pour conclure) et au moins deux formulations sémantiquement équivalentes. Sans ça, on confond facilement le réflexe d'un essai avec une capacité installée.
 
+### Deux questions ouvertes
+
+*Plus de raisonnement suffit-il à avoir du sens commun ?* Pas mécaniquement. Le raisonnement explicite peut compenser une fragilité (Sonnet 4.6 sur V2 : 39 % → 99 % avec `reasoning.effort=high`), mais il peut aussi s'enrouler autour d'un mauvais prior (DeepSeek R1 produit ~450 tokens de raisonnement et reste à 7-14 % de bonne conclusion). Le compte de jetons alloués amplifie ce qui est déjà là, il n'invente pas du sens commun.
+
+*Les modèles "frontier" ont-ils été "patchés" pour passer ce test précis ?* Mes données ne le prouvent pas et il faut rester prudent. Mais elles sont compatibles avec l'hypothèse : la lignée GPT-5 conclut juste depuis août 2025 ; ce qui s'améliore monotoniquement sur 9 mois (gpt-5 → 5.1 → 5.5) c'est précisément la parcimonie sur le critère "ne pas mentionner la distance" — exactement le détail qui rend ce piège visible plutôt qu'un autre. Le test est connu sur les réseaux depuis 2024, un fine-tuning ciblé serait plausible sans être avéré. Pour trancher, il faudrait tester des variantes inédites de la structure du piège (un objet à transporter pour être utilisé sur place, autre langue, autre mise en scène) — c'est dans la liste des "à faire".
+
 ---
 
 *Toutes les données, prompts, et scripts de cette manip : [github.com/acherm/laveauto-llm](https://github.com/acherm/laveauto-llm).*
