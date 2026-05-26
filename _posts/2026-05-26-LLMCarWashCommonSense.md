@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Le test du lave-auto : les LLMs ont-ils vraiment du sens commun ?"
-date:   2026-05-26 19:00:00 +0200
+date:   2026-05-26 08:00:00 +0200
 tags: [LLM, common sense, OpenRouter, benchmark, GPT-5, Claude, Gemini, DeepSeek, Qwen, reasoning, prompt engineering, prompt sensitivity]
 hidden: true
 ---
