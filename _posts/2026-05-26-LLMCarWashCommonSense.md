@@ -21,7 +21,7 @@ Voici ce que j'ai trouvé sur plus de 4 300 réponses LLM générées et près d
 
 ---
 
-## 1. Le setup
+## 1. Le dispositif
 
 J'ai conduit deux expériences en parallèle, mêmes conditions (mêmes modèles, mêmes répétitions, même juge), mais deux formulations différentes du piège :
 

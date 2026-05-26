@@ -261,6 +261,38 @@ nav {
     font-style: italic;
   }
 
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+    font-size: 0.92em;
+    line-height: 1.35;
+  }
+  table th,
+  table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    vertical-align: top;
+  }
+  table th {
+    background: #f4f4f4;
+    border-bottom: 2px solid #b8b8b8;
+    font-weight: 600;
+  }
+  table tr:nth-child(2n) td {
+    background: #fafafa;
+  }
+  table tr:hover td {
+    background: #f0f4f8;
+  }
+  table code {
+    font-size: 0.95em;
+    padding: 1px 4px;
+    background: #ececec;
+    border-radius: 3px;
+  }
+
   .comments {
     margin-top: 10px;
   }
