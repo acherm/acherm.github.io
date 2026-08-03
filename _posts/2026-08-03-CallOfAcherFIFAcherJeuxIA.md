@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deux jeux 3D en une semaine de vacances, avec un neveu de 10 ans qui ne code pas"
+title:  "CallOfAcher et FIFAcher : vibe coder des variantes de jeux avec mon neveu de 10 ans"
 date:   2026-08-03 09:00:00 +0200
 tags: [LLM, coding agents, Claude Code, Three.js, jeux vidéo, generative AI, llm4code, WebRTC, GitHub Pages, sous-agents]
 hidden: true
@@ -153,7 +153,7 @@ Reste le plus simple, et c'est peut-être le vrai argument. Les deux jeux sont l
 ```bibtex
 @misc{acher2026callofacher,
   author = {Mathieu Acher},
-  title = {Deux jeux 3D en une semaine de vacances, avec un neveu de 10 ans qui ne code pas},
+  title = {CallOfAcher et FIFAcher : vibe coder des variantes de jeux avec mon neveu de 10 ans},
   year = {2026},
   month = {aug},
   howpublished = {\url{https://blog.mathieuacher.com/CallOfAcherFIFAcherJeuxIA/}},
