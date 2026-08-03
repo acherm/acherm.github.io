@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "CallOfAcher et FIFAcher : deux jeux 3D, un prompt, et un neveu de 10 ans"
+title:  "Deux jeux 3D en une semaine de vacances, avec un neveu de 10 ans qui ne code pas"
 date:   2026-08-03 09:00:00 +0200
 tags: [LLM, coding agents, Claude Code, Three.js, jeux vidéo, generative AI, llm4code, WebRTC, GitHub Pages, sous-agents]
+hidden: true
 ---
 
 Il y a une semaine, j'ai collé [ce prompt de Matt Shumer](https://x.com/mattshumer_/status/2081100590612922527) (150 mots, pas une ligne de spec technique) dans [Claude Code](https://docs.anthropic.com/en/docs/claude-code), et je suis allé faire autre chose. En rentrant : un FPS jouable dans le navigateur. Pas une démo, pas un prototype. Un jeu. J'ai recommencé deux jours plus tard en remplaçant "Call of Duty" par "FIFA", et ça a marché aussi. Puis mon neveu de 10 ans a fait évoluer les deux jeux, en donnant des idées, en écrivant directement ce qu'il voulait dans le terminal de Claude, en jouant, en critiquant, et ainsi de suite, jusqu'à aujourd'hui.
@@ -152,7 +153,7 @@ Reste le plus simple, et c'est peut-être le vrai argument. Les deux jeux sont l
 ```bibtex
 @misc{acher2026callofacher,
   author = {Mathieu Acher},
-  title = {CallOfAcher et FIFAcher : deux jeux 3D, un prompt, et un neveu de 10 ans},
+  title = {Deux jeux 3D en une semaine de vacances, avec un neveu de 10 ans qui ne code pas},
   year = {2026},
   month = {aug},
   howpublished = {\url{https://blog.mathieuacher.com/CallOfAcherFIFAcherJeuxIA/}},
