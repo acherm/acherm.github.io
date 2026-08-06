@@ -5,8 +5,6 @@ date:   2026-08-06 09:00:00 +0200
 tags: [LLM, coding agents, Claude Code, Three.js, video games, generative AI, llm4code, WebRTC, GitHub Pages, sub-agents, vibe coding]
 ---
 
-*This is the English version of a post originally published in French: [CallOfAcher et FIFAcher : vibe coder des variantes de jeux avec mon neveu de 10 ans](https://blog.mathieuacher.com/CallOfAcherFIFAcherJeuxIA/).*
-
 A week ago, I pasted [this prompt by Matt Shumer](https://x.com/mattshumer_/status/2081100590612922527) (150 words, not a single line of technical spec) into [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and went off to do something else. When I came back: a playable FPS in the browser. Not a demo, not a prototype. A game. I did it again two days later, replacing "Call of Duty" with "FIFA", and that worked too. Then my 10-year-old nephew took over and grew both games, coming up with ideas, typing what he wanted straight into Claude's terminal, playing, criticizing, and so on, right up to today.
 Both games are online, playable right now (even on a phone!), with nothing to install:
 - **[blog.mathieuacher.com/ashfall](https://blog.mathieuacher.com/ashfall/)**: the FPS, with its two-player co-op mode, its environments, and so on. ([video demo](https://www.youtube.com/shorts/DUihik38JEA))
@@ -148,6 +146,8 @@ That leaves the simplest thing, and it may be the real argument. Both games are 
 *Methodology for the numbers: reconstruction from Claude Code session transcripts (927 MB of JSONL). Requests are deduplicated by message identifier, and resumed sessions (which replay the previous session's history) are merged so nothing is counted twice. The "requests" count only what we actually wrote: automatic task-completion notifications, command echoes, and "continue" messages are excluded. The cost is estimated at public API rates (input, output, cache write and cache read), not taken from an invoice. Models: Claude Opus 4.8, Opus 5, and Fable 5.*
 
 *On visual verification: Charly Reux, Mathieu Acher, Djamel Eddine Khelladi, Clément Quinton, Olivier Barais, [Imperfect Visual Verification for Code Edition: A Case Study on TikZ](https://arxiv.org/abs/2606.15693), 2026.*
+
+*This post is the English version of one originally published in French: [CallOfAcher et FIFAcher : vibe coder des variantes de jeux avec mon neveu de 10 ans](https://blog.mathieuacher.com/CallOfAcherFIFAcherJeuxIA/).*
 
 *A comment, an idea, a bug found? mathieu.acher@irisa.fr*
 
