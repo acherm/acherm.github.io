@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Langages de programmation à l'ère de l'IA générative : COBOL, M&M's, français… ou peu importe ?"
-date:   2026-09-07 18:00:00 +0200
+date:   2026-09-07 12:00:00 +0200
 tags: [LLM, coding agents, Claude Code, generative AI, llm4code, programming languages, COBOL, Brainfuck, esoteric languages, chess, vibe coding, talk, Semaine de l'IA]
+hidden: true
 ---
 
 Vendredi 4 septembre 2026, j'ai donné un exposé dans le cadre de la [Semaine de l'IA de l'Université de Rennes](https://intelligence-artificielle.univ-rennes.fr/semaine-ia-2026), devant quelque 230 étudiantes et étudiants (en cœur IA ou coloration IA), sur ce que les agents de codage font des langages de programmation, de Python à COBOL en passant par Brainfuck et les M&M's. L'enregistrement est en ligne, ainsi que les slides, en français et en anglais.
