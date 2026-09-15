@@ -35,7 +35,9 @@ Les expériences de l'exposé sont détaillées dans des billets de ce blog et d
 - [TeXCCChess](https://blog.mathieuacher.com/TeXCCChessEngine/) : jouer aux échecs dans Overleaf
 - [PL Catalog](https://blog.mathieuacher.com/PL-ultimate-llm/) : 14 000+ langages de programmation, avec Software Heritage et CodeCommons
 - Mathieu Acher, Jean-Marc Jézéquel, [Do Programming Languages Still Matter to Your AI Coding Agent Teammate? Evidence at Scale from Chess Engines](https://arxiv.org/abs/2606.13763), 2026 : 34 moteurs d'échecs, 17 langages, 2 agents
-- Mathieu Acher, Mohamed Yassine Kebaili, Djamel Eddine Khelladi, Nicolas Espinasse, Coding Agents Develop COBOL Systems: Evidence from a Human-Guided Multi-Case Study, 2026 : 16 systèmes COBOL créés de zéro, dont [DOOM](https://github.com/acherm/agentic-cobol-study)
+- Mathieu Acher, Zohra Kaouter Kebaili, Jean-Baptiste Espinasse, Djamel Eddine Khelladi, Coding Agents Develop COBOL Systems: Evidence from a Human-Guided Multi-Case Study, 2026 : 16 systèmes COBOL créés de zéro, dont [DOOM](https://github.com/acherm/agentic-cobol-study) https://inria.hal.science/hal-05743207/
+
+
 
 Merci aux organisatrices et organisateurs de la Semaine de l'IA, et au public pour les questions !
 
